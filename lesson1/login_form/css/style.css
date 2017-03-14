@@ -137,6 +137,7 @@ a.help {
 	text-decoration: none;
 	border-bottom: 1px solid #6c6c6c;
 	margin-left: 20px;
+        display: inline-block;
 }
 
 a.help:hover {
