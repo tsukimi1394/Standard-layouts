@@ -1,0 +1,292 @@
+@font-face {
+	font-family: 'NexaLight';
+	src: url('../fonts/nexa_light-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'NexaBold';
+	src: url('../fonts/nexa_bold-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'FeltTipWoman';
+	src: url('../fonts/felt_tip_woman-webfont.woff') format('woff');
+}
+/*Nexa - sans-serif (Arial)
+FeltTipWoman - cursive*/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: NexaLight, Arial, sans-serif;
+	font-size: 62.5%;
+}
+
+nav {
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	border-bottom: 1px solid #dedfe1;
+	width: 90%;
+	text-align: center;
+	padding: 4rem 0;
+	z-index: 999;
+}
+
+nav a {
+	text-decoration: none;
+	text-align: center;
+	padding: 0 2rem;
+	color: #dedfe1;
+}
+
+.home, .about-me, .portfolio, .contact {
+	height: 100vh;
+}
+
+.home {
+	background-image: url(../images/back-home.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.logo, .scroll-down {
+	text-align: center;
+}
+
+.logo img {
+	margin-top: 25rem;
+	/*transform: scale(0.8);*/
+	margin-bottom: 5rem;
+}
+
+.logo h1 {
+	font-size: 6rem;
+	color: #f1f1f1;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.logo h1 span {
+	font-family: NexaBold, Arial, sans-serif;
+}
+
+.scroll-down {
+	clear: both;
+	margin-top: 3rem;
+}
+
+.scroll-down a {
+	color: #dedfe1;
+	font-size: 1.8rem;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: block;
+	margin-bottom: 2.4rem;
+	letter-spacing: 2px;
+}
+
+.scroll-down svg {
+	width: 3.2rem;
+	height: 3.2rem;
+}
+
+.about-me, .gallery {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.wrapper {
+	display: flex;
+}
+
+.about {
+	justify-content: space-around;
+	flex-direction: row-reverse;
+}
+
+.content, .photo {
+	width: 50%;
+}
+
+.photo {
+	float: left;
+	margin-top: 18rem;
+}
+
+.photo img {
+	/*transform: scale(0.7);*/
+	/*width: 77.1rem;
+	height: 70rem;*/
+	width: 100%;
+	height: auto;
+}
+
+.content {
+	margin-top: 24rem;
+	padding-left: 5rem;
+}
+
+.content h2, .portfolio h2 {
+	text-transform: uppercase;
+	font-size: 6rem;
+	line-height: 2;
+	font-weight: normal;
+	letter-spacing: 5px;
+}
+
+.content p {
+	font-size: 2.4rem;
+	line-height: 2;
+	padding-right: 15rem;
+	padding-bottom: 3rem;
+}
+
+.content p:last-child {
+	font-family: FeltTipWoman, cursive;
+	font-size: 3.6rem;
+	font-weight: bold;
+}
+
+.portfolio h2 {
+	text-align: center;
+	padding-top: 16rem;
+	color: #f1f1f1;
+}
+
+.portfolio {
+	background-image: url(../images/back-portfolio.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.gallery {
+	width: 90%;
+	margin-left: 13.5rem;
+}
+
+.gallery img {
+	padding: 2.5rem;
+	width: 19%;
+}
+
+.contact {
+	position: relative;
+}
+
+.copy {
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-transform: uppercase;
+}
+
+.mail {
+	margin-top: 25rem;
+}
+
+.mail p, .phone p, .social p {
+	font-size: 4.8rem;
+	text-align: center;
+	padding: 1.8rem;
+	letter-spacing: 5px;
+}
+
+.contact span {
+	font-family: NexaBold;
+	font-size: 3rem;
+}
+
+.social a {
+	padding: 1.5rem;
+}
+
+.social a:first-of-type {
+	margin-left: 2.0rem;
+}
+
+.copyright {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: 1px solid #dedfe1;
+	width: 90%;
+	text-align: center;
+	padding: 4rem 0;
+	color: #bebebe;
+}
+
+@media (min-width: 1441px) and (max-width: 1600px) {
+	html {
+		font-size: 45%;
+	}
+	.photo {
+		margin-left: 10rem;
+	}
+	.logo img {
+		transform: scale(0.9);
+	}
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+	html {
+		font-size: 40%;
+	}
+	.logo img {
+		transform: scale(0.8);
+		margin-top: 15rem;
+	}
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+	.nav {
+		font-size: 2.2rem;
+	}
+	.content {
+		margin-top: 18rem;
+	}
+	.content h2 {
+		font-size: 5rem;
+	}
+	.content p {
+		font-size: 2.2rem;
+		padding-right: 3rem;
+	}
+	.gallery {
+		margin-left: 8rem;
+		height: 50rem;
+		overflow: hidden;
+	}
+	.gallery img {
+		width: 24%;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	html {
+		font-size: 40%;
+	}
+	.logo img {
+		transform: scale(0.8);
+		margin-top: 15rem;
+	}
+	.photo {
+		margin-top: 20rem;
+	}
+}
