@@ -35,6 +35,7 @@ nav {
 	transform: translateX(-50%);
 	border-bottom: 1px solid #dedfe1;
 	width: 90%;
+	margin: 0 auto;
 	text-align: center;
 	padding: 2.6rem 0;
 	z-index: 999;
@@ -47,11 +48,13 @@ nav a {
 	color: #dedfe1;
 }
 
-.home, .about-me, .portfolio, .contact {
+[id="home"], [id="about-me"], [id="portfolio"], [id="contact"] {
 	height: 100vh;
+	position: relative;
 }
 
-.home {
+/*.home {*/
+[id="home"] {
 	background-image: url(../images/back-home.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -108,7 +111,7 @@ nav a {
 	height: 2.5rem;
 }
 
-.about-me, .gallery {
+[id="about-me"], .gallery {
 	width: 90%;
 	margin: 0 auto;
 }
@@ -146,7 +149,7 @@ nav a {
 	padding-left: 5rem;
 }
 
-.content h2, .portfolio h2 {
+.content h2, [id="portfolio"] h2 {
 	text-transform: uppercase;
 	font-size: 4rem;
 	line-height: 1.8;
@@ -167,17 +170,17 @@ nav a {
 	font-weight: bold;
 }
 
-.about-me .scroll-down, .portfolio .scroll-down {
+[id="about-me"] .scroll-down, [id="portfolio"] .scroll-down {
 	margin-top: 1rem;
 }
 
-.portfolio h2 {
+[id="portfolio"] h2 {
 	text-align: center;
 	padding-top: 9rem;
 	color: #f1f1f1;
 }
 
-.portfolio {
+[id="portfolio"] {
 	background-image: url(../images/back-portfolio.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -194,7 +197,7 @@ nav a {
 	width: 19%;
 }
 
-.contact {
+[id="contact"] {
 	position: relative;
 }
 
@@ -216,7 +219,7 @@ nav a {
 	letter-spacing: 5px;
 }
 
-.contact span {
+[id="contact"] span {
 	font-family: NexaBold;
 	font-size: 3rem;
 }
