@@ -23,11 +23,11 @@ FeltTipWoman - cursive*/
 
 html {
 	font-family: NexaLight, Arial, sans-serif;
-	font-size: 62.5%;
+	font-size: 125%; /*1rem = 20px*/
 }
 
 nav {
-	font-size: 2.4rem;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	position: fixed;
 	top: 0;
@@ -36,14 +36,14 @@ nav {
 	border-bottom: 1px solid #dedfe1;
 	width: 90%;
 	text-align: center;
-	padding: 4rem 0;
+	padding: 2rem 0;
 	z-index: 999;
 }
 
 nav a {
 	text-decoration: none;
 	text-align: center;
-	padding: 0 2rem;
+	padding: 0 1rem;
 	color: #dedfe1;
 }
 
@@ -63,13 +63,13 @@ nav a {
 }
 
 .logo img {
-	margin-top: 25rem;
+	margin-top: 12.5rem;
 	/*transform: scale(0.8);*/
-	margin-bottom: 5rem;
+	margin-bottom: 2.5rem;
 }
 
 .logo h1 {
-	font-size: 6rem;
+	font-size: 3rem;
 	color: #f1f1f1;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -81,24 +81,24 @@ nav a {
 
 .scroll-down {
 	clear: both;
-	margin-top: 3rem;
+	margin-top: 1.5rem;
 }
 
 .scroll-down a {
 	color: #dedfe1;
-	font-size: 1.8rem;
+	font-size: 0.9rem;
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;
 	display: block;
-	margin-bottom: 2.4rem;
+	margin-bottom: 1.2rem;
 	letter-spacing: 2px;
 }
 
 .scroll-down svg {
-	width: 3.2rem;
-	height: 3.2rem;
+	width: 1.6rem;
+	height: 1.6rem;
 }
 
 .about-me, .gallery {
@@ -121,7 +121,7 @@ nav a {
 
 .photo {
 	float: left;
-	margin-top: 18rem;
+	margin-top: 9rem;
 }
 
 .photo img {
@@ -133,34 +133,34 @@ nav a {
 }
 
 .content {
-	margin-top: 24rem;
-	padding-left: 5rem;
+	margin-top: 12rem;
+	padding-left: 2.5rem;
 }
 
 .content h2, .portfolio h2 {
 	text-transform: uppercase;
-	font-size: 6rem;
+	font-size: 3rem;
 	line-height: 2;
 	font-weight: normal;
 	letter-spacing: 5px;
 }
 
 .content p {
-	font-size: 2.4rem;
+	font-size: 1.2rem;
 	line-height: 2;
-	padding-right: 15rem;
-	padding-bottom: 3rem;
+	padding-right: 7.5rem;
+	padding-bottom: 1.5rem;
 }
 
 .content p:last-child {
 	font-family: FeltTipWoman, cursive;
-	font-size: 3.6rem;
+	font-size: 1.8rem;
 	font-weight: bold;
 }
 
 .portfolio h2 {
 	text-align: center;
-	padding-top: 16rem;
+	padding-top: 8rem;
 	color: #f1f1f1;
 }
 
@@ -173,11 +173,11 @@ nav a {
 
 .gallery {
 	width: 90%;
-	margin-left: 13.5rem;
+	margin-left: 6.75rem;
 }
 
 .gallery img {
-	padding: 2.5rem;
+	padding: 1.25rem;
 	width: 19%;
 }
 
@@ -193,31 +193,31 @@ nav a {
 }
 
 .mail {
-	margin-top: 25rem;
+	margin-top: 12.5rem;
 }
 
 .mail p, .phone p, .social p {
-	font-size: 4.8rem;
+	font-size: 2.4rem;
 	text-align: center;
-	padding: 1.8rem;
+	padding: 0.9rem;
 	letter-spacing: 5px;
 }
 
 .contact span {
 	font-family: NexaBold;
-	font-size: 3rem;
+	font-size: 1.5rem;
 }
 
 .social a {
-	padding: 1.5rem;
+	padding: 0.75rem;
 }
 
 .social a:first-of-type {
-	margin-left: 2.0rem;
+	margin-left: 1rem;
 }
 
 .copyright {
-	font-size: 1.8rem;
+	font-size: 0.9rem;
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	margin: 0 auto;
@@ -228,23 +228,25 @@ nav a {
 	border-top: 1px solid #dedfe1;
 	width: 90%;
 	text-align: center;
-	padding: 4rem 0;
+	padding: 2rem 0;
 	color: #bebebe;
 }
 
-@media (min-width: 1441px) and (max-width: 1600px) {
+/*@media (min-width: 1441px) and (max-width: 1600px) {*/
+/*@media (max-width: 1440px) {	
 	html {
-		font-size: 45%;
+		font-size: 40%;
 	}
 	.photo {
 		margin-left: 10rem;
 	}
 	.logo img {
-		transform: scale(0.9);
+		transform: scale(0.7);
+		margin-top: 15rem;
 	}
-}
+}*/
 
-@media (min-width: 1281px) and (max-width: 1440px) {
+/*@media (min-width: 1281px) and (max-width: 1440px) {
 	html {
 		font-size: 40%;
 	}
@@ -288,5 +290,23 @@ nav a {
 	}
 	.photo {
 		margin-top: 20rem;
+	}
+}*/
+
+@media (min-width: 1536px) and (max-width: 1728px) {
+	html {
+		font-size: 112.5%;
+	}
+}
+
+@media (min-width: 1343px) and (max-width: 1535px) {
+	html {
+		font-size: 100%;
+	}
+}
+
+@media (min-width: 1150px) and (max-width: 1342px) {
+	html {
+		font-size: 87.5%;
 	}
 }
