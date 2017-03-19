@@ -54,88 +54,88 @@ nav a {
 }
 
 /*.home {*/
-[id="home"] {
-	background-image: url(../images/back-home.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
+	[id="home"] {
+		background-image: url(../images/back-home.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
 
-.logo, .scroll-down {
-	text-align: center;
-}
+	.logo, .scroll-down {
+		text-align: center;
+	}
 
-.wrapper-logo {
-	width: 25%;
-	margin: 0 auto;
-}
+	.wrapper-logo {
+		width: 25%;
+		margin: 0 auto;
+	}
 
-.logo img {
-	margin-top: 13rem;
-	/*transform: scale(0.8);*/
-	margin-bottom: 3.2rem;
-	width: 100%;
-	height: auto;
-}
+	.logo img {
+		margin-top: 13rem;
+		/*transform: scale(0.8);*/
+		margin-bottom: 3.2rem;
+		width: 100%;
+		height: auto;
+	}
 
-.logo h1 {
-	font-size: 4.26rem;
-	color: #f1f1f1;
-	font-weight: normal;
-	text-transform: uppercase;
-}
+	.logo h1 {
+		font-size: 4.26rem;
+		color: #f1f1f1;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
 
-.logo h1 span {
-	font-family: NexaBold, Arial, sans-serif;
-}
+	.logo h1 span {
+		font-family: NexaBold, Arial, sans-serif;
+	}
 
-.scroll-down {
-	clear: both;
-	margin-top: 3rem;
-}
+	.scroll-down {
+		clear: both;
+		margin-top: 3rem;
+	}
 
-.scroll-down a {
-	color: #dedfe1;
-	font-size: 1.28rem;
-	text-decoration: none;
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: 700;
-	display: block;
-	margin-bottom: 1rem;
-	letter-spacing: 2px;
-}
+	.scroll-down a {
+		color: #dedfe1;
+		font-size: 1.28rem;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		display: block;
+		margin-bottom: 1rem;
+		letter-spacing: 2px;
+	}
 
-.scroll-down svg {
-	width: 2.5rem;
-	height: 2.5rem;
-}
+	.scroll-down svg {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
 
-[id="about-me"], .gallery {
-	width: 90%;
-	margin: 0 auto;
-}
+	[id="about-me"], .gallery {
+		width: 90%;
+		margin: 0 auto;
+	}
 
-.wrapper {
-	display: flex;
-}
+	.wrapper {
+		display: flex;
+	}
 
-.about {
-	justify-content: center;
-	flex-direction: row-reverse;
-}
+	.about {
+		justify-content: center;
+		flex-direction: row-reverse;
+	}
 
-.content, .photo {
-	width: 50%;
-}
+	.content, .photo {
+		width: 50%;
+	}
 
 /*.photo {
 	float: left;
 	margin-top: 12.4rem;
-}*/
+	}*/
 
-.photo img {
-	/*transform: scale(0.7);*/
+	.photo img {
+		/*transform: scale(0.7);*/
 	/*width: 77.1rem;
 	height: 70rem;*/
 	width: 100%;
@@ -248,63 +248,65 @@ nav a {
 	color: #bebebe;
 }
 
-/*@media (min-width: 1441px) and (max-width: 1600px) {*/
-/*@media (max-width: 1440px) {	
-	html {
-		font-size: 40%;
-	}
-	.photo {
-		margin-left: 10rem;
+@media (min-width: 1600px) {
+	nav {
+		font-size: 2.4rem;
+		padding: 4rem 0;
 	}
 	.logo img {
-		transform: scale(0.7);
-		margin-top: 15rem;
+		margin-top: 14rem;
+		margin-bottom: 4.6rem;
 	}
-}*/
-
-/*@media (min-width: 1281px) and (max-width: 1440px) {
-	html {
-		font-size: 40%;
+	.logo h1 {
+		font-size: 6rem;
 	}
-	.logo img {
-		transform: scale(0.8);
-		margin-top: 15rem;
+	.scroll-down a {
+		font-size: 1.8rem;
+		margin-bottom: 3rem;
 	}
-}
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-	.nav {
-		font-size: 2.2rem;
+	.scroll-down svg {
+		width: 3.2rem;
+		height: 3.2rem;
+	}
+	.photo img {
+		padding-left: 22rem;
+		padding-top: 18rem;
 	}
 	.content {
-		margin-top: 18rem;
+		margin-top: 16rem;
+		padding-left: 5rem;
 	}
-	.content h2 {
-		font-size: 5rem;
+	.content h2, [id="portfolio"] h2 {
+		font-size: 6rem;
+		line-height: 2;
 	}
 	.content p {
-		font-size: 2.2rem;
-		padding-right: 3rem;
+		font-size: 2.4rem;
+	}
+	.content p:last-child {
+		font-size: 3.6rem;
+	}
+	[id="portfolio"] h2 {
+		padding-top: 6rem;
 	}
 	.gallery {
-		margin-left: 8rem;
-		height: 50rem;
-		overflow: hidden;
+		margin-left: 12rem;
 	}
-	.gallery img {
-		width: 24%;
+	.mail {
+		margin-top: 10rem;
+	}
+	.mail p, .phone p, .social p {
+		font-size: 3rem;
+		padding: 2rem;
+	}
+	[id="contact"] span {
+		font-size: 4.8rem;
+	}
+	.social a {
+		padding: 2rem;
+	}
+	.copyright {
+		font-size: 1.8rem;
+		padding: 4rem 0;
 	}
 }
-
-@media (min-width: 769px) and (max-width: 1024px) {
-	html {
-		font-size: 40%;
-	}
-	.logo img {
-		transform: scale(0.8);
-		margin-top: 15rem;
-	}
-	.photo {
-		margin-top: 20rem;
-	}
-}*/
