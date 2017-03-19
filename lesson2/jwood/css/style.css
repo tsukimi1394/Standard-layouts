@@ -277,7 +277,7 @@ nav a {
 		padding-left: 5rem;
 	}
 	.content h2, [id="portfolio"] h2 {
-		font-size: 8rem;
+		font-size: 6rem;
 		line-height: 2;
 	}
 	.content p {
@@ -287,13 +287,14 @@ nav a {
 		font-size: 3.6rem;
 	}
 	[id="portfolio"] h2 {
-		padding-top: 6rem;
+		padding-top: 13rem;
+		line-height: 1;
 	}
 	.gallery {
 		margin-left: 12rem;
 	}
 	.mail {
-		margin-top: 15rem;
+		margin-top: 18rem;
 	}
 	.mail p, .phone p, .social p {
 		font-size: 3rem;
@@ -304,6 +305,9 @@ nav a {
 	}
 	.social a {
 		padding: 2rem;
+	}
+	.social a:first-of-type {
+		margin-left: 7rem;
 	}
 	.copyright {
 		font-size: 1.8rem;
