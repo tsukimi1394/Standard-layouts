@@ -167,6 +167,10 @@ nav a {
 	font-weight: bold;
 }
 
+.about-me .scroll-down {
+	margin-top: 1rem;
+}
+
 .portfolio h2 {
 	text-align: center;
 	padding-top: 13rem;
