@@ -46,6 +46,12 @@ nav a {
 	color: #dedfe1;
 }
 
+nav a:hover {
+	color: #8e8e8e;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
 .section {
 	height: 100vh;
 	position: relative;
@@ -98,6 +104,33 @@ nav a {
 	font-weight: 700;
 	letter-spacing: 2px;
 	display: block;
+}
+
+.scroll-down a:hover {
+	color: #8e8e8e;
+	font-size: 1rem;
+}
+
+.scroll-down a:after {
+	content: " ";
+	background-image: url(../images/scroll.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	margin: 0 auto;
+}
+
+.scroll-down a:hover:after {
+	content: " ";
+	background-image: url(../images/scroll1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	margin: 0 auto;
 }
 
 .scroll-down img {
@@ -183,9 +216,22 @@ nav a {
 	max-width: 100%;
 }
 
+.photo-gallery img:hover {
+	transform: scale(1.75);
+}
+
 .wrapper-copy {
 	text-align: center;
 	text-transform: uppercase;
+}
+
+.wrapper-copy a {
+	text-decoration: none;
+	color: #202020;
+}
+
+.wrapper-copy a:visited {
+	color: #202020;
 }
 
 .wrapper-copy dl {
