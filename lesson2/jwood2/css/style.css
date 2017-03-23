@@ -49,7 +49,7 @@ nav a {
 nav a:hover {
 	color: #8e8e8e;
 	font-weight: bold;
-	font-size: 1.5rem;
+	
 }
 
 .section {
@@ -108,7 +108,7 @@ nav a:hover {
 
 .scroll-down a:hover {
 	color: #8e8e8e;
-	font-size: 1rem;
+
 }
 
 .scroll-down a:after {
