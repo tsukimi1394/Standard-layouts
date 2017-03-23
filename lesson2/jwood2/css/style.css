@@ -1,0 +1,339 @@
+@font-face {
+	font-family: 'NexaLight';
+	src: url('../fonts/nexa_light-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'NexaBold';
+	src: url('../fonts/nexa_bold-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'FeltTipWoman';
+	src: url('../fonts/felt_tip_woman-webfont.woff') format('woff');
+}
+/*Nexa - sans-serif (Arial)
+FeltTipWoman - cursive*/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: NexaLight, Arial, sans-serif;
+	font-size: 125%; /*1rem=20px*/
+}
+
+nav {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	border-bottom: 1px solid #dedfe1;
+	width: 90%;
+	text-align: center;
+	padding: 1.9rem 0;
+	z-index: 999;
+}
+
+nav a {
+	text-decoration: none;
+	padding: 0 2.4rem;
+	color: #dedfe1;
+}
+
+.section {
+	height: 100vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+[id="home"] {
+	background-image: url(../images/back-home.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.logo {
+	text-align: center;
+	margin-bottom: 3.5rem;
+	margin-top: 8.5rem;
+}
+
+.logo h1 {
+	font-size: 3rem;
+	color: #f1f1f1;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.logo h1 span {
+	font-family: NexaBold, Arial, sans-serif;
+}
+
+.wrapper-logoimg {
+	margin-bottom: 1.5rem;
+	width: 100%;
+	text-align: center;
+}
+
+.wrapper-logoimg img {
+	width: 70%;
+}
+
+.scroll-down a {
+	text-align: center;
+	color: #dedfe1;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	display: block;
+}
+
+.scroll-down img {
+	width: 1.6rem;
+	height: 1.6rem;
+	margin: 0 auto;
+	margin-top: 1.2rem;
+}
+
+.content, .photo {
+	width: 50%;
+}
+
+.photo img {
+	max-width: 100%;
+}
+
+.wrapper-about {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	width: 80%;
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+}
+
+.content {
+	margin-left: 2.4rem;
+	margin-top: 1rem;
+	color: #202020;
+	padding-right: 2rem;
+}
+
+.content h2, [id="portfolio"] h2 {
+	font-size: 3rem;
+	line-height: 2;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-weight: normal;
+}
+
+[id="portfolio"] h2 {
+	color: #f1f1f1;
+	margin-top: 4rem;
+}
+
+.content p {
+	font-size: 1.2rem;
+	padding: 1rem 0;
+	line-height: 2;
+}
+
+.content p:last-child {
+	font-family: FeltTipWoman, cursive;
+	font-size: 1.8rem;
+	font-weight: bold;
+	line-height: 2.5rem;
+}
+
+[id="portfolio"] {
+	background-image: url(../images/back-portfolio.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.gallery {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	margin-bottom: 3.5rem;
+}
+
+.photo-gallery {
+	width: 20%;
+	height: auto;
+}
+
+.photo-gallery img {
+	padding: 1.25rem;
+	max-width: 100%;
+}
+
+.wrapper-copy {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.wrapper-copy dl {
+	letter-spacing: 5px;
+}
+
+.wrapper-copy dl dt, .wrapper-copy dl dd {
+	padding: 0.75rem;
+}
+
+.mail {
+	font-size: 3rem;
+}
+
+.phone {
+	font-size: 2.4rem;
+}
+
+.wrapper-copy dt {
+	font-family: NexaBold;
+	font-size: 1.5rem;
+}
+
+.social dt {
+	margin-bottom: 1rem;
+	padding-left: 2rem;
+}
+
+.social a {
+	padding: 0.625rem;
+}
+
+.copyright {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: 1px solid #dedfe1;
+	width: 90%;
+	text-align: center;
+	padding: 2rem 0;
+	color: #bebebe;
+}
+
+@media screen and (max-width: 1600px) {
+	html {
+		font-size: 112.5%;
+	}
+	.wrapper-logoimg img {
+		width: 50%;
+	}
+	.wrapper-about {
+		margin-bottom: 1rem;
+	}
+	.photo {
+		margin-top: 3rem;
+	}
+	.content {
+		padding-right: 0;
+	}
+	.content p {
+		line-height: 1.7;
+		padding: 0.75rem 0;
+	}
+	[id="portfolio"] h2 {
+		margin-top: 5rem;
+	}
+	.gallery {
+		margin-bottom: 0.5rem;
+	}
+}
+
+@media screen and (max-width: 1600px) and (min-height: 600px) {
+	html {
+		font-size: 100%;
+	}
+	.photo {
+		margin-top: 0.5rem;
+	}
+	.photo-gallery {
+		width: 19%;
+	}
+	[id="portfolio"] h2 {
+		line-height: 1;
+		margin-top: 5.5rem;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	html {
+		font-size: 100%;
+	}
+	.logo {
+		margin-bottom: 1.5rem;
+	}
+	.photo {
+		margin-top: 5rem;
+	}
+	.content {
+		padding-right: 0;
+	}
+	.content p {
+		line-height: 1.7;
+		padding: 0.75rem 0;
+	}
+}
+
+@media screen and (max-width: 984px) {
+	html {
+		font-size: 75%;
+	}
+	.logo {
+		margin-bottom: 0.5rem;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	html {
+		font-size: 62.5%;
+	}
+	[id="about-me"], [id="portfolio"] {
+		height: auto;
+	}
+	.content, .photo {
+		width: auto;
+	}
+	.wrapper-logoimg img {
+		width: 50%;
+	}
+	.wrapper-about {
+		flex-direction: column;
+		align-items: center;
+	}
+	[id="about-me"] .scroll-down, [id="portfolio"] .scroll-down {
+		margin-bottom: 2rem;
+	}
+	.photo-gallery {
+		width: 30%;
+	}
+	[id="portfolio"] h2 {
+		margin-top: 7rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	html {
+		font-size: 50%;
+	}
+}
