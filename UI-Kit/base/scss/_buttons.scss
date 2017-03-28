@@ -1,0 +1,661 @@
+$light-blue: #77bfe5;
+$blue: #65abd0;
+$dark-blue: #5093b7;
+$dark-dark-blue: #3e7c9e;
+$border-blue: #609fc0;
+$white: #fff;
+$big-font: 18px;
+$medium-font: 16px;
+$small-font: 14px;
+$light-shadow: #27496d;
+$dark-shadow: #193047;
+$smallest-radius: 6px;
+$medium-radius: 24px;
+$big-radius: 30px;
+
+.c-buttons
+{
+    padding: 36px 120px;
+}
+
+.c-btn
+{
+    font-weight: bold;
+
+    display: flex;
+
+    color: $white;
+
+    justify-content: space-around;
+}
+
+.c-btn.c--big
+{
+    font-size: $big-font;
+
+    margin-bottom: 25px;
+    p
+    {
+        padding: $big-font;
+
+        text-align: center;
+    }
+}
+
+.c-btn__load-more
+{
+    width: 190px;
+
+    cursor: pointer;
+
+    background-color: $blue;
+}
+
+.c-btn__load-more:hover
+{
+    background-color: $dark-blue;
+    text-shadow: -1px 1px $light-shadow;
+}
+
+.c-btn__load-more:active
+{
+    background-color: $dark-dark-blue;
+    text-shadow: -1px 1px $dark-shadow;
+}
+
+.c-btn__sign-up
+{
+    border-radius: $smallest-radius;
+
+    @extend .c-btn__load-more;
+}
+
+.c-btn__sign-in
+{
+    border-radius: $big-radius;
+
+    @extend .c-btn__load-more;
+}
+
+.c-btn__logout
+{
+    width: 190px;
+
+    cursor: pointer;
+
+    color: $blue;
+    border: 2px solid $blue;
+    border-radius: $big-radius;
+}
+
+.c-btn__logout:hover
+{
+    color: $dark-blue;
+    border-color: $dark-blue;
+}
+
+.c-btn__logout:active
+{
+    color: $dark-dark-blue;
+    border-color: $dark-dark-blue;
+}
+
+.c-btn__right-arrow--big
+{
+    position: relative;
+
+    width: 60px;
+
+    cursor: pointer;
+
+    border-radius: $big-radius;
+    background-color: $blue;
+}
+
+.c-btn__right-arrow--big::before
+{
+    position: absolute;
+    top: 40%;
+    right: 45%;
+
+    width: 10px;
+    height: 10px;
+
+    content: '';
+    transform: rotate(45deg);
+
+    border-top: solid 2px $white;
+    border-right: solid 2px $white;
+}
+
+.c-btn__right-arrow--big:hover
+{
+    background-color: $dark-blue;
+}
+
+.c-btn__right-arrow--big:active
+{
+    background-color: $dark-dark-blue;
+}
+
+.c-btn.c--medium
+{
+    font-size: $medium-font;
+
+    margin-bottom: 23px;
+    p
+    {
+        padding: 13px;
+
+        text-align: center;
+    }
+}
+
+.c-btn__learn-more
+{
+    width: 140px;
+
+    cursor: pointer;
+
+    background-color: $blue;
+}
+
+.c-btn__learn-more:hover
+{
+    background-color: $dark-blue;
+    text-shadow: -1px 1px $light-shadow;
+}
+
+.c-btn__learn-more:active
+{
+    background-color: $dark-dark-blue;
+    text-shadow: -1px 1px $dark-shadow;
+}
+
+.c-btn__buy-now
+{
+    border-radius: $smallest-radius;
+
+    @extend .c-btn__learn-more;
+}
+
+.c-btn__order-now
+{
+    border-radius: $big-radius;
+
+    @extend .c-btn__learn-more;
+}
+
+.c-btn__install
+{
+    width: 140px;
+
+    cursor: pointer;
+
+    color: $blue;
+    border: 2px solid $blue;
+    border-radius: $big-radius;
+}
+
+.c-btn__install:hover
+{
+    color: $dark-blue;
+    border-color: $dark-blue;
+}
+
+.c-btn__install:active
+{
+    color: $dark-dark-blue;
+    border-color: $dark-dark-blue;
+}
+
+.c-btn__menu--medium
+{
+    position: relative;
+
+    width: 48px;
+
+    cursor: pointer;
+
+    border-radius: $smallest-radius;
+    background-color: $blue;
+}
+
+.c-btn__menu-icon--medium
+{
+    position: absolute;
+
+    width: 18px;
+    height: 2px;
+    margin-top: 23px;
+    margin-left: 15px;
+
+    color: $white;
+    background-color: $white;
+}
+
+.c-btn__menu-icon--medium:before
+{
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    width: 18px;
+    height: 2px;
+
+    content: '';
+
+    background-color: $white;
+}
+
+.c-btn__menu-icon--medium:after
+{
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    width: 18px;
+    height: 2px;
+
+    content: '';
+
+    background-color: $white;
+}
+
+.c-btn__menu--medium:hover
+{
+    background-color: $dark-blue;
+}
+
+.c-btn__menu--medium:active
+{
+    background-color: $dark-dark-blue;
+}
+
+.c-btn__left-arrow--medium
+{
+    position: relative;
+
+    width: 48px;
+
+    cursor: pointer;
+
+    border-radius: $medium-radius;
+    background-color: $blue;
+}
+
+.c-btn__left-arrow--medium:before
+{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
+    width: 10px;
+    height: 10px;
+
+    content: '';
+    transform: rotate(-135deg);
+
+    border-top: solid 2px $white;
+    border-right: solid 2px $white;
+}
+
+.c-btn__left-arrow--medium:hover
+{
+    background-color: $dark-blue;
+}
+
+.c-btn__left-arrow--medium:active
+{
+    background-color: $dark-dark-blue;
+}
+
+.c-btn__next
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 75px;
+
+    cursor: pointer;
+
+    border-radius: $smallest-radius;
+    background-color: $blue;
+}
+
+.c-btn__next:after
+{
+    position: absolute;
+    top: 50%;
+    left: 96%;
+
+    width: 0;
+    height: 0;
+    margin-top: -24px;
+
+    content: ' ';
+
+    border: solid transparent;
+    border-width: 24px;
+    border-left-color: $blue;
+}
+
+.c-btn__next:hover
+{
+    background-color: $dark-blue;
+    text-shadow: -1px 1px $light-shadow;
+}
+
+.c-btn__next:hover:after
+{
+    border-left-color: $dark-blue;
+}
+
+.c-btn__next:active
+{
+    background-color: $dark-dark-blue;
+    text-shadow: -1px 1px $dark-shadow;
+}
+
+.c-btn__next:active:after
+{
+    border-left-color: $dark-dark-blue;
+}
+
+.c-btn.c--small
+{
+    font-size: $small-font;
+    p
+    {
+        padding: 8px;
+
+        text-align: center;
+    }
+}
+
+.c-btn__start
+{
+    width: 120px;
+
+    cursor: pointer;
+
+    background-color: $blue;
+}
+
+.c-btn__start:hover
+{
+    background-color: $dark-blue;
+    text-shadow: -1px 1px $light-shadow;
+}
+
+.c-btn__start:active
+{
+    background-color: $dark-dark-blue;
+    text-shadow: -1px 1px $dark-shadow;
+}
+
+.c-btn__download
+{
+    border-radius: $smallest-radius;
+
+    @extend .c-btn__start;
+}
+
+.c-btn__share
+{
+    border-radius: $big-radius;
+
+    @extend .c-btn__start;
+}
+
+.c-btn__free-trial
+{
+    width: 120px;
+
+    cursor: pointer;
+
+    color: $blue;
+    border: 2px solid $blue;
+    border-radius: $big-radius;
+}
+
+.c-btn__free-trial:hover
+{
+    color: $dark-blue;
+    border-color: $dark-blue;
+}
+
+.c-btn__free-trial:active
+{
+    color: $dark-dark-blue;
+    border-color: $dark-dark-blue;
+}
+
+.c-btn__menu--small
+{
+    position: relative;
+
+    width: 36px;
+    height: 36px;
+
+    cursor: pointer;
+
+    border-radius: $smallest-radius;
+    background-color: $blue;
+}
+
+.c-btn__menu-icon--small
+{
+    position: absolute;
+
+    width: 16px;
+    height: 2px;
+    margin-top: 17px;
+    margin-left: 10px;
+
+    color: $white;
+    background-color: $white;
+}
+
+.c-btn__menu-icon--small:before
+{
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    width: 16px;
+    height: 2px;
+
+    content: '';
+
+    background-color: $white;
+}
+
+.c-btn__menu-icon--small:after
+{
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    width: 16px;
+    height: 2px;
+
+    content: '';
+
+    background-color: $white;
+}
+
+.c-btn__menu--small:hover
+{
+    background-color: $dark-blue;
+}
+
+.c-btn__menu--small:active
+{
+    background-color: $dark-dark-blue;
+}
+
+.c-btn__right-arrow--small
+{
+    position: relative;
+
+    width: 36px;
+
+    cursor: pointer;
+
+    border-radius: $big-radius;
+    background-color: $blue;
+}
+
+.c-btn__right-arrow--small:before
+{
+    position: absolute;
+    top: 40%;
+    right: 40%;
+
+    width: 7px;
+    height: 7px;
+
+    content: '';
+    transform: rotate(45deg);
+
+    border-top: solid 2px $white;
+    border-right: solid 2px $white;
+}
+
+.c-btn__right-arrow--small:hover
+{
+    background-color: $dark-blue;
+}
+
+.c-btn__right-arrow--small:active
+{
+    background-color: $dark-dark-blue;
+}
+
+
+.c-btn__arrows
+{
+    display: flex;
+    flex-direction: row;
+
+    width: 75px;
+
+    border-radius: $smallest-radius;
+    background-color: $blue;
+}
+
+.c-btn__arrows--left
+{
+    position: relative;
+
+    width: 37px;
+    height: 36px;
+
+    cursor: pointer;
+}
+
+.c-btn__arrows--left:hover
+{
+    border-radius: $smallest-radius;
+    background-color: $dark-blue;
+}
+
+.c-btn__arrows--left:active
+{
+    border-radius: $smallest-radius;
+    background-color: $dark-dark-blue;
+}
+
+.c-btn__arrows--left:before
+{
+    position: absolute;
+    top: 40%;
+    right: 40%;
+
+    width: 7px;
+    height: 7px;
+
+    content: '';
+    transform: rotate(-135deg);
+
+    border-top: solid 2px $white;
+    border-right: solid 2px $white;
+}
+
+.c-btn__arrows--right
+{
+    border-left: 1px solid $border-blue;
+
+    @extend .c-btn__arrows--left;
+}
+
+.c-btn__arrows--right:before
+{
+    position: absolute;
+    top: 40%;
+    right: 40%;
+
+    width: 7px;
+    height: 7px;
+
+    content: '';
+    transform: rotate(45deg);
+
+    border-top: solid 2px $white;
+    border-right: solid 2px $white;
+}
+
+.c-btn__forward
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 90px;
+
+    cursor: pointer;
+
+    border-radius: $smallest-radius;
+    background-color: $blue;
+}
+
+.c-btn__forward:after
+{
+    position: absolute;
+    top: 50%;
+    left: 96%;
+
+    width: 0;
+    height: 0;
+    margin-top: -19px;
+
+    content: ' ';
+
+    border: solid transparent;
+    border-width: 19px;
+    border-left-color: $blue;
+}
+
+.c-btn__forward:hover
+{
+    background-color: $dark-blue;
+    text-shadow: -1px 1px $light-shadow;
+}
+
+.c-btn__forward:hover:after
+{
+    border-left-color: $dark-blue;
+}
+
+.c-btn__forward:active
+{
+    background-color: $dark-dark-blue;
+    text-shadow: -1px 1px $dark-shadow;
+}
+
+.c-btn__forward:active:after
+{
+    border-left-color: $dark-dark-blue;
+}
