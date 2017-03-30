@@ -1143,6 +1143,75 @@ body {
 .c-comment-field.c--focus {
   border-color: #65abd0; }
 
+.c-table {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 36px 120px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.c-table__categories-wrapper {
+  width: 160px; }
+
+.c-table__categories-header-border {
+  border-top: 2px solid #dee2e7; }
+
+.c-table__categories {
+  font-weight: bold;
+  width: 100%;
+  text-align: left; }
+  .c-table__categories th {
+    font-size: 14px;
+    padding: 10px;
+    color: #b4bbc2;
+    border-radius: 6px; }
+  .c-table__categories td {
+    font-size: 16px;
+    padding: 10px;
+    color: #383737;
+    border-radius: 6px; }
+  .c-table__categories td:hover {
+    color: #fff;
+    background-color: #65abd0; }
+
+.c-table__music-wrapper {
+  width: 700px; }
+
+.c-table__music {
+  font-weight: bold;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left; }
+  .c-table__music th {
+    font-size: 14px;
+    padding: 15px;
+    color: #b4bbc2;
+    border-radius: 6px; }
+  .c-table__music td {
+    font-size: 16px;
+    padding: 15px;
+    color: #383737;
+    border-top: 2px solid #dee2e7;
+    border-radius: 6px; }
+  .c-table__music td:first-child {
+    color: #b4bbc2; }
+  .c-table__music form {
+    position: relative; }
+  .c-table__music input[type='checkbox'] {
+    opacity: 0; }
+  .c-table__music input[type='checkbox'] + span {
+    position: absolute;
+    z-index: -1;
+    top: 3px;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    cursor: pointer;
+    background: url(../images/checkbox.png) no-repeat; }
+  .c-table__music input[type='checkbox']:checked + span {
+    z-index: -1;
+    background-position: 0 -16px; }
+
 .c-notifications {
   padding: 36px 120px; }
 
