@@ -1,0 +1,44 @@
+$blue: #65abd0;
+$grey: #c6ccd2;
+$light-black: #494949;
+$dark-grey: #b4bbc2;
+$smallest-radius: 6px;
+$medium-font: 16px;
+
+.c-comments
+{
+    display: flex;
+
+    padding: 36px 120px;
+
+    justify-content: space-around;
+}
+
+.c-comment
+{
+    width: 50%;
+    height: 150px;
+}
+
+.c-comment-field
+{
+    font-family: 'Cabin', Arial, sans-serif;
+    font-size: $medium-font;
+    font-weight: bold;
+
+    padding: 10px;
+
+    color: $light-black;
+    border: 2px solid $grey;
+    border-radius: $smallest-radius;
+}
+
+.c-comment-field:focus
+{
+    border-color: $blue;
+}
+
+.c-comment-field.c--focus
+{
+    border-color: $blue;
+}
