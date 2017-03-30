@@ -1,0 +1,179 @@
+$green: #24aa98;
+$blue: #65abd0;
+$orange: #d9c26c;
+$black: #383737;
+$dark-dark-grey: #4c4b4b;
+$white: #fff;
+$big-font: 24px;
+$medium-font: 16px;
+$small-font: 14px;
+$smallest-radius: 6px;
+
+.c-popovers
+{
+    display: flex;
+
+    padding: 36px 120px;
+
+    justify-content: space-around;
+}
+
+.c-popover
+{
+    position: relative;
+
+    width: 49%;
+    height: 204px;
+
+    border-radius: $smallest-radius;
+    p
+    {
+        font-weight: bold;
+    }
+    a
+    {
+        font-size: $small-font;
+        font-weight: bold;
+
+        display: inline-block;
+
+        min-width: 17%;
+        margin-left: 25px;
+        padding: 13px;
+
+        text-align: center;
+        text-decoration: none;
+
+        border-radius: $smallest-radius;
+    }
+}
+
+.c-popover.c--light
+{
+    border: 2px solid $black;
+    p
+    {
+        color: $black;
+    }
+}
+
+.c-popover.c--dark
+{
+    background-color: $dark-dark-grey;
+    p
+    {
+        color: $white;
+    }
+}
+
+.c-popover-header
+{
+    font-size: $big-font;
+
+    padding: 25px 25px 15px 25px;
+}
+
+.c-popover-text
+{
+    font-size: $medium-font;
+
+    padding: 0 25px 20px 25px;
+}
+
+.c-popover-yes--light
+{
+    color: $white;
+    background-color: $green;
+}
+
+.c-popover-not--light
+{
+    color: $white;
+    background-color: $blue;
+}
+
+.c-popover-yes--dark
+{
+    color: $green;
+    border: 2px solid $green;
+}
+
+.c-popover-not--dark
+{
+    color: $orange;
+    border: 2px solid $orange;
+}
+
+.close-icon--light
+{
+    position: absolute;
+    top: 10%;
+    right: 6%;
+
+    cursor: pointer;
+}
+
+.close-icon--light:before
+{
+    position: absolute;
+
+    width: 15px;
+    height: 2px;
+
+    content: '';
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+    background-color: $black;
+}
+
+.close-icon--light:after
+{
+    position: absolute;
+
+    width: 15px;
+    height: 2px;
+
+    content: '';
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+
+    background-color: $black;
+}
+
+.close-icon--dark
+{
+    position: absolute;
+    top: 10%;
+    right: 6%;
+
+    cursor: pointer;
+}
+
+.close-icon--dark:before
+{
+    position: absolute;
+
+    width: 15px;
+    height: 2px;
+
+    content: '';
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+    background-color: $white;
+}
+
+.close-icon--dark:after
+{
+    position: absolute;
+
+    width: 15px;
+    height: 2px;
+
+    content: '';
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+
+    background-color: $white;
+}
