@@ -25,7 +25,7 @@ $medium-font: 16px;
     display: flex;
     flex-direction: row;
 
-    width: 144px;
+    min-width: 144px;
 
     border-radius: $smallest-radius;
     background-color: $green;
@@ -35,8 +35,7 @@ $medium-font: 16px;
 {
     position: relative;
 
-    width: 47px;
-    height: 48px;
+    min-width: 47px;
 
     cursor: pointer;
 }
@@ -55,7 +54,7 @@ $medium-font: 16px;
 
 .c-message__alignment--center
 {
-    width: 50px;
+    min-width: 50px;
 
     border-right: 2px solid $border-green;
     border-left: 2px solid $border-green;
@@ -185,9 +184,7 @@ $medium-font: 16px;
     font-size: $medium-font;
     font-weight: bold;
 
-    display: inline-block;
-
-    width: 220px;
+    width: 74%;
     padding: 13px;
 
     color: $black;
@@ -244,7 +241,7 @@ $medium-font: 16px;
 
     display: inline-block;
 
-    width: 112px;
+    width: 29%;
 
     cursor: pointer;
     select
@@ -252,10 +249,11 @@ $medium-font: 16px;
         font-size: $medium-font;
         font-weight: bold;
 
-        width: 112px;
+        width: 100%;
         padding: 13px;
 
         cursor: pointer;
+        /*text-align: center;*/
 
         color: $white;
         border: 1px solid $green;
@@ -278,7 +276,7 @@ $medium-font: 16px;
 {
     position: absolute;
     top: 40%;
-    right: 8%;
+    right: 5%;
 
     width: 7px;
     height: 7px;
@@ -292,7 +290,7 @@ $medium-font: 16px;
 
 .c-message__choose-message
 {
-    width: 192px;
+    width: 50%;
     margin-left: -4px;
 
     border-left: none;
@@ -313,7 +311,7 @@ $medium-font: 16px;
 
     position: relative;
 
-    width: 60px;
+    min-width: 60px;
     padding: 15px 10px 15px 0;
 
     cursor: pointer;
