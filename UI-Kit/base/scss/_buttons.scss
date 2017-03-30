@@ -44,7 +44,7 @@ $big-radius: 30px;
 
 .c-btn__load-more
 {
-    width: 190px;
+    min-width: 190px;
 
     cursor: pointer;
 
@@ -79,7 +79,7 @@ $big-radius: 30px;
 
 .c-btn__logout
 {
-    width: 190px;
+    min-width: 190px;
 
     cursor: pointer;
 
@@ -104,7 +104,7 @@ $big-radius: 30px;
 {
     position: relative;
 
-    width: 60px;
+    min-width: 60px;
 
     cursor: pointer;
 
@@ -153,7 +153,7 @@ $big-radius: 30px;
 
 .c-btn__learn-more
 {
-    width: 140px;
+    min-width: 140px;
 
     cursor: pointer;
 
@@ -188,7 +188,7 @@ $big-radius: 30px;
 
 .c-btn__install
 {
-    width: 140px;
+    min-width: 140px;
 
     cursor: pointer;
 
@@ -213,7 +213,7 @@ $big-radius: 30px;
 {
     position: relative;
 
-    width: 48px;
+    min-width: 48px;
 
     cursor: pointer;
 
@@ -276,7 +276,7 @@ $big-radius: 30px;
 {
     position: relative;
 
-    width: 48px;
+    min-width: 48px;
 
     cursor: pointer;
 
@@ -316,7 +316,7 @@ $big-radius: 30px;
 
     display: inline-block;
 
-    width: 75px;
+    min-width: 75px;
 
     cursor: pointer;
 
@@ -376,7 +376,7 @@ $big-radius: 30px;
 
 .c-btn__start
 {
-    width: 120px;
+    min-width: 120px;
 
     cursor: pointer;
 
@@ -411,7 +411,7 @@ $big-radius: 30px;
 
 .c-btn__free-trial
 {
-    width: 120px;
+    min-width: 120px;
 
     cursor: pointer;
 
@@ -436,8 +436,7 @@ $big-radius: 30px;
 {
     position: relative;
 
-    width: 36px;
-    height: 36px;
+    min-width: 36px;
 
     cursor: pointer;
 
@@ -500,7 +499,7 @@ $big-radius: 30px;
 {
     position: relative;
 
-    width: 36px;
+    min-width: 36px;
 
     cursor: pointer;
 
@@ -540,7 +539,7 @@ $big-radius: 30px;
     display: flex;
     flex-direction: row;
 
-    width: 75px;
+    min-width: 75px;
 
     border-radius: $smallest-radius;
     background-color: $blue;
@@ -550,8 +549,7 @@ $big-radius: 30px;
 {
     position: relative;
 
-    width: 37px;
-    height: 36px;
+    min-width: 37px;
 
     cursor: pointer;
 }
@@ -613,7 +611,7 @@ $big-radius: 30px;
 
     display: inline-block;
 
-    width: 90px;
+    min-width: 90px;
 
     cursor: pointer;
 
