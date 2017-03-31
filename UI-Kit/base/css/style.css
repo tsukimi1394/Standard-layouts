@@ -1143,6 +1143,198 @@ body {
 .c-comment-field.c--focus {
   border-color: #65abd0; }
 
+.c-settings {
+  padding: 36px 120px; }
+
+.c-settings__select.c--inactive {
+  width: 220px;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 13px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 6px;
+  background-color: #24aa98;
+  margin-bottom: 25px; }
+
+.c-settings__select.c--inactive:after {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  width: 7px;
+  height: 7px;
+  content: '';
+  transform: rotate(135deg);
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  cursor: pointer; }
+
+.c-settings__select.c--active {
+  width: 220px;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 6px;
+  margin-bottom: 25px; }
+  .c-settings__select.c--active ul {
+    width: 100%; }
+  .c-settings__select.c--active li:first-of-type {
+    background-color: #24aa98;
+    padding: 13px;
+    border-radius: 6px 6px 0 0; }
+  .c-settings__select.c--active li:not(first-of-type) {
+    background-color: #1a9385;
+    padding: 13px;
+    border-top: 1px solid #1a877b; }
+  .c-settings__select.c--active li:last-of-type {
+    border-radius: 0 0 6px 6px; }
+
+.c-settings__select.c--active:after {
+  position: absolute;
+  top: 12%;
+  right: 10%;
+  width: 7px;
+  height: 7px;
+  content: '';
+  transform: rotate(-45deg);
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  cursor: pointer; }
+
+.c-settings__radio-check {
+  font-size: 16px;
+  font-weight: bold; }
+
+.c-settings__radio {
+  padding: 13px;
+  position: relative; }
+  .c-settings__radio input[type='radio'] {
+    opacity: 0; }
+  .c-settings__radio input[type='radio'] + span {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 10px;
+    width: 100%;
+    height: 70%;
+    cursor: pointer;
+    background: url(../images/radio.png) no-repeat;
+    background-position: 0 16px; }
+  .c-settings__radio input[type='radio']:checked + span {
+    z-index: -1;
+    background-position: 0 -16px;
+    top: 16px; }
+  .c-settings__radio input[type='radio']:disabled ~ label {
+    color: #c6ccd2; }
+  .c-settings__radio label {
+    padding-left: 13px; }
+
+.c-settings__check {
+  padding: 13px;
+  position: relative; }
+  .c-settings__check input[type='checkbox'] {
+    opacity: 0; }
+  .c-settings__check input[type='checkbox'] + span {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 10px;
+    width: 100%;
+    height: 70%;
+    cursor: pointer;
+    background: url(../images/checkbox.png) no-repeat;
+    background-position: 0 16px; }
+  .c-settings__check input[type='checkbox']:checked + span {
+    z-index: -1;
+    background-position: 0 -16px;
+    top: 16px; }
+  .c-settings__check input[type='checkbox']:disabled ~ label {
+    color: #c6ccd2; }
+  .c-settings__check label {
+    padding-left: 13px; }
+
+.c-on-off--light input[type='radio'] {
+  opacity: 0; }
+
+.c-on-off--light label {
+  position: relative;
+  display: block;
+  width: 72px;
+  height: 36px;
+  padding: 7px;
+  border-radius: 20px;
+  color: #24aa98;
+  border: 2px solid #c6ccd2;
+  font-weight: bold; }
+
+.c-on-off--light label:before {
+  content: "Off";
+  position: absolute;
+  right: 10px;
+  color: #c6ccd2; }
+
+.c-on-off--light label:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  background: #c6ccd2;
+  transition: .5s; }
+
+.c-on-off--light input[type='radio']:checked ~ label:after {
+  left: 33px;
+  background-color: #24aa98; }
+
+.c-on-off--light input[type='radio']:checked ~ label {
+  border-color: #24aa98; }
+
+.c-on-off--dark input[type='radio'] {
+  opacity: 0; }
+
+.c-on-off--dark label {
+  position: relative;
+  display: block;
+  width: 72px;
+  height: 36px;
+  padding: 7px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #c6ccd2;
+  border: 2px solid #c6ccd2;
+  font-weight: bold; }
+
+.c-on-off--dark label:before {
+  content: "Off";
+  position: absolute;
+  right: 10px;
+  color: #fff; }
+
+.c-on-off--dark label:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  background: #fff;
+  transition: .5s; }
+
+.c-on-off--dark input[type='radio']:checked ~ label:after {
+  left: 33px; }
+
+.c-on-off--dark input[type='radio']:checked ~ label {
+  border-color: #24aa98;
+  background-color: #24aa98; }
+
 .c-table {
   display: -ms-flexbox;
   display: flex;
