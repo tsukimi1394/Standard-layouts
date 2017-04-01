@@ -6,252 +6,625 @@ $light-grey: #dee2e7;
 $grey: #c6ccd2;
 $black: #383737;
 $white: #fff;
-
 $smallest-radius: 6px;
 $small-radius: 20px;
-
+$medium-radius: 24px;
+$big-radius: 30px;
 $medium-font: 16px;
 $small-font: 14px;
 
-.c-settings {
-	padding: 36px 120px;
+.c-settings
+{
+    display: flex;
+
+    padding: 36px 120px;
+
+    justify-content: space-around;
 }
 
-.c-settings__select.c--inactive {
-	width: 220px;
-	position: relative;
-	font-size: $medium-font;
-	font-weight: bold;
-	padding: 13px;
-	cursor: pointer;
-	color: $white;
-	border-radius: 6px;
-	background-color: $green;
-	margin-bottom: 25px;
+.c-settings__select
+{
+    width: 23%;
+}
+
+.c-settings__select.c--inactive
+{
+    font-size: $medium-font;
+    font-weight: bold;
+
+    position: relative;
+
+    width: 220px;
+    margin-bottom: 25px;
+    padding: 13px;
+
+    cursor: pointer;
+
+    color: $white;
+    border-radius: 6px;
+    background-color: $green;
 }
 
 .c-settings__select.c--inactive:after
 {
-	position: absolute;
-	top: 40%;
-	right: 10%;
+    position: absolute;
+    top: 40%;
+    right: 10%;
 
-	width: 7px;
-	height: 7px;
+    width: 7px;
+    height: 7px;
 
-	content: '';
-	transform: rotate(135deg);
+    content: '';
+    cursor: pointer;
+    transform: rotate(135deg);
 
-	border-top: solid 2px $white;
-	border-right: solid 2px $white;
-	cursor: pointer;
+    border-top: solid 2px $white;
+    border-right: solid 2px $white;
 }
 
-.c-settings__select.c--active {
-	width: 220px;
-	position: relative;
-	font-size: $medium-font;
-	font-weight: bold;
-	cursor: pointer;
-	color: $white;
-	border-radius: 6px;
-	
-	ul {
-		width: 100%;
-	}
+.c-settings__select.c--active
+{
+    font-size: $medium-font;
+    font-weight: bold;
 
-	li:first-of-type {
-		background-color: $green;
-		padding: 13px;
-		border-radius: $smallest-radius $smallest-radius 0 0;
-	}
+    position: relative;
 
-	li:not(first-of-type) {
-		background-color: $dark-green;
-		padding: 13px;
-		border-top: 1px solid $border-dark-green;
-	}
+    width: 220px;
+    margin-bottom: 25px;
 
-	li:last-of-type {
-		border-radius: 0 0 $smallest-radius $smallest-radius;
-	}
-	
-	margin-bottom: 25px;
+    cursor: pointer;
+
+    color: $white;
+    border-radius: 6px;
+    ul
+    {
+        width: 100%;
+    }
+    li:first-of-type
+    {
+        padding: 13px;
+
+        border-radius: $smallest-radius $smallest-radius 0 0;
+        background-color: $green;
+    }
+    li:not(first-of-type)
+    {
+        padding: 13px;
+
+        border-top: 1px solid $border-dark-green;
+        background-color: $dark-green;
+    }
+    li:last-of-type
+    {
+        border-radius: 0 0 $smallest-radius $smallest-radius;
+    }
 }
 
 .c-settings__select.c--active:after
 {
-	position: absolute;
-	top: 12%;
-	right: 10%;
+    position: absolute;
+    top: 12%;
+    right: 10%;
 
-	width: 7px;
-	height: 7px;
+    width: 7px;
+    height: 7px;
 
-	content: '';
-	transform: rotate(-45deg);
+    content: '';
+    cursor: pointer;
+    transform: rotate(-45deg);
 
-	border-top: solid 2px $white;
-	border-right: solid 2px $white;
-	cursor: pointer;
+    border-top: solid 2px $white;
+    border-right: solid 2px $white;
 }
 
-.c-settings__radio-check {
-	font-size: $medium-font;
-	font-weight: bold;
+.c-settings__radio-check
+{
+    font-size: $medium-font;
+    font-weight: bold;
+
+    width: 27%;
+    margin-left: 15px;
 }
 
-.c-settings__radio {
-	padding: 13px;
-	position: relative;
-
-	input[type='radio'] {
-		opacity: 0;
-	}
-
-	input[type='radio'] + span {
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		left: 10px;
-		width: 100%;
-		height: 70%;
-		cursor: pointer;
-		background: url(../images/radio.png) no-repeat;
-		background-position: 0 16px;
-	}
-
-	input[type='radio']:checked + span {
-		z-index: -1;
-		background-position: 0 -16px;
-		top: 16px;
-	}
-	
-	input[type='radio']:disabled ~ label {
-		color: $grey;
-	}
-
-	label {
-		padding-left: 13px;
-	}
+.c-setting__radio
+{
+    margin-top: -13px;
 }
 
-.c-settings__check {
-	padding: 13px;
-	position: relative;
+.c-settings__radio
+{
+    position: relative;
 
-	input[type='checkbox'] {
-		opacity: 0;
-	}
+    padding: 13px;
+    input[type='radio']
+    {
+        opacity: 0;
+    }
+    input[type='radio'] + span
+    {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 10px;
 
-	input[type='checkbox'] + span {
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		left: 10px;
-		width: 100%;
-		height: 70%;
-		cursor: pointer;
-		background: url(../images/checkbox.png) no-repeat;
-		background-position: 0 16px;
-	}
+        width: 100%;
+        height: 70%;
 
-	input[type='checkbox']:checked + span {
-		z-index: -1;
-		background-position: 0 -16px;
-		top: 16px;
-	}
-	
-	input[type='checkbox']:disabled ~ label {
-		color: $grey;
-	}
+        cursor: pointer;
 
-	label {
-		padding-left: 13px;
-	}
+        background: url(../images/radio.png) no-repeat;
+        background-position: 0 16px;
+    }
+    input[type='radio']:checked + span
+    {
+        z-index: -1;
+        top: 16px;
+
+        background-position: 0 -16px;
+    }
+    input[type='radio']:disabled ~ label
+    {
+        color: $grey;
+    }
+    label
+    {
+        padding-left: 13px;
+    }
 }
 
-.c-on-off--light {
-	input[type='radio'] {
-		opacity: 0;
-	}
-	label {
-		position: relative;
-		display: block;
-		width: 72px;
-		height: 36px;
-		padding: 7px;
-		border-radius: $small-radius;
-		color: $green;
-		border: 2px solid $grey;
-		font-weight: bold;
-	}
-	label:before {
-		content: "Off";
-		position: absolute;
-		right: 10px;
-		color: $grey;
-	}
-	label:after {
-		content: "";
-		position: absolute;
-		left: 3px; 
-		top: 2px;
-		display: block;
-		width: 28px;
-		height: 28px;
-		border-radius: 100%;
-		background: $grey;
-		transition: .5s;
-	}
-	input[type='radio']:checked ~ label:after {
-		left: 33px;
-		background-color: $green;
-	}
-	input[type='radio']:checked ~ label {
-		border-color: $green;
-	}
+.c-settings__check
+{
+    position: relative;
+
+    padding: 13px;
+    input[type='checkbox']
+    {
+        opacity: 0;
+    }
+    input[type='checkbox'] + span
+    {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 10px;
+
+        width: 100%;
+        height: 70%;
+
+        cursor: pointer;
+
+        background: url(../images/checkbox.png) no-repeat;
+        background-position: 0 16px;
+    }
+    input[type='checkbox']:checked + span
+    {
+        z-index: -1;
+        top: 16px;
+
+        background-position: 0 -16px;
+    }
+    input[type='checkbox']:disabled ~ label
+    {
+        color: $grey;
+    }
+    label
+    {
+        padding-left: 13px;
+    }
 }
 
-.c-on-off--dark {
-	input[type='radio'] {
-		opacity: 0;
-	}
-	label {
-		position: relative;
-		display: block;
-		width: 72px;
-		height: 36px;
-		padding: 7px;
-		border-radius: $small-radius;
-		color: $white;
-		background-color: $grey;
-		border: 2px solid $grey;
-		font-weight: bold;
-	}
-	label:before {
-		content: "Off";
-		position: absolute;
-		right: 10px;
-		color: $white;
-	}
-	label:after {
-		content: "";
-		position: absolute;
-		left: 3px; 
-		top: 2px;
-		display: block;
-		width: 28px;
-		height: 28px;
-		border-radius: 100%;
-		background: $white;
-		transition: .5s;
-	}
-	input[type='radio']:checked ~ label:after {
-		left: 33px;
-	}
-	input[type='radio']:checked ~ label {
-		border-color: $green;
-		background-color: $green;
-	}
+.c-settings__different
+{
+    width: 50%;
+}
+
+.c-interval
+{
+    width: 422px;
+    height: 16px;
+    margin: 20px;
+    margin-top: -10px;
+    input[type='range']
+    {
+        width: 100%;
+        height: 2px;
+
+        border-radius: 1px;
+        background-color: $grey;
+
+        -webkit-appearance: none;
+    }
+    input[type='range']::-moz-range-track
+    {
+        height: 2px;
+
+        border: none;
+        border-radius: 1px;
+        background-color: $grey;
+    }
+    input[type='range']::-moz-range-thumb
+    {
+        width: 14px;
+        height: 14px;
+
+        cursor: pointer;
+
+        border: 2px solid $white;
+        border-radius: 100%;
+        background-color: $orange;
+    }
+    input[type=range]::-webkit-slider-thumb
+    {
+        width: 14px;
+        height: 14px;
+
+        cursor: pointer;
+
+        border: 2px solid $white;
+        border-radius: 100%;
+        background-color: $orange;
+
+        -webkit-appearance: none;
+    }
+    input[type='range']::-ms-fill-lower
+    {
+        background-color: $orange;
+    }
+    input[type='range']::-ms-fill-upper
+    {
+        background-color: $grey;
+    }
+    input[type='range']::-ms-track
+    {
+        height: 2px;
+
+        border: none;
+        border-radius: 1px;
+        background-color: $grey;
+    }
+    input[type='range']::-ms-thumb
+    {
+        width: 14px;
+        height: 214px;
+
+        cursor: pointer;
+
+        border: 2px solid $white;
+        border-radius: 100%;
+        background-color: $orange;
+    }
+}
+
+.another-wrapper
+{
+    display: flex;
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.c-on-off
+{
+    width: 20%;
+}
+
+.c-on-off--light
+{
+    input[type='radio']
+    {
+        opacity: 0;
+    }
+    label
+    {
+        font-weight: bold;
+
+        position: relative;
+
+        display: block;
+
+        width: 72px;
+        height: 36px;
+        padding: 7px;
+
+        color: $green;
+        border: 2px solid $grey;
+        border-radius: $small-radius;
+    }
+    label:before
+    {
+        position: absolute;
+        right: 10px;
+
+        content: 'Off';
+
+        color: $grey;
+    }
+    label:after
+    {
+        position: absolute;
+        top: 2px;
+        left: 3px;
+
+        display: block;
+
+        width: 28px;
+        height: 28px;
+
+        content: '';
+        transition: .5s;
+
+        border-radius: 100%;
+        background: $grey;
+    }
+    input[type='radio']:checked ~ label:after
+    {
+        left: 33px;
+
+        background-color: $green;
+    }
+    input[type='radio']:checked ~ label
+    {
+        border-color: $green;
+    }
+}
+
+.c-on-off--dark
+{
+    input[type='radio']
+    {
+        opacity: 0;
+    }
+    label
+    {
+        font-weight: bold;
+
+        position: relative;
+
+        display: block;
+
+        width: 72px;
+        height: 36px;
+        padding: 7px;
+
+        color: $white;
+        border: 2px solid $grey;
+        border-radius: $small-radius;
+        background-color: $grey;
+    }
+    label:before
+    {
+        position: absolute;
+        right: 10px;
+
+        content: 'Off';
+
+        color: $white;
+    }
+    label:after
+    {
+        position: absolute;
+        top: 2px;
+        left: 3px;
+
+        display: block;
+
+        width: 28px;
+        height: 28px;
+
+        content: '';
+        transition: .5s;
+
+        border-radius: 100%;
+        background: $white;
+    }
+    input[type='radio']:checked ~ label:after
+    {
+        left: 33px;
+    }
+    input[type='radio']:checked ~ label
+    {
+        border-color: $green;
+        background-color: $green;
+    }
+}
+
+.other-wrapper
+{
+    width: 80%;
+}
+
+.c-one-range
+{
+    width: 300px;
+    height: 16px;
+    input[type='range']
+    {
+        width: 100%;
+        height: 2px;
+
+        border-radius: 1px;
+        background-color: $grey;
+
+        -webkit-appearance: none;
+    }
+    input[type='range']::-moz-range-track
+    {
+        height: 2px;
+
+        border: none;
+        border-radius: 1px;
+        background-color: $grey;
+    }
+    input[type='range']::-moz-range-thumb
+    {
+        width: 14px;
+        height: 14px;
+
+        cursor: pointer;
+
+        border: 2px solid $white;
+        border-radius: 100%;
+        background-color: $blue;
+    }
+    input[type=range]::-webkit-slider-thumb
+    {
+        width: 14px;
+        height: 14px;
+
+        cursor: pointer;
+
+        border: 2px solid $white;
+        border-radius: 100%;
+        background-color: $blue;
+
+        -webkit-appearance: none;
+    }
+    input[type='range']::-ms-fill-lower
+    {
+        background-color: $blue;
+    }
+    input[type='range']::-ms-fill-upper
+    {
+        background-color: $grey;
+    }
+    input[type='range']::-ms-track
+    {
+        height: 2px;
+
+        border: none;
+        border-radius: 1px;
+        background-color: $grey;
+    }
+    input[type='range']::-ms-thumb
+    {
+        width: 14px;
+        height: 214px;
+
+        cursor: pointer;
+
+        border: 2px solid $white;
+        border-radius: 100%;
+        background-color: $blue;
+    }
+}
+
+.c-loader-wrapper
+{
+    width: 300px;
+    margin: 15px;
+}
+
+.c-loader
+{
+    width: 100%;
+    padding: 2px 4px;
+
+    border-radius: $medium-radius;
+    background-color: $grey;
+}
+
+.c-loader-inner
+{
+    font-size: $small-font;
+    font-weight: bold;
+
+    width: 64%;
+    padding: 10px;
+
+    text-align: right;
+
+    color: $white;
+    border-radius: $small-radius;
+    background: $green;
+}
+
+.c-tooltips
+{
+    display: flex;
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.c-tooltip
+{
+    font-size: $small-font;
+    font-weight: bold;
+
+    position: relative;
+
+    width: 120px;
+    height: 36px;
+    margin: 15px;
+    padding: 10px 5px;
+
+    text-align: center;
+
+    color: $white;
+    border-radius: $smallest-radius;
+    background: $black;
+}
+
+.c-tooltip.c--top:before
+{
+    position: absolute;
+    top: 100%;
+    left: 45%;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border-top: 7px solid $black;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.c-tooltip.c--left:before
+{
+    position: absolute;
+    top: 42%;
+    right: 100%;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border-top: 5px solid transparent;
+    border-right: 7px solid $black;
+    border-bottom: 5px solid transparent;
+}
+
+.c-tooltip.c--right:before
+{
+    position: absolute;
+    top: 42%;
+    left: 100%;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid $black;
+}
+
+.c-tooltip.c--bottom:before
+{
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border-right: 5px solid transparent;
+    border-bottom: 7px solid $black;
+    border-left: 5px solid transparent;
 }
