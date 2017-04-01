@@ -1150,24 +1150,66 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
-.c-settings__select {
+.c-settings__select-wrapper {
   width: 23%; }
+
+.c-settings__select-wrapper--inactive {
+  width: 220px;
+  margin-bottom: 24px; }
+
+.c-settings__select-wrapper--active {
+  width: 220px; }
 
 .c-settings__select.c--inactive {
   font-size: 16px;
   font-weight: bold;
   position: relative;
-  width: 220px;
-  margin-bottom: 25px;
-  padding: 13px;
-  cursor: pointer;
-  color: #fff;
+  width: 100%;
+  list-style: none;
   border-radius: 6px;
   background-color: #24aa98; }
+  .c-settings__select.c--inactive li {
+    position: relative;
+    display: block; }
+    .c-settings__select.c--inactive li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff; }
+    .c-settings__select.c--inactive li .first:hover {
+      color: #fff;
+      border-radius: 6px 6px 0 0;
+      background: #24aa98; }
+  .c-settings__select.c--inactive ul {
+    position: absolute;
+    left: -9999px;
+    width: 100%;
+    list-style: none;
+    opacity: 0; }
+    .c-settings__select.c--inactive ul li {
+      border-top: 1px solid #1a877b; }
+    .c-settings__select.c--inactive ul li:first-of-type {
+      border-top: none; }
+    .c-settings__select.c--inactive ul a {
+      display: block;
+      white-space: nowrap; }
+  .c-settings__select.c--inactive li:hover ul {
+    z-index: 1;
+    left: 0;
+    opacity: 1; }
+    .c-settings__select.c--inactive li:hover ul a {
+      text-decoration: none; }
+    .c-settings__select.c--inactive li:hover ul li:last-of-type a {
+      border-radius: 0 0 6px 6px; }
+  .c-settings__select.c--inactive li:hover .first {
+    border-radius: 6px 6px 0 0;
+    background: #24aa98; }
+  .c-settings__select.c--inactive li:hover a {
+    background: #1a9385; }
 
 .c-settings__select.c--inactive:after {
   position: absolute;
-  top: 40%;
+  top: 16px;
   right: 10%;
   width: 7px;
   height: 7px;
@@ -1177,31 +1219,41 @@ body {
   border-top: solid 2px #fff;
   border-right: solid 2px #fff; }
 
+.c-settings__select.c--inactive:hover:after {
+  transform: rotate(-45deg); }
+
 .c-settings__select.c--active {
   font-size: 16px;
   font-weight: bold;
   position: relative;
-  width: 220px;
-  margin-bottom: 25px;
-  cursor: pointer;
-  color: #fff;
-  border-radius: 6px; }
+  width: 100%;
+  list-style: none;
+  border-radius: 6px;
+  background-color: #24aa98; }
+  .c-settings__select.c--active li {
+    position: relative;
+    display: block; }
+    .c-settings__select.c--active li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff; }
   .c-settings__select.c--active ul {
-    width: 100%; }
-  .c-settings__select.c--active li:first-of-type {
-    padding: 13px;
-    border-radius: 6px 6px 0 0;
-    background-color: #24aa98; }
-  .c-settings__select.c--active li:not(first-of-type) {
-    padding: 13px;
-    border-top: 1px solid #1a877b;
+    width: 100%;
+    list-style: none;
+    border-radius: 0 0 6px 6px;
     background-color: #1a9385; }
-  .c-settings__select.c--active li:last-of-type {
-    border-radius: 0 0 6px 6px; }
+    .c-settings__select.c--active ul li {
+      border-top: 1px solid #1a877b; }
+    .c-settings__select.c--active ul li:first-of-type {
+      border-top: none; }
+    .c-settings__select.c--active ul a {
+      display: block;
+      white-space: nowrap; }
 
 .c-settings__select.c--active:after {
   position: absolute;
-  top: 12%;
+  top: 16px;
   right: 10%;
   width: 7px;
   height: 7px;
