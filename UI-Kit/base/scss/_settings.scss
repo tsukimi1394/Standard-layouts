@@ -22,11 +22,21 @@ $small-font: 14px;
     justify-content: space-around;
 }
 
-.c-settings__select
+.c-settings__select-wrapper
 {
     width: 23%;
 }
 
+
+.c-settings__select-wrapper--inactive
+{
+    width: 220px;
+    margin-bottom: 24px;
+}
+.c-settings__select-wrapper--active
+{
+    width: 220px;
+}
 .c-settings__select.c--inactive
 {
     font-size: $medium-font;
@@ -34,21 +44,89 @@ $small-font: 14px;
 
     position: relative;
 
-    width: 220px;
-    margin-bottom: 25px;
-    padding: 13px;
+    width: 100%;
 
-    cursor: pointer;
+    list-style: none;
 
-    color: $white;
-    border-radius: 6px;
+    border-radius: $smallest-radius;
     background-color: $green;
+    li
+    {
+        position: relative;
+
+        display: block;
+        a
+        {
+            display: block;
+
+            padding: 10px;
+
+            text-decoration: none;
+
+            color: $white;
+        }
+        .first:hover
+        {
+            color: $white;
+            border-radius: $smallest-radius $smallest-radius 0 0;
+            background: $green;
+        }
+    }
+    ul
+    {
+        position: absolute;
+        left: -9999px;
+
+        width: 100%;
+
+        list-style: none;
+
+        opacity: 0;
+        li
+        {
+            border-top: 1px solid $border-dark-green;
+        }
+        li:first-of-type
+        {
+            border-top: none;
+        }
+        a
+        {
+            display: block;
+
+            white-space: nowrap;
+        }
+    }
+    li:hover ul
+    {
+        z-index: 1;
+        left: 0;
+
+        opacity: 1;
+        a
+        {
+            text-decoration: none;
+        }
+        li:last-of-type a
+        {
+            border-radius: 0 0 $smallest-radius $smallest-radius;
+        }
+    }
+    li:hover .first
+    {
+        border-radius: $smallest-radius $smallest-radius 0 0;
+        background: $green;
+    }
+    li:hover a
+    {
+        background: $dark-green;
+    }
 }
 
 .c-settings__select.c--inactive:after
 {
     position: absolute;
-    top: 40%;
+    top: 16px;
     right: 10%;
 
     width: 7px;
@@ -62,6 +140,11 @@ $small-font: 14px;
     border-right: solid 2px $white;
 }
 
+.c-settings__select.c--inactive:hover:after
+{
+    transform: rotate(-45deg);
+}
+
 .c-settings__select.c--active
 {
     font-size: $medium-font;
@@ -69,41 +152,57 @@ $small-font: 14px;
 
     position: relative;
 
-    width: 220px;
-    margin-bottom: 25px;
+    width: 100%;
 
-    cursor: pointer;
+    list-style: none;
 
-    color: $white;
-    border-radius: 6px;
+    border-radius: $smallest-radius;
+    background-color: $green;
+    li
+    {
+        position: relative;
+
+        display: block;
+        a
+        {
+            display: block;
+
+            padding: 10px;
+
+            text-decoration: none;
+
+            color: $white;
+        }
+    }
     ul
     {
         width: 100%;
-    }
-    li:first-of-type
-    {
-        padding: 13px;
 
-        border-radius: $smallest-radius $smallest-radius 0 0;
-        background-color: $green;
-    }
-    li:not(first-of-type)
-    {
-        padding: 13px;
+        list-style: none;
 
-        border-top: 1px solid $border-dark-green;
-        background-color: $dark-green;
-    }
-    li:last-of-type
-    {
         border-radius: 0 0 $smallest-radius $smallest-radius;
+        background-color: $dark-green;
+        li
+        {
+            border-top: 1px solid $border-dark-green;
+        }
+        li:first-of-type
+        {
+            border-top: none;
+        }
+        a
+        {
+            display: block;
+
+            white-space: nowrap;
+        }
     }
 }
 
 .c-settings__select.c--active:after
 {
     position: absolute;
-    top: 12%;
+    top: 16px;
     right: 10%;
 
     width: 7px;
