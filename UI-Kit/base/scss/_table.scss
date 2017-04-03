@@ -57,6 +57,10 @@ $smallest-radius: 6px;
         color: $white;
         background-color: $blue;
     }
+    td.hover {
+    	color: $white;
+    	background-color: $blue;
+    }
 }
 
 .c-table__music-wrapper
@@ -73,6 +77,9 @@ $smallest-radius: 6px;
     border-collapse: collapse;
 
     text-align: left;
+    .active {
+    	color: $green;
+    }
     th
     {
         font-size: $small-font;
