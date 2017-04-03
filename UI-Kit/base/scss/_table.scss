@@ -8,127 +8,93 @@ $medium-font: 16px;
 $small-font: 14px;
 $smallest-radius: 6px;
 
-.c-table
-{
-    display: flex;
-
-    padding: 36px 120px;
-
-    justify-content: space-around;
+.c-table {
+	display: flex;
+	justify-content: space-around;
+	padding: 36px 120px;
 }
 
-.c-table__categories-wrapper
-{
-    width: 160px;
+.c-table__categories-wrapper {
+	width: 160px;
 }
 
-.c-table__categories-header-border
-{
-    border-top: 2px solid $light-grey;
+.c-table__categories-header-border {
+	border-top: 2px solid $light-grey;
 }
 
-.c-table__categories
-{
-    font-weight: bold;
-
-    width: 100%;
-
-    text-align: left;
-    th
-    {
-        font-size: $small-font;
-
-        padding: 10px;
-
-        color: $dark-grey;
-        border-radius: $smallest-radius;
-    }
-    td
-    {
-        font-size: $medium-font;
-
-        padding: 10px;
-
-        color: $black;
-        border-radius: $smallest-radius;
-    }
-    td:hover
-    {
-        color: $white;
-        background-color: $blue;
-    }
-    td.hover {
-    	color: $white;
-    	background-color: $blue;
-    }
+.c-table__categories {
+	width: 100%;
+	text-align: left;
+	font-weight: bold;
+	border-collapse: collapse;
+	th {
+		padding: 10px;
+		border-radius: $smallest-radius;
+		font-size: $small-font;
+		color: $dark-grey;
+	}
+	td {
+		padding: 10px;
+		border-radius: $smallest-radius;
+		font-size: $medium-font;
+		color: $black;
+		&:hover {
+			color: $white;
+			background-color: $blue;
+		}
+		&.hover {
+			color: $white;
+			background-color: $blue;
+		}
+	}
 }
 
-.c-table__music-wrapper
-{
-    width: 700px;
+.c-table__music-wrapper {
+	width: 700px;
 }
 
-.c-table__music
-{
-    font-weight: bold;
-
-    width: 100%;
-
-    border-collapse: collapse;
-
-    text-align: left;
-    .active {
-    	color: $green;
-    }
-    th
-    {
-        font-size: $small-font;
-
-        padding: 15px;
-
-        color: $dark-grey;
-        border-radius: $smallest-radius;
-    }
-    td
-    {
-        font-size: $medium-font;
-
-        padding: 15px;
-
-        color: $black;
-        border-top: 2px solid $light-grey;
-        border-radius: $smallest-radius;
-    }
-    td:first-child
-    {
-        color: $dark-grey;
-    }
-    form
-    {
-        position: relative;
-    }
-    input[type='checkbox']
-    {
-        opacity: 0;
-    }
-    input[type='checkbox'] + span
-    {
-        position: absolute;
-        z-index: -1;
-        top: 3px;
-        left: 0;
-
-        width: 100%;
-        height: 85%;
-
-        cursor: pointer;
-
-        background: url(../images/checkbox.png) no-repeat;
-    }
-    input[type='checkbox']:checked + span
-    {
-        z-index: -1;
-
-        background-position: 0 -16px;
-    }
+.c-table__music {
+	width: 100%;
+	border-collapse: collapse;
+	font-weight: bold;
+	text-align: left;
+	color: $black;
+	th {
+		padding: 15px;
+		border-radius: $smallest-radius;
+		font-size: $small-font;
+		color: $dark-grey;
+	}
+	td {
+		padding: 15px;
+		border-top: 2px solid $light-grey;
+		border-radius: $smallest-radius;
+		font-size: $medium-font;
+		&:first-child {
+			color: $dark-grey;
+		}
+	}
+	form {
+		position: relative;
+	}
+	input[type='checkbox'] {
+		opacity: 0;
+	}
+	input[type='checkbox'] + span {
+		position: absolute;
+		z-index: -1;
+		top: 3px;
+		left: 0;
+		width: 100%;
+		height: 85%;
+		background: url(../images/checkbox.png) no-repeat;
+		cursor: pointer;
+	}
+	input[type='checkbox']:checked + span {
+		z-index: -1;
+		background-position: 0 -16px;
+	}
+	.active {
+		color: $green;
+	}
 }
