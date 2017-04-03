@@ -151,8 +151,8 @@ $small-font: 14px;
     font-size: $medium-font;
     font-weight: bold;
 
-    width: 78%;
-    padding: 13px 13px 13px 0;
+    width: 100%;
+    padding: 13px 13px 13px 33px;
 
     color: $light-black;
 }
@@ -167,11 +167,9 @@ $small-font: 14px;
 .c-inputs__search-field.c--outfocus-first
 {
     border: 2px solid $grey;
-}
-
-.c-inputs__search-submit.c--outfocus-first
-{
-    border: 2px solid $grey;
+    &:focus {
+    	border-color: $blue;
+    }
 }
 
 .c-inputs__search-field.c--focus-first
@@ -179,24 +177,9 @@ $small-font: 14px;
     border: 2px solid $blue;
 }
 
-.c-inputs__search-submit.c--focus-first
-{
-    border: 2px solid $blue;
-}
-
-.c-inputs__search-submit.c--round
-{
-    border-right: none;
-    border-radius: $medium-radius 0 0 $medium-radius;
-    background-color: $white;
-}
-
 .c-inputs__search-field.c--round
 {
-    width: 82%;
-
-    border-left: none;
-    border-radius: 0 $medium-radius $medium-radius 0;
+    border-radius: $medium-radius;
 }
 
 .search-icon
@@ -300,6 +283,7 @@ $small-font: 14px;
 .c-inputs__search-field.c--rectangular
 {
     padding-left: 14px;
+    width: 78%;
 
     border-right: none;
     border-radius: $smallest-radius 0 0 $smallest-radius;
@@ -453,8 +437,8 @@ $small-font: 14px;
     font-size: $small-font;
     font-weight: bold;
 
-    width: 78%;
-    padding: 9px 9px 9px 0;
+    width: 100%;
+    padding: 9px 9px 9px 29px;
 
     color: $light-black;
 }
@@ -469,11 +453,9 @@ $small-font: 14px;
 .c-inputs__search-field--small.c--outfocus-first
 {
     border: 2px solid $grey;
-}
-
-.c-inputs__search-submit--small.c--outfocus-first
-{
-    border: 2px solid $grey;
+    &:focus {
+    	border-color: $blue;
+    }
 }
 
 .c-inputs__search-field--small.c--focus-first
@@ -481,24 +463,11 @@ $small-font: 14px;
     border: 2px solid $blue;
 }
 
-.c-inputs__search-submit--small.c--focus-first
-{
-    border: 2px solid $blue;
-}
-
-.c-inputs__search-submit--small.c--round
-{
-    border-right: none;
-    border-radius: $medium-radius 0 0 $medium-radius;
-    background-color: $white;
-}
-
 .c-inputs__search-field--small.c--round
 {
-    width: 87%;
+    width: 100%;
 
-    border-left: none;
-    border-radius: 0 $medium-radius $medium-radius 0;
+    border-radius: $medium-radius;
 }
 
 .c-inputs__search-field--small.c--outfocus-second
@@ -517,7 +486,7 @@ $small-font: 14px;
 .c-inputs__search-field--small.c--rectangular
 {
     padding-left: 14px;
-
+		width: 78%;
     border-right: none;
     border-radius: $smallest-radius 0 0 $smallest-radius;
 }
