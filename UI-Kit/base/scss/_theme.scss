@@ -21,150 +21,180 @@ $dark-black: #262626;
 $white: #fff;
 $light-shadow: #27496d;
 $dark-shadow: #193047;
-
 $smallest-radius: 6px;
 $small-font: 14px;
 
-.t-theme
-{
-    display: flex;
-
-    padding: 96px 120px 36px;
-
-    justify-content: space-around;
+.t-theme {
+	display: flex;
+	justify-content: space-around;
+	padding: 96px 120px 36px;
 }
 
-.t-green,
-.t-blue,
-.t-orange,
-.t-red,
-.t-grey,
-.t-black
-{
-    width: 141px;
-    height: 121px;
-
-    border-radius: $smallest-radius;
-    background-color: $black;
+.t-green {
+	width: 141px;
+	height: 121px;
+	border-radius: $smallest-radius;
+	background-color: $black;
+	&:hover {
+		box-shadow: inset 0 0 0 1px $light-shadow, 0 5px 15px $dark-shadow;
+	}
 }
 
-.t-green:hover,
-.t-blue:hover,
-.t-orange:hover,
-.t-red:hover,
-.t-grey:hover,
-.t-black:hover
-{
-    box-shadow: inset 0 0 0 1px $light-shadow, 0 5px 15px $dark-shadow;
+.t-blue {
+	@extend .t-green;
 }
 
-.t-green__gradient,
-.t-blue__gradient,
-.t-orange__gradient,
-.t-red__gradient,
-.t-grey__gradient,
-.t-black__gradient
-{
-    width: 100%;
-    height: 48px;
-
-    border-radius: 4px 4px 0 0;
+.t-orange {
+	@extend .t-green;
 }
 
-.t-green__text,
-.t-blue__text,
-.t-orange__text,
-.t-red__text,
-.t-grey__text,
-.t-black__text
-{
-    p
-    {
-        font-size: $small-font;
-        font-weight: bold;
-        line-height: 1.5;
-
-        padding-top: 15px;
-        padding-left: 20px;
-
-        color: $white;
-    }
+.t-red {
+	@extend .t-green;
 }
 
-.t-green__gradient.t--color
-{
-    background-image: linear-gradient(to right, $light-green 33%, $green 33%, $green 66%, $dark-green 66%);
+.t-grey {
+	@extend .t-green;
 }
 
-.t-green__text.t--color
-{
-    span
-    {
-        color: $green;
-    }
+.t-black {
+	@extend .t-green;
 }
 
-.t-blue__gradient.t--color
-{
-    background-image: linear-gradient(to right, $light-blue 33%, $blue 33%, $blue 66%, $dark-blue 66%);
+.t-green__gradient {
+	width: 100%;
+	height: 48px;
+	border-radius: 4px 4px 0 0;
 }
 
-.t-blue__text.t--color
-{
-    span
-    {
-        color: $blue;
-    }
+.t-blue__gradient {
+	@extend .t-green__gradient;
 }
 
-.t-orange__gradient.t--color
-{
-    background-image: linear-gradient(to right, $light-orange 33%, $orange 33%, $orange 66%, $dark-orange 66%);
+.t-orange__gradient {
+	@extend .t-green__gradient;
 }
 
-.t-orange__text.t--color
-{
-    span
-    {
-        color: $orange;
-    }
+.t-red__gradient {
+	@extend .t-green__gradient;
 }
 
-.t-red__gradient.t--color
-{
-    background-image: linear-gradient(to right, $light-red 33%, $red 33%, $red 66%, $dark-red 66%);
+.t-grey__gradient {
+	@extend .t-green__gradient;
+}
+.t-black__gradient {
+	@extend .t-green__gradient;
 }
 
-.t-red__text.t--color
-{
-    span
-    {
-        color: $red;
-    }
+.t-green__text {
+	padding-top: 15px;
+	padding-left: 20px;
+	font-size: $small-font;
+	font-weight: bold;
+	line-height: 1.5;
+	color: $white;
 }
 
-.t-grey__gradient.t--color
-{
-    background-image: linear-gradient(to right, $light-grey 33%, $grey 33%, $grey 66%, $dark-grey 66%);
+.t-blue__text {
+	padding-top: 15px;
+	padding-left: 20px;
+	font-size: $small-font;
+	font-weight: bold;
+	line-height: 1.5;
+	color: $white;
 }
 
-.t-grey__text.t--color
-{
-    span
-    {
-        color: $grey-label;
-    }
+.t-orange__text {
+	padding-top: 15px;
+	padding-left: 20px;
+	font-size: $small-font;
+	font-weight: bold;
+	line-height: 1.5;
+	color: $white;
 }
 
-.t-black__gradient.t--color
-{
-    background-image: linear-gradient(to right, $light-black 33%, $black 33%, $black 66%, $dark-black 66%);
+.t-red__text {
+	padding-top: 15px;
+	padding-left: 20px;
+	font-size: $small-font;
+	font-weight: bold;
+	line-height: 1.5;
+	color: $white;
 }
 
-.t-black__text.t--color
-{
-    span
-    {
-        color: $black-label;
-    }
+.t-grey__text {
+	padding-top: 15px;
+	padding-left: 20px;
+	font-size: $small-font;
+	font-weight: bold;
+	line-height: 1.5;
+	color: $white;
+}
+
+.t-black__text {
+	padding-top: 15px;
+	padding-left: 20px;
+	font-size: $small-font;
+	font-weight: bold;
+	line-height: 1.5;
+	color: $white;
+}
+
+.t-green__gradient.t--color {
+	background-image: linear-gradient(to right, $light-green 33%, $green 33%, $green 66%, $dark-green 66%);
+}
+
+.t-green__text.t--color {
+	span {
+		color: $green;
+	}
+}
+
+.t-blue__gradient.t--color {
+	background-image: linear-gradient(to right, $light-blue 33%, $blue 33%, $blue 66%, $dark-blue 66%);
+}
+
+.t-blue__text.t--color {
+	span {
+		color: $blue;
+	}
+}
+
+.t-orange__gradient.t--color {
+	background-image: linear-gradient(to right, $light-orange 33%, $orange 33%, $orange 66%, $dark-orange 66%);
+}
+
+.t-orange__text.t--color {
+	span {
+		color: $orange;
+	}
+}
+
+.t-red__gradient.t--color {
+	background-image: linear-gradient(to right, $light-red 33%, $red 33%, $red 66%, $dark-red 66%);
+}
+
+.t-red__text.t--color {
+	span {
+		color: $red;
+	}
+}
+
+.t-grey__gradient.t--color {
+	background-image: linear-gradient(to right, $light-grey 33%, $grey 33%, $grey 66%, $dark-grey 66%);
+}
+
+.t-grey__text.t--color {
+	span {
+		color: $grey-label;
+	}
+}
+
+.t-black__gradient.t--color {
+	background-image: linear-gradient(to right, $light-black 33%, $black 33%, $black 66%, $dark-black 66%);
+}
+
+.t-black__text.t--color {
+	span {
+		color: $black-label;
+	}
 }
