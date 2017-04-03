@@ -1,14 +1,11 @@
-*
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-body
-{
-    font-family: 'Cabin', Arial, sans-serif;
-
-    max-width: 1180px;
-    margin: 0 auto;
+body {
+	max-width: 1180px;
+	margin: 0 auto;
+	font-family: 'Cabin', Arial, sans-serif;
 }
