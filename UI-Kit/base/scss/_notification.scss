@@ -8,92 +8,65 @@ $small-font: 14px;
 $smallest-radius: 6px;
 
 
-.c-notifications
-{
-    padding: 36px 120px;
+.c-notifications {
+	padding: 36px 120px;
 }
 
-.c-notification
-{
-    font-size: $medium-font;
-    font-weight: bold;
-
-    position: relative;
-
-    margin-bottom: 12px;
-    padding: 20px;
-
-    color: $white;
-    border-radius: $smallest-radius;
+.c-notification {
+	position: relative;
+	margin-bottom: 12px;
+	padding: 20px;
+	border-radius: $smallest-radius;
+	color: $white;font-size: $medium-font;
+	font-weight: bold;
+	&.c--ok {
+		background-color: $green;
+	}
+	&.c--warning {
+		background-color: $orange;
+	}
+	&.c--error {
+		background-color: $red;
+	}
 }
 
-.c-notification.c--ok
-{
-    background-color: $green;
+.c-notification-submit {
+	min-width: 120px;
+	margin-top: 12px;
+	padding: 10px 25px;
+	border: none;
+	border-radius: $smallest-radius;
+	background-color: $light-red;
+	cursor: pointer;
+	text-align: center;
+	font-size: $small-font;
+	font-weight: bold;
+	color: $white;
 }
 
-.c-notification.c--warning
-{
-    background-color: $orange;
-}
-
-.c-notification.c--error
-{
-    background-color: $red;
-}
-
-.c-notification-submit
-{
-    font-size: $small-font;
-    font-weight: bold;
-
-    min-width: 120px;
-    margin-top: 12px;
-    padding: 10px 25px;
-
-    cursor: pointer;
-    text-align: center;
-
-    color: $white;
-    border: none;
-    border-radius: $smallest-radius;
-    background-color: $light-red;
-}
-
-.close-icon-notification
-{
-    position: absolute;
-    top: 28px;
-    right: 10px;
-		width: 20px;
-		height: 20px;
-    cursor: pointer;
-}
-
-.close-icon-notification:before
-{
-    position: absolute;
-
-    width: 15px;
-    height: 2px;
-
-    content: '';
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-
-    background-color: $white;
-}
-
-.close-icon-notification:after
-{
-    position: absolute;
-
-    width: 15px;
-    height: 2px;
-
-    content: '';
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-
-    background-color: $white;
+.close-icon-notification {
+	position: absolute;
+	top: 28px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	&::before {
+		position: absolute;
+		width: 15px;
+		height: 2px;
+		background-color: $white;
+		content: '';
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	&::after {
+		position: absolute;
+		width: 15px;
+		height: 2px;
+		background-color: $white;
+		content: '';
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
 }
