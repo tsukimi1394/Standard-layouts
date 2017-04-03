@@ -180,10 +180,10 @@
 			</div>
 			<div class="c-inputs__search">
 				<form class="temp-wrapper">
-					<input type="submit" name="send" value= " " class="c-inputs__search-submit c--outfocus-first c--round"><div class="search-icon"></div><input type="text" name="search" placeholder="Search" class="c-inputs__search-field c--outfocus-first c--round">
+					<div class="search-icon"></div><input type="text" name="search" placeholder="Search" class="c-inputs__search-field c--outfocus-first c--round">
 				</form>
 				<form class="temp-wrapper">
-					<input type="submit" name="send" value= " " class="c-inputs__search-submit c--focus-first c--round"><div class="search-icon c--focus-first"></div><div class="cancel-icon"></div><input type="text" name="search" value="UI Kit" class="c-inputs__search-field c--focus-first c--round">
+					<div class="search-icon c--focus-first"></div><div class="cancel-icon"></div><input type="text" name="search" value="UI Kit" class="c-inputs__search-field c--focus-first c--round">
 				</form>
 				<form class="temp-wrapper">
 					<input type="text" name="search" placeholder="Search" class="c-inputs__search-field c--outfocus-second c--rectangular"><div class="search-icon c--outfocus-second"></div><input type="submit" name="send" value= " " class="c-inputs__search-submit c--outfocus-second c--rectangular">
@@ -212,10 +212,10 @@
 			</div>
 			<div class="c-inputs__search">
 				<form class="temp-wrapper">
-					<input type="submit" name="send" value= " " class="c-inputs__search-submit--small c--outfocus-first c--round"><div class="search-icon--small"></div><input type="text" name="search" placeholder="Search" class="c-inputs__search-field--small c--outfocus-first c--round">
+					<div class="search-icon--small"></div><input type="text" name="search" placeholder="Search" class="c-inputs__search-field--small c--outfocus-first c--round">
 				</form>
 				<form class="temp-wrapper">
-					<input type="submit" name="send" value= " " class="c-inputs__search-submit--small c--focus-first c--round"><div class="search-icon--small c--focus-first"></div><div class="cancel-icon--small"></div><input type="text" name="search" value="UI Kit" class="c-inputs__search-field--small c--focus-first c--round">
+					<div class="search-icon--small c--focus-first"></div><div class="cancel-icon--small"></div><input type="text" name="search" value="UI Kit" class="c-inputs__search-field--small c--focus-first c--round">
 				</form>
 				<form class="temp-wrapper">
 					<input type="text" name="search" placeholder="Search" class="c-inputs__search-field--small c--outfocus-second c--rectangular"><div class="search-icon--small c--outfocus-second"></div><input type="submit" name="send" value= " " class="c-inputs__search-submit--small c--outfocus-second c--rectangular">
@@ -318,10 +318,15 @@
 					<div class="c-one-range">
 						<input type="range">
 					</div>
-					<div class="c-loader-wrapper">
-		  			<div class="c-loader">
-		    			<div class="c-loader-inner">64%</div>
-		  			</div>
+					<div class="c-loader-wrap">
+						<div class="c-loader-wrap-wrap">
+							<div class="c-loader-wrapper">
+				  			<div class="c-loader">
+				    			<div class="c-loader-inner" id="myBar">64%</div>
+				  			</div>
+			  			</div>
+			  		</div>
+			  		<button onclick="move()">Click Me To Finish Progress Bar</button>  
 					</div>
 					<div class="c-tooltips">
 						<div class="c-tooltip c--top">
@@ -344,14 +349,42 @@
 
 <!--        STEPS AND PAGINATION                -->
 
-	<section class="c-pagination">
-		<div class="c-pagination__line">
-			<div class="c-pagination__line c--in-progress"></div>
-			<div class="c-pagination__line c--active-page"></div>
+	<section class="c-steps-pagination">
+		<div class="c-steps">
+			<div class="c-steps-one">
+				<a href="#" class="active disabled">1</a>
+				<a href="#" class="disabled">2</a>
+				<a href="#" class="disabled">3</a>
+			</div>
+			<div class="c-steps-two">
+				<a href="#" class="disabled">1</a>
+				<a href="#" class="active disabled">2</a>
+				<a href="#" class="disabled">3</a>
+			</div>
 		</div>
-		<div class="c-pagintation__pages">
-			<div class="c-pagintation__pages c--active-circle"></div>
-			<div class="c-pagintation__pages c--active"></div>
+		<div class="c-pagination">
+			<div class="c-pagination--circle">
+				<a href="#" class="back">< Back</a>
+  			<a href="#">1</a>
+  			<a href="#" class="active">2</a>
+  			<a href="#">3</a>
+  			<span>...</span>
+  			<a href="#">12</a>
+  			<a href="#">13</a>
+  			<a href="#">14</a>
+  			<a href="#" class="next">Next ></a>
+			</div>
+			<div class="c-pagination--simple">
+				<a href="#">< Back</a>
+  			<a href="#">1</a>
+  			<a href="#">2</a>
+  			<a href="#" class="active">3</a>
+  			<span>...</span>
+  			<a href="#">12</a>
+  			<a href="#">13</a>
+  			<a href="#">14</a>
+  			<a href="#">Next ></a>
+			</div>
 		</div>
 	</section>
 
@@ -370,7 +403,7 @@
 					<td>Branding</td>
 				</tr>
 				<tr>
-					<td>Graphic Design</td>
+					<td class="hover">Graphic Design</td>
 				</tr>
 				<tr>
 					<td>Illustration</td>
@@ -395,40 +428,40 @@
 					<th>Song</th>
 					<th>Select</th>
 				</tr>
-				<tr>
+				<tr class="active">
 					<td>1</td>
 					<td>Kasabian</td>
 					<td>Velociraptor!</td>
 					<td>Re-wired</td>
-					<td><form><input type="checkbox" checked><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'" checked><span></span></form></td>
 				</tr>
 				<tr>
 					<td>2</td>
 					<td>Suuns</td>
 					<td>Images Du Futur</td>
 					<td>Up Past The Nursery</td>
-					<td><form><input type="checkbox"><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><span></span></form></td>
 				</tr>
 				<tr>
 					<td>3</td>
 					<td>RHCP</td>
 					<td>Californication</td>
 					<td>Around the World</td>
-					<td><form><input type="checkbox"><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><span></span></form></td>
 				</tr>
-				<tr>
+				<tr class="active" style="color:#24aa98;">
 					<td>4</td>
-					<td>Woodkid</td>
+					<td class="active">Woodkid</td>
 					<td>The Golden Age</td>
 					<td>Iron</td>
-					<td><form><input type="checkbox" checked><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'" checked><span></span></form></td>
 				</tr>
 				<tr>
 					<td>5</td>
 					<td>Hugo</td>
 					<td>Old Tyme Religion</td>
 					<td>99 problems</td>
-					<td><form><input type="checkbox"><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><span></span></form></td>
 				</tr>
 			</table>
 		</div>
@@ -438,15 +471,15 @@
 
 	<section class="c-notifications">
 		<div class="c-notification c--ok">
-			<div class="close-icon-notification"></div>
+			<div class="close-icon-notification" onclick="this.parentNode.style.display='none';"></div>
 			<p>This I have produced as a scantling of Jack's great eloquence and the force of his reasoning upon such abstruse matters.</p>
 		</div>
 		<div class="c-notification c--warning">
-			<div class="close-icon-notification"></div>
+			<div class="close-icon-notification" onclick="this.parentNode.style.display='none';"></div>
 			<p>Poor Alice! It was as much as she could do, lying down on one side, to look through into the garden with one eye; but to get through was more hopeless than ever: she sat down and began to cry again.t</p>
 		</div>
 		<div class="c-notification c--error">
-			<div class="close-icon-notification"></div>
+			<div class="close-icon-notification" onclick="this.parentNode.style.display='none';"></div>
 			<p>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
 			<form>
 				<input type="submit" value="Submit" class="c-notification-submit">
@@ -458,19 +491,36 @@
 
 	<section class="c-popovers">
 		<div class="c-popover c--light">
-			<div class="close-icon--light"></div>
+			<div class="close-icon--light" onclick="this.parentNode.style.display='none';"></div>
 			<p class="c-popover-header">Popover header</p>
 			<p class="c-popover-text">This I have produced as a scantling of Jack's great eloquence and the force of his reasoning upon such abstruse matters.</p>
 			<a href="#" class="c-popover-yes--light">Cool</a>
 			<a href="#" class="c-popover-not--light">Not sure</a>
 		</div>
 		<div class="c-popover c--dark">
-			<div class="close-icon--dark"></div>
+			<div class="close-icon--dark" onclick="this.parentNode.style.display='none';"></div>
 			<p class="c-popover-header">Popover header</p>
 			<p class="c-popover-text">This I have produced as a scantling of Jack's great eloquence and the force of his reasoning upon such abstruse matters.</p>
 			<a href="#" class="c-popover-yes--dark">Cool</a>
 			<a href="#" class="c-popover-not--dark">Not sure</a>
 		</div>
 	</section>
+
+	<script>
+	function move() {
+  	var elem = document.getElementById("myBar");   
+  	var width = 64;
+  	var id = setInterval(frame, 10);
+  	function frame() {
+    	if (width >= 100) {
+      	clearInterval(id);
+    	} else {
+      	width++; 
+      	elem.style.width = width + '%'; 
+      	elem.innerHTML = width * 1  + '%';
+    	}
+  	}
+	}
+	</script>
 </body>
 </html>
