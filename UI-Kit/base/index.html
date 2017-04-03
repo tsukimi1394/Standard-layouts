@@ -353,36 +353,36 @@
 		<div class="c-steps">
 			<div class="c-steps-one">
 				<a href="#" class="active disabled">1</a>
-				<a href="#" class="disabled">2</a>
-				<a href="#" class="disabled">3</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
 			</div>
 			<div class="c-steps-two">
-				<a href="#" class="disabled">1</a>
-				<a href="#" class="active disabled">2</a>
-				<a href="#" class="disabled">3</a>
+				<a href="#" class="disabled js-switch-next-step">1</a>
+				<a href="#" class="active disabled js-switch-next-step">2</a>
+				<a href="#" class="js-switch-next-step">3</a>
 			</div>
 		</div>
 		<div class="c-pagination">
 			<div class="c-pagination--circle">
-				<a href="#" class="back">< Back</a>
-  			<a href="#">1</a>
-  			<a href="#" class="active">2</a>
-  			<a href="#">3</a>
+				<a href="#">< Back</a>
+  			<a href="#" class="js-switch-next-page1">1</a>
+  			<a href="#" class="active js-switch-next-page1">2</a>
+  			<a href="#" class="js-switch-next-page1">3</a>
   			<span>...</span>
-  			<a href="#">12</a>
-  			<a href="#">13</a>
-  			<a href="#">14</a>
-  			<a href="#" class="next">Next ></a>
+  			<a href="#" class="js-switch-next-page1">12</a>
+  			<a href="#" class="js-switch-next-page1">13</a>
+  			<a href="#" class="js-switch-next-page1">14</a>
+  			<a href="#">Next ></a>
 			</div>
 			<div class="c-pagination--simple">
 				<a href="#">< Back</a>
-  			<a href="#">1</a>
-  			<a href="#">2</a>
-  			<a href="#" class="active">3</a>
+  			<a href="#" class="js-switch-next-page2">1</a>
+  			<a href="#" class="js-switch-next-page2">2</a>
+  			<a href="#" class="active js-switch-next-page2">3</a>
   			<span>...</span>
-  			<a href="#">12</a>
-  			<a href="#">13</a>
-  			<a href="#">14</a>
+  			<a href="#" class="js-switch-next-page2">12</a>
+  			<a href="#" class="js-switch-next-page2">13</a>
+  			<a href="#" class="js-switch-next-page2">14</a>
   			<a href="#">Next ></a>
 			</div>
 		</div>
@@ -449,9 +449,9 @@
 					<td>Around the World</td>
 					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><span></span></form></td>
 				</tr>
-				<tr class="active" style="color:#24aa98;">
+				<tr class="active">
 					<td>4</td>
-					<td class="active">Woodkid</td>
+					<td>Woodkid</td>
 					<td>The Golden Age</td>
 					<td>Iron</td>
 					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'" checked><span></span></form></td>
@@ -507,20 +507,53 @@
 	</section>
 
 	<script>
-	function move() {
-  	var elem = document.getElementById("myBar");   
-  	var width = 64;
-  	var id = setInterval(frame, 10);
-  	function frame() {
-    	if (width >= 100) {
-      	clearInterval(id);
-    	} else {
-      	width++; 
-      	elem.style.width = width + '%'; 
-      	elem.innerHTML = width * 1  + '%';
-    	}
-  	}
-	}
+		function move() {
+  		var elem = document.getElementById("myBar");   
+  		var width = 64;
+  		var id = setInterval(frame, 10);
+  		function frame() {
+    		if (width >= 100) {
+      		clearInterval(id);
+    		} else {
+	      	width++; 
+	      	elem.style.width = width + '%'; 
+	      	elem.innerHTML = width * 1  + '%';
+    		}
+  		}
+		}
+	</script>
+	<script>
+		var switchNextStep = document.querySelectorAll('.js-switch-next-step')
+		switchNextStep.forEach(function(node){
+			node.addEventListener('click', function(e){
+  			if (this.classList.contains('active')) return;
+  			this.classList.add('active','disabled')
+			})
+		})
+	</script>
+	<script>
+		var switchNextPage1 = document.querySelectorAll('.js-switch-next-page1')
+		switchNextPage1.forEach(function(node){
+			node.addEventListener('click', function(e){
+  			if (this.classList.contains('active')) return;
+  			switchNextPage1.forEach(function(node){
+    			node.classList.remove('active');
+    		})
+  			this.classList.add('active')
+			})
+		})
+	</script>
+	<script>
+		var switchNextPage2 = document.querySelectorAll('.js-switch-next-page2')
+		switchNextPage2.forEach(function(node){
+			node.addEventListener('click', function(e){
+  			if (this.classList.contains('active')) return;
+  			switchNextPage2.forEach(function(node){
+    			node.classList.remove('active');
+    		})
+  			this.classList.add('active')
+			})
+		})
 	</script>
 </body>
 </html>
