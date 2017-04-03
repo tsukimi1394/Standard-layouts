@@ -9,173 +9,125 @@ $medium-font: 16px;
 $small-font: 14px;
 $smallest-radius: 6px;
 
-.c-popovers
-{
+.c-popovers {
     display: flex;
-
-    padding: 36px 120px;
-
     justify-content: space-around;
+    padding: 36px 120px;
 }
 
-.c-popover
-{
+.c-popover {
     position: relative;
-
     width: 49%;
     height: 204px;
-
     border-radius: $smallest-radius;
-    p
-    {
+    p {
         font-weight: bold;
     }
-    a
-    {
-        font-size: $small-font;
-        font-weight: bold;
-
+    a {
         display: inline-block;
-
         min-width: 17%;
         margin-left: 25px;
         padding: 13px;
-
+        border-radius: $smallest-radius;
         text-align: center;
         text-decoration: none;
-
-        border-radius: $smallest-radius;
+        font-size: $small-font;
+        font-weight: bold;
+    }
+    &.c--light {
+        border: 2px solid $black;
+        p {
+            color: $black;
+        } 
+    }
+    &.c--dark {
+        background-color: $dark-dark-grey;
+        p {
+            color: $white;
+        }
     }
 }
 
-.c-popover.c--light
-{
-    border: 2px solid $black;
-    p
-    {
-        color: $black;
-    }
-}
-
-.c-popover.c--dark
-{
-    background-color: $dark-dark-grey;
-    p
-    {
-        color: $white;
-    }
-}
-
-.c-popover-header
-{
-    font-size: $big-font;
-
+.c-popover-header {
     padding: 25px 25px 15px 25px;
+    font-size: $big-font;
 }
 
-.c-popover-text
-{
-    font-size: $medium-font;
-
+.c-popover-text {
     padding: 0 25px 20px 25px;
+    font-size: $medium-font;
 }
 
-.c-popover-yes--light
-{
+.c-popover-yes--light {
     color: $white;
     background-color: $green;
 }
 
-.c-popover-not--light
-{
+.c-popover-not--light {
     color: $white;
     background-color: $blue;
 }
 
-.c-popover-yes--dark
-{
+.c-popover-yes--dark {
     color: $green;
     border: 2px solid $green;
 }
 
-.c-popover-not--dark
-{
+.c-popover-not--dark {
     color: $orange;
     border: 2px solid $orange;
 }
 
-.close-icon--light
-{
+.close-icon--light {
     position: absolute;
     top: 10%;
     right: 2%;
     width: 20px;
     height: 20px;
     cursor: pointer;
+    &::before {
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background-color: $black;
+        content: '';
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &::after {
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background-color: $black;
+        content: '';
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
 }
 
-.close-icon--light:before
-{
-    position: absolute;
-
-    width: 15px;
-    height: 2px;
-
-    content: '';
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-
-    background-color: $black;
-}
-
-.close-icon--light:after
-{
-    position: absolute;
-
-    width: 15px;
-    height: 2px;
-
-    content: '';
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-
-    background-color: $black;
-}
-
-.close-icon--dark
-{
+.close-icon--dark {
     position: absolute;
     top: 10%;
     right: 2%;
     width: 20px;
     height: 20px;
     cursor: pointer;
-}
-
-.close-icon--dark:before
-{
-    position: absolute;
-
-    width: 15px;
-    height: 2px;
-
-    content: '';
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-
-    background-color: $white;
-}
-
-.close-icon--dark:after
-{
-    position: absolute;
-
-    width: 15px;
-    height: 2px;
-
-    content: '';
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-
-    background-color: $white;
+    &::before {
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background-color: $white;
+        content: '';
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &::after {
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background-color: $white;
+        content: '';
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
 }
