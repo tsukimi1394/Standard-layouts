@@ -1212,6 +1212,8 @@ body {
     border-radius: 6px;
     line-height: 36px;
     text-decoration: none; }
+    .c-nav__items a:link {
+      color: #383737; }
     .c-nav__items a:visited {
       color: #383737; }
     .c-nav__items a.active {
