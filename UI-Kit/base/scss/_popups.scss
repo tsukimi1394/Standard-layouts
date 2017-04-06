@@ -1,133 +1,92 @@
-$green: #24aa98;
-$blue: #65abd0;
-$orange: #d9c26c;
-$black: #383737;
-$dark-dark-grey: #4c4b4b;
-$white: #fff;
-$big-font: 24px;
-$medium-font: 16px;
-$small-font: 14px;
-$smallest-radius: 6px;
-
-.c-popovers {
-    display: flex;
-    justify-content: space-around;
-    padding: 36px 120px;
+.popups {
+	display: flex;
+	justify-content: space-around;
 }
 
-.c-popover {
-    position: relative;
-    width: 49%;
-    height: 204px;
-    border-radius: $smallest-radius;
-    p {
-        font-weight: bold;
-    }
-    a {
-        display: inline-block;
-        min-width: 17%;
-        margin-left: 25px;
-        padding: 13px;
-        border-radius: $smallest-radius;
-        text-align: center;
-        text-decoration: none;
-        font-size: $small-font;
-        font-weight: bold;
-    }
-    &.c--light {
-        border: 2px solid $black;
-        p {
-            color: $black;
-        } 
-    }
-    &.c--dark {
-        background-color: $dark-dark-grey;
-        p {
-            color: $white;
-        }
-    }
+.popup-wrapper {
+	width: 50%;
+	margin: 10px;
 }
 
-.c-popover-header {
-    padding: 25px 25px 15px 25px;
-    font-size: $big-font;
+.c-popup {
+	position: relative;
+
+	width: 100%;
+	border: $border-width solid $black;
+
+	border-radius: $smallest-border-radius;
+	&.c-popup--dark {
+		background-color: $black;
+	}
 }
 
-.c-popover-text {
-    padding: 0 25px 20px 25px;
-    font-size: $medium-font;
+.close-icon {
+	&.c-popup--dark {
+		&::before {
+			background-color: $white;
+		}
+		&::after {
+			background-color: $white;
+		}
+	}
 }
 
-.c-popover-yes--light {
-    color: $white;
-    background-color: $green;
+.c-popup__header {
+	padding-top: $x-large-padding;
+	padding-left: $x-large-padding;
+
+	color: $black;
+	font-weight: bold;
+	font-size: $x-large-font;
+	letter-spacing: $letter-spacing;
+	&.c-popup--dark {
+		color: $white;
+		font-weight: normal;
+		text-shadow: 0 0 1px $white;
+	}
 }
 
-.c-popover-not--light {
-    color: $white;
-    background-color: $blue;
+.c-popup__text {
+	padding: $large-padding $x-large-padding;
+
+	color: $black;
+	font-size: $medium-font;
+	letter-spacing: $letter-spacing;
+	&.c-popup--dark {
+		color: $white;
+	}
 }
 
-.c-popover-yes--dark {
-    color: $green;
-    border: 2px solid $green;
+.popup-buttons-wrapper {
+	display: inline-block;
+	width: 90px;
+	margin-bottom: $x-large-padding;
+	margin-left: $x-large-padding;
 }
 
-.c-popover-not--dark {
-    color: $orange;
-    border: 2px solid $orange;
-}
+.c-button {
+	&.c-popup__yes {
+		background-color: $green;
+		&.c-popup--dark {
+			border: $border-width solid $green;
 
-.close-icon--light {
-    position: absolute;
-    top: 10%;
-    right: 2%;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    &::before {
-        position: absolute;
-        width: 15px;
-        height: 2px;
-        background-color: $black;
-        content: '';
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-    &::after {
-        position: absolute;
-        width: 15px;
-        height: 2px;
-        background-color: $black;
-        content: '';
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-}
+			background-color: $black;
 
-.close-icon--dark {
-    position: absolute;
-    top: 10%;
-    right: 2%;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    &::before {
-        position: absolute;
-        width: 15px;
-        height: 2px;
-        background-color: $white;
-        content: '';
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-    &::after {
-        position: absolute;
-        width: 15px;
-        height: 2px;
-        background-color: $white;
-        content: '';
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
+			color: $green;
+			font-weight: bold;
+			text-shadow: none;
+		}
+	}
+	&.c-popup__not {
+		background-color: $blue;
+		&.c-popup--dark {
+			border: $border-width solid $orange;
+
+			background-color: $black;
+
+			color: $orange;
+			font-weight: bold;
+			text-shadow: none;
+		}
+	}
 }
