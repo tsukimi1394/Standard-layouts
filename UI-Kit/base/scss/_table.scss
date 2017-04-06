@@ -37,6 +37,9 @@
 
 		line-height: 36px;
 		text-decoration: none;
+		&:link {
+			color: $black;
+		}
 		&:visited {
 			color: $black;
 		}
