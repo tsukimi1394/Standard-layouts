@@ -580,6 +580,7 @@ body {
 .c-settings__select.c--inactive {
   position: relative;
   width: 100%;
+  padding-left: 0;
   border-radius: 6px;
   background-color: #24aa98;
   font-weight: bold;
@@ -613,6 +614,7 @@ body {
   .c-settings__select.c--inactive li:hover ul {
     left: 0;
     z-index: 1;
+    padding-left: 0;
     opacity: 1; }
     .c-settings__select.c--inactive li:hover ul a {
       text-decoration: none; }
@@ -640,6 +642,7 @@ body {
 .c-settings__select.c--active {
   position: relative;
   width: 100%;
+  padding-left: 0;
   border-radius: 6px;
   background-color: #24aa98;
   font-weight: bold;
