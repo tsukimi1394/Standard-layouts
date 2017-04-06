@@ -1,248 +1,191 @@
-$light-green: #42c7b7;
-$green: #24aa98;
-$dark-green: #1a9385;
-$dark-dark-green: #137d72;
-$border-green: #269e8e;
-$white: #fff;
-$light-black: #494949;
-$black: #383737;
-$grey: #c6ccd2;
-$dark-grey: #b4bbc2;
-$smallest-radius: 6px;
-$medium-font: 16px;
-
-.c-message {
+.message {
 	display: flex;
-	justify-content: space-around;
-	padding: 36px 120px;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px;
 }
 
-.c-message__alignment {
-	display: flex;
-	flex-direction: row;
-	min-width: 144px;
-	border-radius: $smallest-radius;
-	background-color: $green;
-}
-
-.c-message__alignment--left {
-	position: relative;
-	min-width: 47px;
-	cursor: pointer;
-	&:hover {
-		border-radius: $smallest-radius;
-		background-color: $dark-green;
+.c-button {
+	&.c--alignment {
+		background-color: $green;
 	}
-	&:active {
-		border-radius: $smallest-radius;
-		background-color: $dark-dark-green;
-	}
-}
+	&.c--button-ok {
+		position: relative;
 
-.c-message__alignment--center {
-	@extend .c-message__alignment--left;
-	min-width: 50px;
-	border-right: 2px solid $border-green;
-	border-left: 2px solid $border-green;
-}
+		width: 60px;
+		padding: $normal-padding;
 
-.c-message__alignment--right {
-	@extend .c-message__alignment--left;
-}
+		background-color: $green;
 
-.c-message__alignment-icon--left {
-	position: absolute;
-	width: 18px;
-	height: 2px;
-	margin-top: 23px;
-	margin-left: 16px;
-	background-color: $white;
-	color: $white;	
-	&::before {
-		position: absolute;
-		top: -5px;
-		left: 0;
-		width: 14px;
-		height: 2px;
-		background-color: $white;
-		content: '';
-	}
-	&::after {
-		position: absolute;
-		top: 5px;
-		left: 0;
-		width: 8px;
-		height: 2px;
-		background-color: $white;
-		content: '';
+		text-align: left;
+		&::after {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			right: 3%;
+
+			width: 7px;
+			height: 7px;
+			border-top: $border-width solid $white;
+			border-right: $border-width solid $white;
+
+			transform: translate(-50%, -75%) rotate(135deg);
+		}
 	}
 }
 
-
-.c-message__alignment-icon--center {
-	@extend .c-message__alignment-icon--left;
-	&::before {
-		position: absolute;
-		top: -5px;
-		left: 2px;
-		width: 14px;
-		height: 2px;
-		background-color: $white;
-		content: '';
+.c-button-square-icon {
+	&.c--alignment-left {
+		&::before {
+			width: $alignment-middle-width;
+		}
+		&::after {
+			width: $alignment-small-width;
+		}
 	}
-	&::after {
-		position: absolute;
-		top: 5px;
-		left: 4px;
+	&.c--alignment-center {
+		&::before {
+			left: 50%;
 
-		width: 10px;
-		height: 2px;
-		background-color: $white;
-		content: '';
-	}
-}
+			width: $alignment-middle-width;
 
-.c-message__alignment-icon--right {
-	@extend .c-message__alignment-icon--left;
-	&::before {
-		position: absolute;
-		top: -5px;
-		left: 4px;
-		width: 14px;
-		height: 2px;
-		background-color: $white;
-		content: '';
+			transform: translate(-50%);
+		}
+		&::after {
+			left: 50%;
+
+			width: $alignment-small-center-width;
+
+			transform: translate(-50%);
+		}
 	}
-	&::after {
-		position: absolute;
-		top: 5px;
-		left: 10px;
-		width: 8px;
-		height: 2px;
-		background-color: $white;
-		content: '';
+	&.c--alignment-right {
+		&::before {
+			left: 4px;
+
+			width: $alignment-middle-width;
+		}
+		&::after {
+			left: 10px;
+
+			width: $alignment-small-width;
+		}
 	}
 }
 
-.c-message__simple-sender {
+.simple-message-wrapper {
 	width: 296px;
+	margin: 5px;
 }
 
-.c-message__simple-message {
-	width: 74%;
-	padding: 13px;
-	border: 2px solid $grey;
+.c-simple-message {
+	width: 100%;
+}
+
+.c-simple-message__text {
+	width: 75%;
+	padding: $normal-padding;
+	border: $border-width solid $grey;
 	border-right: none;
-	border-radius: $smallest-radius 0 0 $smallest-radius;
-	font-size: $medium-font;
-	font-weight: bold;
+
+	border-radius: $smallest-border-radius 0 0 $smallest-border-radius;
+	outline: none;
+
 	color: $black;
-	&:hover {
-		border-color: $dark-grey;
-	}
-	&:focus {
-		border-color: $light-black;
-	}
-}
-
-.c-message__simple-send {
-	display: inline-block;
-	padding: 13px;
-	border: 1px solid $green;
-	border-radius: 0 $smallest-radius $smallest-radius 0;
-	background-color: $green;
-	cursor: pointer;
-	font-size: $medium-font;
 	font-weight: bold;
-	color: $white;
-	&:hover {
-		background-color: $dark-green;
-	}
-	&:active {
-		background-color: $dark-dark-green;
-	}
+	font-size: $medium-font;
+	letter-spacing: $letter-spacing;
 }
 
-.c-message__choose-sender {
+.c-simple-message__submit {
+	width: 25%;
+	padding: $normal-padding;
+	border: $border-width solid $green;
+
+	border-radius: 0 $smallest-border-radius $smallest-border-radius 0;
+	background-color: $green;
+	outline: none;
+
+	color: $white;
+	font-size: $medium-font;
+	letter-spacing: $letter-spacing;
+	text-shadow: 0 0 1px $white;
+
+	cursor: pointer;
+}
+
+.choose-message-wrapper {
 	width: 380px;
 }
 
-.c-message__choose-to-send {
+.c-choose-message {
 	position: relative;
-	display: inline-block;
-	width: 29%;
-	cursor: pointer;
-	select 	{
-		appearance: none;
-		width: 100%;
-		padding: 13px;
-		border: 1px solid $green;
-		border-radius: $smallest-radius 0 0 $smallest-radius;
-		background-color: $green;
-		cursor: pointer;
-		font-size: $medium-font;
-		font-weight: bold;
-		color: $white;
-	}
-	select:hover
-	{
-		background-color: $dark-green;
-	}
-	select:active
-	{
-		background-color: $dark-dark-green;
-	}
-	&::after {
+
+	width: 100%;
+	&::before {
+		content: '';
+
 		position: absolute;
-		top: 40%;
-		right: 5%;
+		top: 47%;
+		left: 25%;
+
 		width: 7px;
 		height: 7px;
-		border-top: solid 2px $white;
-		border-right: solid 2px $white;
-		content: '';
-		transform: rotate(135deg);
+		border-top: $border-width solid $white;
+		border-right: $border-width solid $white;
+
+		transform: translate(-25%, -50%) rotate(135deg);
 	}
 }
 
-.c-message__choose-message {
-	@extend .c-message__simple-message;
-	width: 50%;
-	margin-left: -4px;
-	border-left: none;
-	border-radius: 0;
-}
+.c-choose-message__select {
+	width: 30%;
+	padding: $normal-padding;
+	border: $border-width solid $green;
 
-.c-message__choose-send {
-	@extend .c-message__simple-send;
-}
-
-.c-message__ok {
-	position: relative;
-	min-width: 60px;
-	padding: 15px 10px 15px 0;
-	border-radius: $smallest-radius;
+	border-radius: $smallest-border-radius 0 0 $smallest-border-radius;
 	background-color: $green;
-	cursor: pointer;
-	text-align: center;
+	outline: none;
+
+	color: $white;
 	font-size: $medium-font;
+	letter-spacing: $letter-spacing;
+	text-shadow: 0 0 1px $white;
+
+	cursor: pointer;
+
+	appearance: none;
+}
+
+.c-choose-message__text {
+	width: 50%;
+	padding: $normal-padding;
+	border: $border-width solid $grey;
+	border-right: none;
+	border-left: none;
+
+	outline: none;
+
+	color: $black;
 	font-weight: bold;
-	color: white;
-	&:hover {
-		background-color: $dark-green;
-	}
-	&:active {
-		background-color: $dark-dark-green;
-	}
-	&::after {
-		position: absolute;
-		top: 37%;
-		right: 15%;
-		width: 7px;
-		height: 7px;
-		border-top: solid 2px $white;
-		border-right: solid 2px $white;
-		content: '';
-		transform: rotate(135deg);
-	}
+	font-size: $medium-font;
+	letter-spacing: $letter-spacing;
+}
+
+.c-choose-message__submit {
+	width: 20%;
+	padding: $normal-padding;
+	border: $border-width solid $green;
+
+	border-radius: 0 $smallest-border-radius $smallest-border-radius 0;
+	background-color: $green;
+	outline: none;
+
+	color: $white;
+	font-size: $medium-font;
+	letter-spacing: $letter-spacing;
+	text-shadow: 0 0 1px $white;
+
+	cursor: pointer;
 }
