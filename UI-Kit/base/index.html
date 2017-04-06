@@ -4,266 +4,206 @@
 	<meta charset="UTF-8">
 	<title>Base</title>
 	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet"> 
-	<link rel="stylesheet" type= "text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-	<!--                   THEME                   -->
-
-	<section class="t-theme">
-		<div class="t-green">
-			<div class="t-green__gradient t--color"></div>
-			<div class="t-green__text t--color">
-				<p>Green
-				<br>
-				<span>24aa98</span></p>
-			</div>
+	<!--BUTTONS-->
+	<section class="buttons">
+		<div class="button-wrapper button-wrapper--large">
+			<button class="c-button c--button-large">Load more</button>
 		</div>
-		<div class="t-blue">
-			<div class="t-blue__gradient t--color"></div>
-			<div class="t-blue__text t--color">
-				<p>Blue
-				<br>
-				<span>65abd0</span></p>
-			</div>
+		<div class="button-wrapper button-wrapper--large">
+			<button class="c-button c--button-rounded c--button-large">Sign Up</button>
 		</div>
-		<div class="t-orange">
-			<div class="t-orange__gradient t--color"></div>
-			<div class="t-orange__text t--color">
-				<p>Orange
-				<br>
-				<span>d9c26c</span></p>
-			</div>
+		<div class="button-wrapper button-wrapper--large">
+			<button class="c-button c--button-round c--button-large">Sign In</button>
 		</div>
-		<div class="t-red">
-			<div class="t-red__gradient t--color"></div>
-			<div class="t-red__text t--color">
-				<p>Red
-				<br>
-				<span>db7560</span></p>
-			</div>
+		<div class="button-wrapper button-wrapper--large">
+			<button class="c-button c--button-ghost c--button-round c--button-large">Logout</button>
 		</div>
-		<div class="t-grey">
-			<div class="t-grey__gradient t--color"></div>
-			<div class="t-grey__text t--color">
-				<p>Grey
-				<br>
-				<span>eaeaea</span></p>
-			</div>
+		<button class="c-button c--button-round c--button-square c--button-circle c--button-large"></button>
+		<div class="button-wrapper">
+			<button class="c-button">Learn more</button>
 		</div>
-		<div class="t-black">
-			<div class="t-black__gradient t--color"></div>
-			<div class="t-black__text t--color">
-				<p>Black
-				<br>
-				<span>383737</span></p>
-			</div>
+		<div class="button-wrapper">
+			<button class="c-button c--button-rounded">Buy now</button>
 		</div>
-	</section>
-
-<!--                       BUTTONS              -->	
-
-	<section class="c-buttons">
-		<div class="c-btn c--big">
-			<div class="c-btn__load-more" onClick="location.href='#'">
-				<p>Load more</p>
-			</div>
-			<div class="c-btn__sign-up" onClick="location.href='#'">
-				<p>Sign up</p>
-			</div>
-			<div class="c-btn__sign-in" onClick="location.href='#'">
-				<p>Sign in</p>
-			</div>
-			<div class="c-btn__logout" onClick="location.href='#'">
-				<p>Logout</p>
-			</div>
-			<div class="c-btn__right-arrow--big" onClick="location.href='#'"></div>
+		<div class="button-wrapper">
+			<button class="c-button c--button-round">Order now</button>
 		</div>
-		<div class="c-btn c--medium">
-			<div class="c-btn__learn-more" onClick="location.href='#'">
-				<p>Learn more</p>
-			</div>
-			<div class="c-btn__buy-now" onClick="location.href='#'">
-				<p>Buy now</p>
-			</div>
-			<div class="c-btn__order-now" onClick="location.href='#'">
-				<p>Order now</p>
-			</div>
-			<div class="c-btn__install" onClick="location.href='#'">
-				<p>Install</p>
-			</div>
-			<div class="c-btn__menu--medium" onClick="location.href='#'">
-				<div class="c-btn__menu-icon--medium"></div>
-			</div>
-			<div class="c-btn__left-arrow--medium" onClick="location.href='#'"></div>
-			<div class="c-btn__next" onClick="location.href='#'">
-				<p>Next</p>
-			</div>
+		<div class="button-wrapper">
+			<button class="c-button c--button-ghost c--button-round">Install</button>
 		</div>
-		<div class="c-btn c--small">
-			<div class="c-btn__start" onClick="location.href='#'">
-				<p>Start</p>
-			</div>
-			<div class="c-btn__download" onClick="location.href='#'">
-				<p>Download</p>
-			</div>
-			<div class="c-btn__share" onClick="location.href='#'">
-				<p>Share</p>
-			</div>
-			<div class="c-btn__free-trial" onClick="location.href='#'">
-				<p>Free trial</p>
-			</div>
-			<div class="c-btn__menu--small" onClick="location.href='#'">
-				<div class="c-btn__menu-icon--small"></div>
-			</div>
-			<div class="c-btn__right-arrow--small" onClick="location.href='#'"></div>
-			<div class="c-btn__arrows">
-				<div class="c-btn__arrows--left" onClick="location.href='#'"></div>
-				<div class="c-btn__arrows--right" onClick="location.href='#'"></div>
-			</div>
-			<div class="c-btn__forward" onClick="location.href='#'">
-				<p>Forward</p>
-			</div>
+		<button class="c-button c--button-square c--button-rounded">
+			<div class="c-button-square-icon"></div>
+		</button>
+		<button class="c-button c--button-round c--button-square c--button-circle"></button>
+		<div class="button-wrapper button-wrapper-arrow">
+			<button class="c-button c--button-arrow c--button-rounded">Next</button>
+		</div>
+		<div class="button-wrapper button-wrapper--small">
+			<button class="c-button c--button-small">Start</button>
+		</div>
+		<div class="button-wrapper button-wrapper--small">
+			<button class="c-button c--button-rounded c--button-small">Download</button>
+		</div>
+		<div class="button-wrapper button-wrapper--small">
+			<button class="c-button c--button-round c--button-small">Share</button>
+		</div>
+		<div class="button-wrapper button-wrapper--small">
+			<button class="c-button c--button-ghost c--button-round c--button-small">Free Trial</button>
+		</div>
+		<button class="c-button c--button-square c--button-rounded c--button-small">
+			<div class="c-button-square-icon c--button-small"></div>
+		</button>
+		<button class="c-button c--button-round c--button-square c--button-circle c--button-small"></button>
+		<div class="button-wrapper button-wrapper--small button-group-wrapper">
+			<button class="c-button c--button-square c--button-group c--button-small c-left-arrow-in-group"></button>
+			<button class="c-button c--button-square c--button-group c--button-small c-right-arrow-in-group"></button>
+		</div>
+		<div class="button-wrapper button-wrapper--small button-wrapper-arrow">
+			<button class="c-button c--button-arrow c--button-rounded c--button-small">Forward</button>
 		</div>
 	</section>
 
-<!--                      MESSAGES              -->	
+	<!--MESSAGE-->
+	<section class="message">
+		<div class="button-wrapper button-group-wrapper">
+			<button class="c-button c--button-square c--button-group c--alignment">
+				<div class="c-button-square-icon c--alignment-left"></div>
+			</button>
+			<button class="c-button c--button-square c--button-group c--alignment">
+				<div class="c-button-square-icon c--alignment-center"></div>
+			</button>
+			<button class="c-button c--button-square c--button-group c--alignment">
+				<div class="c-button-square-icon c--alignment-right"></div>
+			</button>
+		</div>
+		<div class="simple-message-wrapper">
+			<form class="c-simple-message">
+				<input type="text" value="Hey there!" class="c-simple-message__text"><input type="submit" value="Send" class="c-simple-message__submit">
+			</form>
+		</div>
+		<div class="choose-message-wrapper">
+			<form class="c-choose-message">
+				<select class="c-choose-message__select">
+					<option value="seller">To seller</option>
+					<option value="other">To other</option>
+				</select><input type="text" placeholder="Message" class="c-choose-message__text"><input type="submit" value="Send" class="c-choose-message__submit">
+			</form>
+		</div>
+		<button class="c-button c--button-square c--button-rounded c--button-ok">Ok</button>
+	</section>
 
-	<section class="c-message">
-		<div class="c-message__alignment">
-			<div class="c-message__alignment--left" onClick="location.href='#'">
-				<div class="c-message__alignment-icon--left"></div>
+	<!--EMAIL-->	
+	<section class="email-search">
+		<div class="email">
+			<div class="email-wrapper">
+				<input type="email" placeholder="E-mail" class="c-email">
 			</div>
-			<div class="c-message__alignment--center" onClick="location.href='#'">
-				<div class="c-message__alignment-icon--center"></div>
+			<div class="email-wrapper">
+				<input type="email" placeholder="E-mail" value="hello" class="c-email c-email--focus">
 			</div>
-			<div class="c-message__alignment--right" onClick="location.href='#'">
-				<div class="c-message__alignment-icon--right"></div>
+			<div class="email-wrapper">
+				<input type="email" placeholder="E-mail" value="hello@cretiveda.sh" class="c-email c-email--valid">
+				<div class="valid-icon"></div>
+			</div>
+			<div class="email-wrapper">
+				<input type="email" placeholder="E-mail" value="hellocretiveda.sh" class="c-email c-email--invalid">
+				<div class="invalid-icon"></div>
+			</div>
+			<div class="email-wrapper">
+				<input type="email" placeholder="E-mail" class="c-email c-email--small">
+			</div>
+			<div class="email-wrapper">
+				<input type="email" placeholder="E-mail" value="hello" class="c-email c-email--focus c-email--small">
+			</div>
+			<div class="email-wrapper">
+				<input type="email" placeholder="E-mail" value="hello@cretiveda.sh" class="c-email c-email--valid c-email--small">
+				<div class="valid-icon c-email--small"></div>
+			</div>
+			<div class="email-wrapper">
+				<input type="email" placeholder="E-mail" value="hellocretiveda.sh" class="c-email c-email--invalid c-email--small">
+				<div class="invalid-icon c-email--small"></div>
 			</div>
 		</div>
-		<form class="c-message__simple-sender">
-			<input type="text" name="simple-message" value="Hey there!" class="c-message__simple-message"><input type="submit" name="send" value="Send" class="c-message__simple-send">
-		</form>
-		<form class="c-message__choose-sender">
-			<div class="c-message__choose-to-send ">
-				<select>
-					<option>To seller</option>
-					<option>To other</option>
-				</select>
-			</div>
-			<input type="text" name="choose-message" placeholder="Message" class="c-message__choose-message"><input type="submit" name="send" value="Send" class="c-message__choose-send">
-		</form>
-		<div class="c-message__ok" onClick="location.href='#'">
-			<p>Ok</p>
+
+		<!--SEARCH-->
+		<div class="search">
+			<form class="search-wrapper">
+				<input type="search" placeholder="Search" class="c-search c-search--round">
+				<div class="search-icon"></div>
+			</form>
+			<form class="search-wrapper">
+				<input type="search" placeholder="Search" value="UI-Kit" class="c-search c-search--round c-search--focus">
+				<div class="search-icon"></div>
+				<div class="cancel-icon"></div>
+			</form>
+			<form class="search-wrapper">
+				<input type="search" placeholder="Search" class="c-search c-search--rounded"><input type="submit" value=" " class="c-button c--button-square c--button-search">
+				<div class="search-icon c-search--rounded"></div>
+			</form>
+			<form class="search-wrapper">
+				<input type="search" placeholder="Search" value="Flat" class="c-search c-search--rounded c-search--focus"><input type="submit" value=" " class="c-button c--button-square c--button-search c-search--focus">
+				<div class="search-icon c-search--rounded c-search--focus"></div>
+			</form>
+
+			<form class="search-wrapper">
+				<input type="search" placeholder="Search" class="c-search c-search--round c-search--small">
+				<div class="search-icon c-search--small"></div>
+			</form>
+			<form class="search-wrapper">
+				<input type="search" placeholder="Search" value="UI-Kit" class="c-search c-search--round c-search--focus c-search--small">
+				<div class="search-icon c-search--small"></div>
+				<div class="cancel-icon"></div>
+			</form>
+			<form class="search-wrapper">
+				<input type="search" placeholder="Search" class="c-search c-search--rounded c-search--small"><input type="submit" value=" " class="c-button c--button-square c--button-search c--button-small">
+				<div class="search-icon c-search--rounded c-search--small"></div>
+			</form>
+			<form class="search-wrapper">
+				<input type="search" placeholder="Search" value="Flat" class="c-search c-search--rounded c-search--focus c-search--small"><input type="submit" value=" " class="c-button c--button-square c--button-search c-search--focus c--button-small">
+				<div class="search-icon c-search--rounded c-search--focus c-search--small"></div>
+			</form>
 		</div>
 	</section>
 
-<!--                INPUTS                       -->
-
-	<section class="c-input">
-		<div class="c-inputs c--big">
-			<div class="c-inputs__email">
-				<div class="temp-wrapper">
-					<input type="text" name="email" placeholder="E-mail" class="c-inputs__email--big c--outfocus">
-				</div>
-				<div class="temp-wrapper">
-					<input  type="text" name="email" value="hello" class="c-inputs__email--big c--focus">
-				</div>
-				<div class="temp-wrapper">
-					<input type="text" name="email" value="hello@creativeda.sh" class="c-inputs__email--big c--correct">
-					<div class="correct-icon--big"></div>
-				</div>
-				<div class="temp-wrapper">
-					<input type="text" name="email" value="hellocreativeda.sh" class="c-inputs__email--big c--incorrect">
-					<div class="incorrect-icon--big"></div>
-				</div>
-			</div>
-			<div class="c-inputs__search">
-				<form class="temp-wrapper">
-					<div class="search-icon"></div><input type="text" name="search" placeholder="Search" class="c-inputs__search-field c--outfocus-first c--round">
-				</form>
-				<form class="temp-wrapper">
-					<div class="search-icon c--focus-first"></div><div class="cancel-icon"></div><input type="text" name="search" value="UI Kit" class="c-inputs__search-field c--focus-first c--round">
-				</form>
-				<form class="temp-wrapper">
-					<input type="text" name="search" placeholder="Search" class="c-inputs__search-field c--outfocus-second c--rectangular"><div class="search-icon c--outfocus-second"></div><input type="submit" name="send" value= " " class="c-inputs__search-submit c--outfocus-second c--rectangular">
-				</form>
-				<form class="temp-wrapper">
-					<input type="text" name="search" value="Flat" class="c-inputs__search-field c--focus-second c--rectangular"><div class="search-icon c--outfocus-second"></div><input type="submit" name="send" value= " " class="c-inputs__search-submit c--focus-second c--rectangular">
-				</form>
-			</div>
+	<!--COMMENT-->	
+	<section class="comment">
+		<div class="comment-wrapper">
+			<textarea cols="40" rows="5" placeholder="Write your comment here..." class="c-comment-field"></textarea>
 		</div>
-		<div class="c-inputs c--small">
-			<div class="c-inputs__email">
-				<div class="temp-wrapper">
-					<input type="text" name="email" placeholder="E-mail" class="c-inputs__email--small c--outfocus">
-				</div>
-				<div class="temp-wrapper">
-					<input  type="text" name="email" value="hello" class="c-inputs__email--small c--focus">
-				</div>
-				<div class="temp-wrapper">
-					<input type="text" name="email" value="hello@creativeda.sh" class="c-inputs__email--small c--correct">
-					<div class="correct-icon--small"></div>
-				</div>
-				<div class="temp-wrapper">
-					<input type="text" name="email" value="hellocreativeda.sh" class="c-inputs__email--small c--incorrect">
-					<div class="incorrect-icon--small"></div>
-				</div>
-			</div>
-			<div class="c-inputs__search">
-				<form class="temp-wrapper">
-					<div class="search-icon--small"></div><input type="text" name="search" placeholder="Search" class="c-inputs__search-field--small c--outfocus-first c--round">
-				</form>
-				<form class="temp-wrapper">
-					<div class="search-icon--small c--focus-first"></div><div class="cancel-icon--small"></div><input type="text" name="search" value="UI Kit" class="c-inputs__search-field--small c--focus-first c--round">
-				</form>
-				<form class="temp-wrapper">
-					<input type="text" name="search" placeholder="Search" class="c-inputs__search-field--small c--outfocus-second c--rectangular"><div class="search-icon--small c--outfocus-second"></div><input type="submit" name="send" value= " " class="c-inputs__search-submit--small c--outfocus-second c--rectangular">
-				</form>
-				<form class="temp-wrapper">
-					<input type="text" name="search" value="Flat" class="c-inputs__search-field--small c--focus-second c--rectangular"><div class="search-icon--small c--outfocus-second"></div><input type="submit" name="send" value= " " class="c-inputs__search-submit--small c--focus-second c--rectangular">
-				</form>
-			</div>
+		<div class="comment-wrapper">
+			<textarea cols="40" rows="5" placeholder="Write your comment here..." class="c-comment-field c-comment-field--focus"></textarea>
 		</div>
 	</section>
 
-<!--             COMMENTS                       -->
-
-	<section class="c-comments">
-		<form class="c-comment c--outfocus">
-			<textarea name="comment" cols="45" rows="5" placeholder="Write your comment here..." class="c-comment-field"></textarea>
-		</form>
-		<form class="c-comment c--focus">
-			<textarea name="comment" cols="45" rows="5" class="c-comment-field c--focus">Great stuff!</textarea>
-		</form>
-	</section>
-
-<!--                SETTINGS                   -->
-
+	<!--SELECT, RADIO-CHECK, RANGE, LOADER, TOOLTIPS-->
 	<section class="c-settings">
 		<div class="c-settings__select-wrapper">
 			<div class="c-settings__select-wrapper--inactive">
 				<ul class="c-settings__select c--inactive">
-  				<li>
-    				<a href="#" class="first">Select country:</a>
-    				<ul>
-				      <li><a href="#">USA</a></li>
-				      <li><a href="#">Canada</a></li>
-				      <li><a href="#">Germany</a></li>
-    				</ul>
-  				</li>
+					<li>
+						<a href="#" class="first">Select country:</a>
+						<ul>
+							<li><a href="#">USA</a></li>
+							<li><a href="#">Canada</a></li>
+							<li><a href="#">Germany</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 			<div class="c-settings__select-wrapper--active">
 				<ul class="c-settings__select c--active">
-  				<li>
-    				<a href="#" class="first">Select country:</a>
-    				<ul>
-				      <li><a href="#">USA</a></li>
-				      <li><a href="#">Canada</a></li>
-				      <li><a href="#">Germany</a></li>
-    				</ul>
-  				</li>
+					<li>
+						<a href="#" class="first">Select country:</a>
+						<ul>
+							<li><a href="#">USA</a></li>
+							<li><a href="#">Canada</a></li>
+							<li><a href="#">Germany</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -321,12 +261,11 @@
 					<div class="c-loader-wrap">
 						<div class="c-loader-wrap-wrap">
 							<div class="c-loader-wrapper">
-				  			<div class="c-loader">
-				    			<div class="c-loader-inner" id="myBar">64%</div>
-				  			</div>
-			  			</div>
-			  		</div>
-			  		<button onclick="move()">Click Me To Finish Progress Bar</button>  
+								<div class="c-loader">
+									<div class="c-loader-inner" id="myBar">64%</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="c-tooltips">
 						<div class="c-tooltip c--top">
@@ -347,79 +286,75 @@
 		</div>
 	</section>
 
-<!--        STEPS AND PAGINATION                -->
-
-	<section class="c-steps-pagination">
-		<div class="c-steps">
-			<div class="c-steps-one">
-				<a href="#" class="active disabled">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-			</div>
-			<div class="c-steps-two">
-				<a href="#" class="disabled js-switch-next-step">1</a>
-				<a href="#" class="active disabled js-switch-next-step">2</a>
-				<a href="#" class="js-switch-next-step">3</a>
-			</div>
+	<!--STEPS and PAGINATION-->
+	<section class="steps-pagination">
+		<div class="steps-wrapper">
+			<ol class="c-steps c-steps--line" data-steps="3">
+				<li class="active">
+					<span class="c-steps__step c-steps--line">1</span>
+				</li>
+				<li >
+					<span class="c-steps__step c-steps--line">2</span>
+				</li>
+				<li >
+					<span class="c-steps__step c-steps--line">3</span>
+				</li>
+			</ol>
+			<ol class="c-steps" data-steps="3">
+				<li >
+					<span class="c-steps__step">1</span>
+				</li>
+				<li class="active">
+					<span class="c-steps__step">2</span>
+				</li>
+				<li >
+					<span class="c-steps__step">3</span>
+				</li>
+			</ol>
 		</div>
-		<div class="c-pagination">
-			<div class="c-pagination--circle">
+		<div class="pagination-wrapper">
+			<div class="c-pagination c-pagination--circle">
 				<a href="#">< Back</a>
-  			<a href="#" class="js-switch-next-page1">1</a>
-  			<a href="#" class="active js-switch-next-page1">2</a>
-  			<a href="#" class="js-switch-next-page1">3</a>
-  			<span>...</span>
-  			<a href="#" class="js-switch-next-page1">12</a>
-  			<a href="#" class="js-switch-next-page1">13</a>
-  			<a href="#" class="js-switch-next-page1">14</a>
-  			<a href="#">Next ></a>
+				<a href="#">1</a>
+				<a href="#" class="active">2</a>
+				<a href="#">3</a>
+				<span>...</span>
+				<a href="#">12</a>
+				<a href="#">13</a>
+				<a href="#">14</a>
+				<a href="#">Next ></a>
 			</div>
-			<div class="c-pagination--simple">
+			<div class="c-pagination">
 				<a href="#">< Back</a>
-  			<a href="#" class="js-switch-next-page2">1</a>
-  			<a href="#" class="js-switch-next-page2">2</a>
-  			<a href="#" class="active js-switch-next-page2">3</a>
-  			<span>...</span>
-  			<a href="#" class="js-switch-next-page2">12</a>
-  			<a href="#" class="js-switch-next-page2">13</a>
-  			<a href="#" class="js-switch-next-page2">14</a>
-  			<a href="#">Next ></a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#" class="active">3</a>
+				<span>...</span>
+				<a href="#">12</a>
+				<a href="#">13</a>
+				<a href="#">14</a>
+				<a href="#">Next ></a>
 			</div>
 		</div>
 	</section>
 
-<!--                TABLE                      -->
-
-	<section class="c-table">
-		<div class="c-table__categories-wrapper">
-			<table class="c-table__categories">
-				<tr>
-					<th>Categories</th>
-				</tr>
-				<tr>
-					<td>Art Direction</td>
-				</tr>
-				<tr>
-					<td>Branding</td>
-				</tr>
-				<tr>
-					<td class="hover">Graphic Design</td>
-				</tr>
-				<tr>
-					<td>Illustration</td>
-				</tr>
-				<tr>
-					<th class="c-table__categories-header-border">Popular</th>
-				</tr>
-				<tr>
-					<td>Motion Graphic</td>
-				</tr>
-				<tr>
-					<td>UI/UX</td>
-				</tr>
-			</table>
+	<!--TABLE-->
+	<section class="table">
+		<div class="nav-wrapper">
+			<span class="c-nav__title">Categories</span>
+			<ul class="c-nav__items">
+				<li><a href="#">Art Direction</a></li>
+				<li><a href="#">Branding</a></li>
+				<li><a href="#" class="active">Graphic Design</a></li>
+				<li><a href="#">Illustration</a></li>
+			</ul>
+			<span class="c-nav__title">Popular</span>
+			<ul class="c-nav__items">
+				<li><a href="#">Motion Graphic</a></li>
+				<li><a href="#">UI/UX</a></li>
+			</ul>
 		</div>
-		<div class="c-table__music-wrapper">
+		<div class="table-music-wrapper">
 			<table class="c-table__music">
 				<tr>
 					<th>#</th>
@@ -433,53 +368,52 @@
 					<td>Kasabian</td>
 					<td>Velociraptor!</td>
 					<td>Re-wired</td>
-					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'" checked><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'" checked><label></label></form></td>
 				</tr>
 				<tr>
 					<td>2</td>
 					<td>Suuns</td>
 					<td>Images Du Futur</td>
 					<td>Up Past The Nursery</td>
-					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><label></label></form></td>
 				</tr>
 				<tr>
 					<td>3</td>
 					<td>RHCP</td>
 					<td>Californication</td>
 					<td>Around the World</td>
-					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><label></label></form></td>
 				</tr>
 				<tr class="active">
 					<td>4</td>
 					<td>Woodkid</td>
 					<td>The Golden Age</td>
 					<td>Iron</td>
-					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'" checked><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'" checked><label></label></form></td>
 				</tr>
 				<tr>
 					<td>5</td>
 					<td>Hugo</td>
 					<td>Old Tyme Religion</td>
 					<td>99 problems</td>
-					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><span></span></form></td>
+					<td><form><input type="checkbox" onchange="this.parentNode.parentNode.parentNode.className = this.checked ? 'active' : 'inactive'"><label></label></form></td>
 				</tr>
 			</table>
 		</div>
 	</section>
 
-<!--           NOTIFICATIONS                    -->
-
-	<section class="c-notifications">
+	<!--NOTIFICATIONS-->
+	<section class="notification">
 		<div class="c-notification c--ok">
-			<div class="close-icon-notification" onclick="this.parentNode.style.display='none';"></div>
+			<div class="close-icon c-notification-close"></div>
 			<p>This I have produced as a scantling of Jack's great eloquence and the force of his reasoning upon such abstruse matters.</p>
 		</div>
 		<div class="c-notification c--warning">
-			<div class="close-icon-notification" onclick="this.parentNode.style.display='none';"></div>
+			<div class="close-icon c-notification-close"></div>
 			<p>Poor Alice! It was as much as she could do, lying down on one side, to look through into the garden with one eye; but to get through was more hopeless than ever: she sat down and began to cry again.t</p>
 		</div>
 		<div class="c-notification c--error">
-			<div class="close-icon-notification" onclick="this.parentNode.style.display='none';"></div>
+			<div class="close-icon c-notification-close"></div>
 			<p>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
 			<form>
 				<input type="submit" value="Submit" class="c-notification-submit">
@@ -487,73 +421,34 @@
 		</div>
 	</section>
 
-<!--               POP-UPS                      -->
-
-	<section class="c-popovers">
-		<div class="c-popover c--light">
-			<div class="close-icon--light" onclick="this.parentNode.style.display='none';"></div>
-			<p class="c-popover-header">Popover header</p>
-			<p class="c-popover-text">This I have produced as a scantling of Jack's great eloquence and the force of his reasoning upon such abstruse matters.</p>
-			<a href="#" class="c-popover-yes--light">Cool</a>
-			<a href="#" class="c-popover-not--light">Not sure</a>
+	<!--POPUPS-->
+	<section class="popups">
+		<div class="popup-wrapper">
+			<div class="c-popup">
+				<div class="close-icon"></div>
+				<p class="c-popup__header">Popover header</p>
+				<p class="c-popup__text">This I have produced as a scantling of Jack's great eloquence and the force of his reasoning upon such abstruse matters.</p>
+				<div class="popup-buttons-wrapper">
+					<button class="c-popup__yes c-button c--button-rounded c--button-small">Cool</button>
+				</div>
+				<div class="popup-buttons-wrapper">
+					<button class="c-popup__not c-button c--button-rounded c--button-small">Not sure</button>
+				</div>
+			</div>
 		</div>
-		<div class="c-popover c--dark">
-			<div class="close-icon--dark" onclick="this.parentNode.style.display='none';"></div>
-			<p class="c-popover-header">Popover header</p>
-			<p class="c-popover-text">This I have produced as a scantling of Jack's great eloquence and the force of his reasoning upon such abstruse matters.</p>
-			<a href="#" class="c-popover-yes--dark">Cool</a>
-			<a href="#" class="c-popover-not--dark">Not sure</a>
+		<div class="popup-wrapper">
+			<div class="c-popup c-popup--dark">
+				<div class="close-icon c-popup--dark"></div>
+				<p class="c-popup__header c-popup--dark">Popover header</p>
+				<p class="c-popup__text c-popup--dark">This I have produced as a scantling of Jack's great eloquence and the force of his reasoning upon such abstruse matters.</p>
+				<div class="popup-buttons-wrapper">
+					<button class="c-popup__yes c-button c--button-rounded c--button-small c-popup--dark">Cool</button>
+				</div>
+				<div class="popup-buttons-wrapper">
+					<button class="c-popup__not c-button c--button-rounded c--button-small c-popup--dark">Not sure</button>
+				</div>
+			</div>
 		</div>
 	</section>
-
-	<script>
-		function move() {
-  		var elem = document.getElementById("myBar");   
-  		var width = 64;
-  		var id = setInterval(frame, 10);
-  		function frame() {
-    		if (width >= 100) {
-      		clearInterval(id);
-    		} else {
-	      	width++; 
-	      	elem.style.width = width + '%'; 
-	      	elem.innerHTML = width * 1  + '%';
-    		}
-  		}
-		}
-	</script>
-	<script>
-		var switchNextStep = document.querySelectorAll('.js-switch-next-step')
-		switchNextStep.forEach(function(node){
-			node.addEventListener('click', function(e){
-  			if (this.classList.contains('active')) return;
-  			this.classList.add('active','disabled')
-			})
-		})
-	</script>
-	<script>
-		var switchNextPage1 = document.querySelectorAll('.js-switch-next-page1')
-		switchNextPage1.forEach(function(node){
-			node.addEventListener('click', function(e){
-  			if (this.classList.contains('active')) return;
-  			switchNextPage1.forEach(function(node){
-    			node.classList.remove('active');
-    		})
-  			this.classList.add('active')
-			})
-		})
-	</script>
-	<script>
-		var switchNextPage2 = document.querySelectorAll('.js-switch-next-page2')
-		switchNextPage2.forEach(function(node){
-			node.addEventListener('click', function(e){
-  			if (this.classList.contains('active')) return;
-  			switchNextPage2.forEach(function(node){
-    			node.classList.remove('active');
-    		})
-  			this.classList.add('active')
-			})
-		})
-	</script>
 </body>
 </html>
