@@ -23,4 +23,7 @@
 	&.c-comment-field--focus {
 		border-color: $blue;
 	}
+	&:focus {
+		border-color: $blue;
+	}
 }
