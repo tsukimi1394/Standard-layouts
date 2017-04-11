@@ -1,0 +1,93 @@
+.c-header {
+	height: 100vh;
+	position: relative;
+	background-image: url(../images/back.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.c-header__logo-img {
+	position: absolute;
+	top: 6rem;
+	left: 12rem;
+}
+
+.c-header__menu {
+	text-align: center;
+	padding-top: 8rem;
+	margin-bottom: 12rem;
+}
+
+.c-header__menu-item {
+	margin: 2rem;
+	text-decoration: none;
+	letter-spacing: 0.05rem;
+	color: $black;
+	font-size: $medium-font;
+	line-height: 2.25;
+	text-transform: uppercase;
+}
+
+.c-button{
+	&.c-header__menu-item {
+		position: absolute;
+		background-color: transparent;
+		margin: 0;
+		top: 4.9rem;
+		right: 12rem;
+	}
+}
+
+.c-button-square-icon {
+	&.c-header__menu-item {
+		background-color: $black;
+		&::before {
+			background-color: $black;
+		}
+		&::after {
+			background-color: $black;
+		}
+	}
+}
+
+.c-header__title {
+	text-align: center;
+	color: $black;
+	font-size: 3.6rem;
+	letter-spacing: $letter-spacing;
+	margin-bottom: 11rem;
+	padding: 0 28rem;
+	line-height: 1.4;
+}
+
+.sign-wrapper {
+	width: 66rem;
+	margin: 0 auto;
+	height: 9.6rem;
+	background-color: #f2f5f8;
+	border-radius: 6px;
+	padding: 16px;
+}
+
+.c-sign-up {
+	div {
+		display: inline-block;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+}
+
+.email-wrapper {
+	width: 22rem;
+}
+
+.password-wrapper {
+	width: 22rem;
+}
+
+.submit-wrapper {
+	width: 140px;
+	margin-left: 10px;
+}
