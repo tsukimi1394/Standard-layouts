@@ -175,15 +175,15 @@
 			<textarea cols="40" rows="5" placeholder="Write your comment here..." class="c-comment-field"></textarea>
 		</div>
 		<div class="comment-wrapper">
-			<textarea cols="40" rows="5" placeholder="Write your comment here..." class="c-comment-field c-comment-field--focus"></textarea>
+			<textarea cols="40" rows="5" placeholder="Write your comment here..." class="c-comment-field c-comment-field--focus">Great stuff!</textarea>
 		</div>
 	</section>
 
 	<!--SELECT, RADIO-CHECK, RANGE, LOADER, TOOLTIPS-->
-	<section class="c-settings">
-		<div class="c-settings__select-wrapper">
-			<div class="c-settings__select-wrapper--inactive">
-				<ul class="c-settings__select c--inactive">
+	<section class="settings">
+		<div class="dropdown-wrapper">
+			<div class="dropdown-wrapper--inactive">
+				<ul class="c-dropdown c--inactive">
 					<li>
 						<a href="#" class="first">Select country:</a>
 						<ul>
@@ -194,8 +194,8 @@
 					</li>
 				</ul>
 			</div>
-			<div class="c-settings__select-wrapper--active">
-				<ul class="c-settings__select c--active">
+			<div class="dropdown-wrapper--active">
+				<ul class="c-dropdown c--active">
 					<li>
 						<a href="#" class="first">Select country:</a>
 						<ul>
@@ -207,64 +207,60 @@
 				</ul>
 			</div>
 		</div>
-		<div class="c-settings__radio-check">
-			<form class="c-setting__radio">
-				<div class="c-settings__radio">
-					<input name="radio-btn" type="radio" value="off" id="radio-btn--off"><span></span><label for="radio-btn--off">Radiobutton Off</label>
+		<div class="radio-check">
+			<form class="c-radio-form">
+				<div class="c-radio">
+					<input name="radio-btn" type="radio" value="off" id="radio-btn--off"><label for="radio-btn--off">Radiobutton Off</label>
 				</div>
-				<div class="c-settings__radio">
-					<input name="radio-btn" type="radio" value="on" id="radio-btn--on" checked><span></span><label for="radio-btn--on">Radiobutton On</label>
+				<div class="c-radio">
+					<input name="radio-btn" type="radio" value="on" id="radio-btn--on" checked><label for="radio-btn--on">Radiobutton On</label>
 				</div>
-				<div class="c-settings__radio">
-					<input name="radio-btn" type="radio" value="disables" id="radio-btn--disabled" disabled><span></span><label for="radio-btn--disabled">Radiobutton Disabled</label>
+				<div class="c-radio">
+					<input name="radio-btn" type="radio" value="disables" id="radio-btn--disabled" disabled><label for="radio-btn--disabled">Radiobutton Disabled</label>
 				</div>
 			</form>
-			<form class="c-setting__check">
-				<div class="c-settings__check">
-					<input name="check-btn" type="checkbox" value="off" id="check-btn--off"><span></span><label for="check-btn--off">Checkbox Off</label>
+			<form class="c-check-form">
+				<div class="c-check">
+					<input name="check-btn" type="checkbox" value="off" id="check-btn--off"><label for="check-btn--off">Checkbox Off</label>
 				</div>
-				<div class="c-settings__check">
-					<input name="check-btn" type="checkbox" value="on" id="check-btn--on" checked><span></span><label for="check-btn--on">Checkbox On</label>
+				<div class="c-check">
+					<input name="check-btn" type="checkbox" value="on" id="check-btn--on" checked><label for="check-btn--on">Checkbox On</label>
 				</div>
-				<div class="c-settings__check">
-					<input name="check-btn" type="checkbox" value="disables" id="check-btn--disabled" disabled><span></span><label for="check-btn--disabled">Checkbox Disabled</label>
+				<div class="c-check">
+					<input name="check-btn" type="checkbox" value="disables" id="check-btn--disabled" disabled><label for="check-btn--disabled">Checkbox Disabled</label>
 				</div>
 			</form>
 		</div>
-		<div class="c-settings__different">
-			<div class="c-interval">
+		<div class="settings-different">
+			<div class="c-slider2x">
 				<input type="range">
 			</div>
 			<div class="another-wrapper">
-				<div class="c-on-off">
-					<form class="c-on-off--light">
-						<div class="c-on-off--light">
-							<input type="radio" id="on-off-light--off" name="on-off-light"><label for="on-off-light--off">On</label>
+				<div class="c-switchers">
+					<form>
+						<div class="c-switchers">
+							<input type="checkbox" id="switcher-light--off" name="switcher-light"><label for="switcher-light--off">On</label>
 						</div>
-						<div class="c-on-off--light">
-							<input type="radio" id="on-off-light--on" name="on-off-light" checked><label for="on-off-light--on">On</label>
+						<div class="c-switchers">
+							<input type="checkbox" id="switcher-light--on" name="switcher-light" checked><label for="switcher-light--on">On</label>
 						</div>
 					</form>
-					<form class="c-on-off--dark">
-						<div class="c-on-off--dark">
-							<input type="radio" id="on-off-dark--off" name="on-off-dark"><label for="on-off-dark--off">On</label>
+					<form>
+						<div class="c-switchers c--dark">
+							<input type="checkbox" id="switcher-dark--off" name="switcher-dark"><label for="switcher-dark--off">On</label>
 						</div>
-						<div class="c-on-off--dark">
-							<input type="radio" id="on-off-dark--on" name="on-off-dark" checked><label for="on-off-dark--on">On</label>
+						<div class="c-switchers c--dark">
+							<input type="checkbox" id="switcher-dark--on" name="switcher-dark" checked><label for="switcher-dark--on">On</label>
 						</div>
 					</form>
 				</div>
 				<div class="other-wrapper">
-					<div class="c-one-range">
+					<div class="c-slider">
 						<input type="range">
 					</div>
-					<div class="c-loader-wrap">
-						<div class="c-loader-wrap-wrap">
-							<div class="c-loader-wrapper">
-								<div class="c-loader">
-									<div class="c-loader-inner" id="myBar">64%</div>
-								</div>
-							</div>
+					<div class="loader-wrap">
+						<div class="c-loader">
+							<div class="c-loader__inner" style="width: 64%" data-width="64%"></div>
 						</div>
 					</div>
 					<div class="c-tooltips">
