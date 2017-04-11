@@ -1,0 +1,49 @@
+.c-header {
+	height: 100vh;
+	position: relative;
+	background-image: url(../images/back.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding: 8rem 0 10.7rem;
+}
+
+.c-header__logo {
+	position: absolute;
+	top: 8rem;
+	left: 12rem;
+}
+
+.c-header__menu {
+	text-align: right;
+	margin-right: 12rem;
+}
+
+.c-header__menu-item {
+	margin: 2rem;
+	text-decoration: none;
+	letter-spacing: $letter-spacing;
+	color: $white;
+	font-size: $medium-font;
+}
+
+.c-button{
+	&.c-header__menu-item {
+		background-color: transparent;
+		margin: 0;
+	}
+}
+
+.c-header__title {
+	margin: 29rem 21rem 1.5rem 12rem;
+	color: $white;
+	font-size: 3.6rem;
+	letter-spacing: $letter-spacing;
+}
+
+.c-header__subtitle {
+	margin: 1.5rem 21rem 0 12rem;
+	color: $white;
+	font-size: 1.8rem;
+	letter-spacing: $letter-spacing;
+}
