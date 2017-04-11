@@ -8,6 +8,12 @@
 .c-button {
 	&.c--alignment {
 		background-color: $green;
+		&:hover {
+			background-color: $dark-green;
+		}
+		&:active {
+			background-color: $dark-dark-green;
+		}
 	}
 	&.c--button-ok {
 		position: relative;
@@ -18,6 +24,12 @@
 		background-color: $green;
 
 		text-align: left;
+		&:hover {
+			background-color: $dark-green;
+		}
+		&:active {
+			background-color: $dark-dark-green;
+		}
 		&::after {
 			content: '';
 
@@ -113,6 +125,14 @@
 	text-shadow: 0 0 1px $white;
 
 	cursor: pointer;
+	&:hover {
+		background-color: $dark-green;
+		border-color: $dark-green;
+	}
+	&:active {
+		background-color: $dark-dark-green;
+		border-color: $dark-dark-green;
+	}
 }
 
 .choose-message-wrapper {
@@ -156,6 +176,10 @@
 	cursor: pointer;
 
 	appearance: none;
+	&:hover {
+		background-color: $dark-green;
+		border-color: $dark-green;
+	}
 }
 
 .c-choose-message__text {
@@ -188,4 +212,12 @@
 	text-shadow: 0 0 1px $white;
 
 	cursor: pointer;
+	&:hover {
+		background-color: $dark-green;
+		border-color: $dark-green;
+	}
+	&:active {
+		background-color: $dark-dark-green;
+		border-color: $dark-dark-green;
+	}
 }
