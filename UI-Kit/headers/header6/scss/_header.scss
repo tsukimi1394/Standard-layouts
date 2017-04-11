@@ -1,0 +1,147 @@
+.c-header {
+	height: 100vh;
+	position: relative;
+	background-color: #f2f5f8;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.c-header__menu-button {
+	position: absolute;
+	top: 4rem;
+	left: 12rem;
+}
+
+.c-button{
+	&.c-header__menu-item {
+		background-color: transparent;
+		margin: 0;
+	}
+}
+
+.c-button-square-icon {
+	&.c-header__menu-item {
+		background-color: $black;
+		&::before {
+			background-color: $black;
+		}
+		&::after {
+			background-color: $black;
+		}
+	}
+}
+
+.c-header__menu-button-text {
+	font-size: $medium-font;
+	color: $black;
+	letter-spacing: $letter-spacing;
+	line-height: 1.5;
+	vertical-align: middle;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.c-header__sign-in {
+	display: inline-block;
+	position: absolute;
+	top: 5.5rem;
+	right: 12rem;
+}
+
+.c-header__sign-in-item {
+	color: $black;
+	font-size: $medium-font;
+	letter-spacing: $letter-spacing;
+	line-height: 1.5;
+	text-decoration: none;
+	&:not(:last-child) {
+		margin-right: 2rem;
+	}
+}
+
+.c-header__logo {
+	position: relative;
+	margin-bottom: 12rem;
+}
+
+.c-header__logo-img {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.c-header__search {
+	position: relative;
+	width: 645px;
+	margin: 0 auto;
+	label {
+		line-height: 2.25;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		color: $dark-grey;
+		margin-right: 15px;
+	}
+}
+
+.c-search {
+	&.c-search--rounded {
+		&.c-search--focus {
+			&.c-header__search {
+				width: 82%;
+				padding-left: 40px;
+			}
+		}
+	}
+}
+
+.c-button {
+	&.c--button-search {
+		&.c-header__search {
+			top: -20px;
+		}
+	}
+}
+
+.search-icon {
+	&.c-header__search-input {
+		left: 85px;
+		border-color: #b5bcc3;
+		&::before {
+			background-color: #b5bcc3;
+		}
+	}
+}
+
+.search-icon {
+	&.c-header__search-submit {
+		left: 97.7%;
+	}
+}
+
+.c-header__text {
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	color: $black;
+	font-size: $medium-font;
+	line-height: 1.25;
+	letter-spacing: $letter-spacing;
+}
+
+.c-header__text-link {
+	color: $green;
+	text-decoration: none;
+	&:not(:last-child) {
+		margin-right: 5px;
+	}
+}
+
+.c-header__footer-text {
+	color: $dark-grey;
+	font-size: $small-font;
+	letter-spacing: $letter-spacing;
+	line-height: 1.42;
+	margin-bottom: 35px;
+	text-align: center;
+}
