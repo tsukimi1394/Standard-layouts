@@ -67,6 +67,12 @@
 .c-button {
 	&.c-popup__yes {
 		background-color: $green;
+		&:hover {
+			background-color: $dark-green;
+		}
+		&:active {
+			background-color: $dark-dark-green;
+		}
 		&.c-popup--dark {
 			border: $border-width solid $green;
 
@@ -75,10 +81,24 @@
 			color: $green;
 			font-weight: bold;
 			text-shadow: none;
+			&:hover {
+				color: $light-green;
+				border-color: $light-green;
+			}
+			&:active {
+				color: $light-light-green;
+				border-color: $light-light-green;
+			}
 		}
 	}
 	&.c-popup__not {
 		background-color: $blue;
+		&:hover {
+			background-color: $dark-blue;
+		}
+		&:active {
+			background-color: $dark-dark-blue;
+		}
 		&.c-popup--dark {
 			border: $border-width solid $orange;
 
@@ -87,6 +107,14 @@
 			color: $orange;
 			font-weight: bold;
 			text-shadow: none;
+			&:hover {
+				color: $light-orange;
+				border-color: $light-orange;
+			}
+			&:active {
+				color: $light-light-orange;
+				border-color: $light-light-orange;
+			}
 		}
 	}
 }
