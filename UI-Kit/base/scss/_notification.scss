@@ -39,6 +39,12 @@
 	text-align: center;
 
 	cursor: pointer;
+	&:hover {
+		background-color: rgba(255,255,255,.3);
+	}
+	&:active {
+		background-color: rgba(255,255,255,.4);
+	}
 }
 
 .close-icon {
