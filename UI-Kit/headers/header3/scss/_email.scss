@@ -1,0 +1,101 @@
+.email-search {
+	display: flex;
+	justify-content: space-around;
+}
+
+.email {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 50%;
+}
+
+.email-wrapper {
+	position: relative;
+
+	width: 220px;
+}
+
+.c-email {
+	width: 100%;
+	margin: 10px;
+	padding: $normal-padding;
+	border: $border-width solid $grey;
+
+	border-radius: $smallest-border-radius;
+	outline: none;
+
+	font-weight: bold;
+	font-size: $medium-font;
+	&:focus {
+		border-color: $blue;
+	}
+	&.c-email--focus {
+		border-color: $blue;
+	}
+	&.c-email--valid {
+		border-color: $green;
+	}
+	&.c-email--invalid {
+		border-color: $red;
+	}
+	&.c-email--small {
+		padding: $small-padding;
+
+		font-size: $small-font;
+	}
+}
+
+.valid-icon {
+	position: absolute;
+	top: 27px;
+	right: 0;
+
+	width: 13px;
+	height: 7px;
+	border-bottom: $border-width solid $green;
+	border-left: $border-width solid $green;
+
+	color: $green;
+
+	transform: rotate(-45deg);
+	&.c-email--small {
+		top: 21px;
+	}
+}
+
+.invalid-icon {
+	position: absolute;
+	top: 32px;
+	right: 7%;
+
+	color: $red;
+	&::before {
+		content: '';
+
+		position: absolute;
+
+		width: 13px;
+		height: 2px;
+
+		background-color: $red;
+
+		transform: rotate(45deg);
+	}
+	&::after {
+		content: '';
+
+		position: absolute;
+
+		width: 13px;
+		height: 2px;
+
+		background-color: $red;
+
+		transform: rotate(-45deg);
+	}
+	&.c-email--small {
+		top: 26px;
+	}
+}
