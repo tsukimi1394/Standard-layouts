@@ -1,0 +1,76 @@
+.c-footer {
+	height: 288px;
+	background-color: #f2f5f8;
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 120px;
+	&__logo {
+		width: 75px;
+		//margin-right: 80px;
+	}
+	&__contact {
+		width: 200px;
+		//padding-right: 50px;
+		&-title {
+			color: $black;
+			font-size: $medium-font;
+			letter-spacing: $letter-spacing;
+			line-height: 2.25;
+		}
+		&-info {
+			display: block;
+			color: $dark-grey;
+			font-size: $medium-font;
+			letter-spacing: $letter-spacing;
+			line-height: 1.375;
+			margin-bottom: 20px;
+		}
+	}
+	&__info {
+		width: 270px;
+		//padding-right: 60px;
+		&-title {
+			color: $black;
+			font-size: $medium-font;
+			letter-spacing: $letter-spacing;
+			line-height: 2.25;
+		}
+		&-text {
+			display: block;
+			color: $dark-grey;
+			font-size: $medium-font;
+			letter-spacing: $letter-spacing;
+			line-height: 1.375;
+		}
+	}
+	&__app {
+		width: 150px;
+		&-title {
+			color: $black;
+			font-size: $medium-font;
+			letter-spacing: $letter-spacing;
+			line-height: 2.25;
+		}
+		&-link {
+			display: block;
+			color: $blue;
+			font-size: $medium-font;
+			letter-spacing: $letter-spacing;
+			line-height: 1.375;
+			text-decoration: none;
+			margin-left: 20px;
+		}
+	}
+}
+
+.button-wrapper {
+	&.c-footer__app-button {
+		margin: 10px 0 20px;
+	}
+}
+
+.c-button {
+	&.c-footer__app-button {
+		background-color: $green;
+	}
+}
