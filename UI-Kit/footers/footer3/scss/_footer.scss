@@ -1,0 +1,45 @@
+.c-footer {
+	height: 288px;
+	background-color: #f2f5f8;
+	display: flex;
+	justify-content: space-around;
+	padding: 30px 0;
+	&__menu-item {
+		display: block;
+		&:first-child .c-footer__menu-subitem:first-child {
+			color: $blue;
+		}
+	}
+	&__menu-subitem {
+		display: block;
+		color: $dark-grey;
+		text-decoration: none;
+		line-height: 2.25;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		&:first-child {
+			color: $black;
+		}
+	}
+	&__copyright {
+		&-logo-img {
+			display: block;
+		}
+		&-copy {
+			display: block;
+			line-height: 2.25;
+			letter-spacing: $letter-spacing;
+			color: $black;
+			font-size: $medium-font;
+			margin-top: 10px;
+		}
+		&-link {
+			display: block;
+			line-height: 2;
+			letter-spacing: $letter-spacing;
+			color: $dark-grey;
+			font-size: $medium-font;
+			text-decoration: none;
+		}
+	}
+}
