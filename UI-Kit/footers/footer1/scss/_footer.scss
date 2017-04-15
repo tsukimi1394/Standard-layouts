@@ -1,0 +1,52 @@
+.c-footer {
+	height: 168px;
+	background-color: #f2f5f8;
+	display: flex;
+	justify-content: space-between;
+	&__logo-menu {
+		margin-top: 50px;
+		margin-left: 120px;
+	}
+	&__menu {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 20px;
+		margin-left: 50px;
+		&-item {
+			color: $black;
+			font-size: $medium-font;
+			line-height: 2.25;
+			letter-spacing: $letter-spacing;
+			text-decoration: none;
+			margin-right: 40px;
+		}
+	}
+	&__social {
+		height: 14px;
+		width: auto;
+		margin-right: 30px;
+		vertical-align: top;
+		margin-top: 30px;
+	}
+	&__address {
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		margin-top: 40px;
+		margin-right: 120px;
+		&-city {
+			color: $black;
+			display: block;
+			line-height: 2.25;
+		}
+		&-street {
+			display: block;
+			color: $dark-grey;
+			line-height: 1.25;
+		}
+		&-tel {
+			display: block;
+			color: $dark-grey;
+			line-height: 1.25;
+		}
+	}
+}
