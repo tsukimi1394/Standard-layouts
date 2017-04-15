@@ -1,0 +1,110 @@
+.c-footer {
+	height: 336px;
+	background-color: #f2f5f8;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 50px;
+	&__info {
+		margin-left: 120px;
+		&-title {
+			color: $black;
+			letter-spacing: $letter-spacing;
+			line-height: 0.83;
+			font-size: 24px;
+			margin-bottom: 15px;
+		}
+		&-text {
+			color: $black;
+			letter-spacing: $letter-spacing;
+			line-height: 1.5;
+			font-size: $medium-font;
+		}
+		&-social {
+			margin-top: 30px;
+		}
+		&-social-item {
+			width: 55px;
+			height: 28px;
+			text-align: right;
+			color: $white;
+			padding-right: 10px;
+			border-radius: $smallest-border-radius;
+			outline: none;
+			letter-spacing: $letter-spacing;
+			&:not(:last-child) {
+				margin-right: 12px;
+			}
+			&.c--facebook {
+				background-color: #3162a2;
+				border: $border-width solid #3162a2;
+			}
+			&.c--twitter {
+				background-color: #2eb1eb;
+				border: $border-width solid #2eb1eb;
+			}
+			&.c--dribbble {
+				background-color: #f552b6;
+				border: $border-width solid #f552b6;
+			}
+			&.c--linkedin {
+				background-color: #457ac0;
+				border: $border-width solid #457ac0;
+			}
+			&-img {
+				height: 14px;
+				width: auto;
+				&.c--facebook {
+					margin-bottom: -1px;
+				}
+				&.c--twitter {
+					margin-right: 5px;
+					margin-bottom: -2px;
+				}
+				&.c--dribbble {
+					margin-right: 5px;
+					margin-bottom: -2px;	
+				}
+				&.c--linkedin {
+					margin-right: 5px;
+				}
+			}
+		}
+		&-links {
+			margin-top: 40px;
+		}
+		&-link {
+			display: inline-block;
+			text-decoration: none;
+			line-height: 2.25;
+			font-size: $medium-font;
+			color: $blue;
+			letter-spacing: $letter-spacing;
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+	}
+	&__menu {
+		margin-right: 120px;
+		margin-left: 240px;
+		display: flex;
+		justify-content: space-around;
+		&-item {
+			display: block;
+			&:not(:last-child) {
+				margin-right: 60px;
+			}
+		}
+		&-subitem {
+			display: block;
+			line-height: 2;
+			font-size: $medium-font;
+			letter-spacing: $letter-spacing;
+			color: $dark-grey;
+			text-decoration: none;
+			&:first-child {
+				color: $black;
+			}
+		}
+	}
+}
