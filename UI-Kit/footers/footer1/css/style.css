@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 1180px;
+  margin: 0 auto;
+  font-family: "Cabin", Arial, sans-serif; }
+
+.c-footer {
+  height: 168px;
+  background-color: #f2f5f8;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .c-footer__logo-menu {
+    margin-top: 50px;
+    margin-left: 120px; }
+  .c-footer__menu {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-left: 50px; }
+    .c-footer__menu-item {
+      color: #383737;
+      font-size: 16px;
+      line-height: 2.25;
+      letter-spacing: 0.02rem;
+      text-decoration: none;
+      margin-right: 40px; }
+  .c-footer__social {
+    height: 14px;
+    width: auto;
+    margin-right: 30px;
+    vertical-align: top;
+    margin-top: 30px; }
+  .c-footer__address {
+    font-size: 16px;
+    letter-spacing: 0.02rem;
+    margin-top: 40px;
+    margin-right: 120px; }
+    .c-footer__address-city {
+      color: #383737;
+      display: block;
+      line-height: 2.25; }
+    .c-footer__address-street {
+      display: block;
+      color: #b4bbc2;
+      line-height: 1.25; }
+    .c-footer__address-tel {
+      display: block;
+      color: #b4bbc2;
+      line-height: 1.25; }
+
+/*# sourceMappingURL=style.css.map */
