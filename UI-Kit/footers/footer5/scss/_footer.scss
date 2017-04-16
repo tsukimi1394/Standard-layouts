@@ -1,0 +1,145 @@
+.c-footer {
+	height: 409px;
+	&__subscribe {
+		height: 120px;
+		background-color: $green;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		&-label {
+			font-size: $medium-font;
+			color: $white;
+			letter-spacing: $letter-spacing;
+			line-height: 2.25;
+		}
+		&-input-wrapper {
+			display: inline-block;
+			width: 321px;
+			height: 48px;
+			margin-right: 20px;
+			margin-left: 15px;
+		}
+		&-input {
+			width: 100%;
+			height: 100%;
+			border: 1px solid $white;
+			border-radius: $smallest-border-radius;
+			padding: 18px 50px;
+			color: $black;
+			outline: none;
+			font-size: $medium-font;
+			&::placeholder {
+				color: $dark-grey;
+			}
+		}
+		&-submit {
+			min-width: 178px;
+			font-size: $medium-font;
+			line-height: 1.5;
+			letter-spacing: $letter-spacing;
+			color: $white;
+			background-color: $orange;
+			border: 1px solid $orange;
+			border-radius: $smallest-border-radius;
+			padding: 12px;
+			outline: none;
+		}
+	}
+	&__main {
+		height: 289px;
+		background-color: #f2f5f8;
+		display: flex;
+		justify-content: space-between;
+		padding: 50px 80px;
+		&-logo {
+			width: 150px;
+		}
+		&-menu-item {
+			width: 150px;
+			display: block;
+			:first-child {
+				color: $black;
+			}
+		}
+		&-menu-subitem {
+			display: block;
+			color: $dark-grey;
+			font-size: $medium-font;
+			letter-spacing: $letter-spacing;
+			line-height: 2;
+			text-decoration: none;
+		}
+		&-map {
+			width: 300px;
+		}
+		&-copyright {
+			width: 250px;
+			&-copy {
+				display: block;
+				color: $black;
+				font-size: $medium-font;
+				letter-spacing: $letter-spacing;
+				line-height: 2.25;
+			}
+			&-contact {
+				display: block;
+				color: $dark-grey;
+				font-size: $medium-font;
+				letter-spacing: $letter-spacing;
+				line-height: 1.375;
+			}
+		}
+	}
+}
+
+.mail-icon {
+	position: absolute;
+	width: 20px;
+	height: 14px;
+	border-radius: 1px;
+	border: solid 1px $black;
+	border-radius: 2px;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 9px;
+		top: -5px;
+		width: 1px;
+		height: 12px;
+		background-color: $black;
+		transform-origin: bottom;
+		transform: rotate(-54deg);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		left: 8px;
+		top: -5px;
+		width: 1px;
+		height: 12px;
+		background-color: $black;
+		transform-origin: bottom;
+		transform: rotate(54deg);
+	}
+	&.c-footer__subscribe-mail-icon {
+		border-color: $white;
+		background-color: $orange;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 38%;
+		&::before {
+			background-color: $white;
+		}
+		&::after {
+			background-color: $white;
+		}
+	}
+}
+
+.button-wrapper {
+	&.c-footer__main-copyright-button {
+		min-width: 100px;
+		margin-top: 55px;
+	}
+}
