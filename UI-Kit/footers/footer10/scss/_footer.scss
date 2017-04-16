@@ -1,0 +1,96 @@
+.c-footer {
+	height: 461px;
+	background-color: $green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	&__title {
+		color: $white;
+		line-height: 1.16;
+		font-size: 50px;
+		letter-spacing: $letter-spacing;
+		margin-bottom: 40px;
+	}
+	&__text {
+		color: $white;
+		line-height: 2.25;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		font-weight: normal;
+		margin-bottom: 25px;
+	}
+	&__form-wrapper {
+		width: 660px;
+		height: 96px;
+		border-radius: $smallest-border-radius;
+		background-color: #f2f5f8;
+		border: 1px solid transparent;
+		padding: 24px;
+		margin-bottom: 75px;
+	}
+	&__form-input-wrapper {
+		display: inline-block;
+		width: 220px;
+		height: 48px;
+		&:first-child {
+			margin-right: 10px;
+		}
+	}
+	&__form-input {
+		width: 100%;
+		height: 100%;
+		border: 2px solid $grey;
+		border-radius: $smallest-border-radius;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		line-height: 1.5;
+		padding: 10px;
+		color: $black;
+		background-color: $white;
+		outline: none;
+		font-weight: bold;
+		&::placeholder {
+			color: $grey;
+		}
+	}
+	&__form-submit-wrapper {
+		display: inline-block;
+		width: 140px;
+		height: 48px;
+		margin-left: 10px;
+	}
+	&__form-submit {
+		width: 100%;
+		height: 100%;
+		border: 1px solid transparent;
+		border-radius: $smallest-border-radius;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		line-height: 1.5;
+		padding: 10px;
+		color: $white;
+		background-color: $orange;
+		outline: none;
+	}
+	&__menu {
+		margin-bottom: 25px;
+		&-item {
+			text-decoration: none;
+			color: $white;
+			line-height: 1.71;
+			font-size: $small-font;
+			letter-spacing: 0.05rem;
+			text-transform: uppercase;
+			&:not(:last-child) {
+				margin-right: 55px;
+			}
+		}
+	}
+	&__copyright {
+		line-height: 2.57;
+		font-size: $small-font;
+		letter-spacing: $letter-spacing;
+		color: rgba(255, 255, 255, .3);
+	}
+}
