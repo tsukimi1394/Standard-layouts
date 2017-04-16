@@ -1,0 +1,41 @@
+.c-footer {
+	height: 72px;
+	background-color: $black;
+	padding: 15px 120px;
+	display: flex;
+	justify-content: space-between;
+	&__menu {
+		display: inline-block;
+		&-item {
+			text-decoration: none;
+			line-height: 2.25;
+			color: $white;
+			font-size: $medium-font;
+			letter-spacing: $letter-spacing;
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+	}
+	&__copyright {
+		display: inline-block;
+		color: #838282;
+		font-size: $medium-font;
+		line-height: 2.25;
+		letter-spacing: $letter-spacing;
+	}
+	&__social {
+		display: inline-block;
+		&-item {
+			width: 36px;
+			height: 36px;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			&-img {
+				height: 14px;
+				width: auto;
+			}
+		}
+	}
+}
