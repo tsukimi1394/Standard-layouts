@@ -4,8 +4,24 @@
 	display: flex;
 	justify-content: space-around;
 	padding: 30px 0;
+	@include respond-to(handhelds) {
+		flex-direction: column;
+		align-items: center;
+		height: 880px;
+	}
+	@include respond-to(tablets) {
+		flex-flow: wrap;
+		height: 470px;
+		align-items: center;
+	}
 	&__menu-item {
 		display: block;
+		@include respond-to(handhelds) {
+			margin-bottom: 30px;
+		}
+		@include respond-to(tablets) {
+			margin-bottom: 30px;
+		}
 		&:first-child .c-footer__menu-subitem:first-child {
 			color: $blue;
 		}
@@ -19,11 +35,27 @@
 		letter-spacing: $letter-spacing;
 		&:first-child {
 			color: $black;
+			pointer-events: none;
+		}
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 	&__copyright {
+		@include respond-to(handhelds) {
+			text-align: center;
+		}
+		@include respond-to(tablets) {
+			text-align: center;
+		}
 		&-logo-img {
 			display: block;
+			@include respond-to(handhelds) {
+				display: inline-block;
+			}
+			@include respond-to(tablets) {
+				display: inline-block;
+			}
 		}
 		&-copy {
 			display: block;
@@ -40,6 +72,9 @@
 			color: $dark-grey;
 			font-size: $medium-font;
 			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
