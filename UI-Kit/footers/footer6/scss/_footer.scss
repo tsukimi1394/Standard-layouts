@@ -2,6 +2,16 @@
 	height: 192px;
 	background-color: $black;
 	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	@include respond-to(tablets) {
+		height: 225px;
+	}
+	@include respond-to(handhelds) {
+		height: 250px;
+	}
 	&__menu {
 		display: block;
 		text-align: center;
@@ -14,6 +24,9 @@
 			text-decoration: none;
 			&:not(:last-child) {
 				margin-right: 30px;
+			}
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -32,26 +45,52 @@
 			&.c--facebook {
 				background-color: #3162a2;
 				border-color: #3162a2;
+				&:hover {
+					background-color: #235493;
+					border-color: #235493;
+					cursor: pointer;
+				}
 			}
 			&.c--twitter {
 				background-color: #2eb1eb;
 				border-color: #2eb1eb;
+				&:hover {
+					background-color: #209dd4;
+					border-color: #209dd4;
+					cursor: pointer;
+				}
 			}
 			&.c--dribbble {
 				background-color: #f552b6;
 				border-color: #f552b6;
+				&:hover {
+					background-color: #d43b99;
+					border-color: #d43b99;
+					cursor: pointer;
+				}
 			}
 			&.c--vimeo {
 				background-color: #3498b9;
 				border-color: #3498b9;
+				&:hover {
+					background-color: #2485a5;
+					border-color: #2485a5;
+					cursor: pointer;
+				}
 			}
 			&.c--google-plus {
 				background-color: #f25c58;
 				border-color: #f25c58;
+				&:hover {
+					background-color: #d24440;
+					border-color: #d24440;
+					cursor: pointer;
+				}
 			}
 			&-img {
-				height: 14px;
+				height: 16px;
 				width: auto;
+				vertical-align: middle;
 			}
 		}
 	}
