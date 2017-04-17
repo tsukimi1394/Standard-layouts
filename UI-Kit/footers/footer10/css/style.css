@@ -9,48 +9,48 @@ body {
 }
 
 .c-footer {
-  height: 461px;
-  background-color: #24aa98;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
+  height: 461px;
+  background-color: #24aa98;
 }
 
 .c-footer__title {
-  color: #fff;
-  line-height: 1.16;
-  font-size: 50px;
-  letter-spacing: 0.02rem;
   margin-bottom: 40px;
+  color: #fff;
+  font-size: 50px;
+  line-height: 1.16;
+  letter-spacing: 0.02rem;
   text-align: center;
 }
 
 .c-footer__text {
-  color: #fff;
-  line-height: 2.25;
-  font-size: 16px;
-  letter-spacing: 0.02rem;
-  font-weight: normal;
   margin-bottom: 25px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 2.25;
+  letter-spacing: 0.02rem;
 }
 
 .c-footer__form-wrapper {
-  width: 56%;
-  height: 96px;
-  border-radius: 6px;
-  background-color: #f2f5f8;
-  border: 1px solid transparent;
-  padding: 24px;
-  margin-bottom: 75px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 56%;
+  height: 96px;
+  margin-bottom: 75px;
+  padding: 24px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: #f2f5f8;
 }
 
 .c-footer__form-input-wrapper {
@@ -66,16 +66,16 @@ body {
 .c-footer__form-input {
   width: 100%;
   height: 100%;
+  padding: 10px;
   border: 2px solid #c6ccd2;
   border-radius: 6px;
-  font-size: 16px;
-  letter-spacing: 0.02rem;
-  line-height: 1.5;
-  padding: 10px;
-  color: #383737;
   background-color: #fff;
   outline: none;
+  color: #383737;
   font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
 }
 
 .c-footer__form-input::-webkit-input-placeholder {
@@ -100,20 +100,20 @@ body {
 .c-footer__form-submit {
   width: 100%;
   height: 100%;
+  padding: 10px;
   border: 1px solid transparent;
   border-radius: 6px;
-  font-size: 16px;
-  letter-spacing: 0.02rem;
-  line-height: 1.5;
-  padding: 10px;
-  color: #fff;
   background-color: #d9c26c;
   outline: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
 }
 
 .c-footer__form-submit:hover {
-  background-color: #c9b248;
   border-color: #c9b248;
+  background-color: #c9b248;
   cursor: pointer;
 }
 
@@ -123,12 +123,12 @@ body {
 }
 
 .c-footer__menu-item {
-  text-decoration: none;
   color: #fff;
-  line-height: 1.71;
   font-size: 14px;
+  line-height: 1.71;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .c-footer__menu-item:not(:last-child) {
@@ -140,10 +140,10 @@ body {
 }
 
 .c-footer__copyright {
-  line-height: 2.57;
-  font-size: 14px;
-  letter-spacing: 0.02rem;
   color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  line-height: 2.57;
+  letter-spacing: 0.02rem;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -162,10 +162,10 @@ body {
     flex-flow: wrap;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: 210px;
-    padding: 12px;
     -ms-flex-align: center;
     align-items: center;
+    height: 210px;
+    padding: 12px;
   }
 
   .c-footer__form-input-wrapper {
@@ -191,12 +191,12 @@ body {
     padding: 12px;
   }
 
-  .c-footer__form-input-wrapper:first-child {
-    margin-bottom: 20px;
-  }
-
   .c-footer__form-input-wrapper {
     width: 220px;
+  }
+
+  .c-footer__form-input-wrapper:first-child {
+    margin-bottom: 20px;
   }
 }
 
