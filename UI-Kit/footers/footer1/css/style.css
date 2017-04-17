@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
-  width: 1180px;
-  margin: 0 auto;
-  font-family: "Cabin", Arial, sans-serif; }
+  font-family: "Cabin", Arial, sans-serif;
+}
 
 .c-footer {
   height: 168px;
@@ -14,44 +14,164 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
-  .c-footer__logo-menu {
-    margin-top: 50px;
-    margin-left: 120px; }
-  .c-footer__menu {
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 20px;
-    margin-left: 50px; }
-    .c-footer__menu-item {
-      color: #383737;
-      font-size: 16px;
-      line-height: 2.25;
-      letter-spacing: 0.02rem;
-      text-decoration: none;
-      margin-right: 40px; }
-  .c-footer__social {
-    height: 14px;
-    width: auto;
-    margin-right: 30px;
-    vertical-align: top;
-    margin-top: 30px; }
-  .c-footer__address {
-    font-size: 16px;
-    letter-spacing: 0.02rem;
-    margin-top: 40px;
-    margin-right: 120px; }
-    .c-footer__address-city {
-      color: #383737;
-      display: block;
-      line-height: 2.25; }
-    .c-footer__address-street {
-      display: block;
-      color: #b4bbc2;
-      line-height: 1.25; }
-    .c-footer__address-tel {
-      display: block;
-      color: #b4bbc2;
-      line-height: 1.25; }
+  justify-content: space-between;
+}
 
+.c-footer__logo-menu {
+  margin-top: 50px;
+  margin-left: 120px;
+}
+
+.c-footer__menu {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.c-footer__menu-item {
+  color: #383737;
+  font-size: 16px;
+  line-height: 2.25;
+  letter-spacing: 0.02rem;
+  text-decoration: none;
+}
+
+.c-footer__menu-item:hover {
+  text-decoration: underline;
+}
+
+.c-footer__social {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+.c-footer__social-item {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid transparent;
+  background-color: transparent;
+  outline: none;
+}
+
+.c-footer__social-item:hover {
+  border-color: #383737;
+  border-radius: 999rem;
+  cursor: pointer;
+}
+
+.c-footer__social-item-img {
+  height: 14px;
+  width: auto;
+}
+
+.c-footer__address {
+  font-size: 16px;
+  letter-spacing: 0.02rem;
+  margin-top: 40px;
+  margin-right: 120px;
+}
+
+.c-footer__address-city {
+  color: #383737;
+  display: block;
+  line-height: 2.25;
+}
+
+.c-footer__address-street {
+  display: block;
+  color: #b4bbc2;
+  line-height: 1.25;
+}
+
+.c-footer__address-tel {
+  display: block;
+  color: #b4bbc2;
+  line-height: 1.25;
+}
+
+@media only screen and (min-width: 1025px) {
+  .c-footer__menu-item {
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .c-footer__logo-menu {
+    margin-left: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .c-footer__menu-item {
+    margin-right: 10px;
+  }
+
+  .c-footer__menu {
+    margin-left: 0;
+  }
+
+  .c-footer__address {
+    margin-top: 0;
+    margin-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .c-footer {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 370px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .c-footer__logo-menu {
+    margin-left: 0;
+  }
+
+  .c-footer__menu-item {
+    margin-right: 20px;
+  }
+
+  .c-footer__menu {
+    margin-left: 30px;
+  }
+
+  .c-footer__social {
+    display: block;
+  }
+
+  .c-footer__address {
+    margin-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .c-footer {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 325px;
+  }
+
+  .c-footer__logo-img {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .c-footer__menu-item {
+    margin-right: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
