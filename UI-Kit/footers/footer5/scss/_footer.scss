@@ -7,11 +7,40 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
+		@include respond-to(handhelds) {
+			height: 200px;
+		}
+		@include respond-to(tablets) {
+			height: 200px;
+		}
+		&-wrapper {
+			position: relative;
+			@include respond-to(tablets) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			@include respond-to(handhelds) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+		}
 		&-label {
 			font-size: $medium-font;
 			color: $white;
 			letter-spacing: $letter-spacing;
 			line-height: 2.25;
+			@include respond-to(tablets) {
+				display: block;
+				margin-bottom: 10px;
+			}
+			@include respond-to(handhelds) {
+				display: block;
+				margin-bottom: 10px;
+			}
 		}
 		&-input-wrapper {
 			display: inline-block;
@@ -19,6 +48,15 @@
 			height: 48px;
 			margin-right: 20px;
 			margin-left: 15px;
+			@include respond-to(tablets) {
+				display: block;
+				margin-bottom: 20px;
+			}
+			@include respond-to(handhelds) {
+				display: block;
+				margin-bottom: 20px;
+				width: 255px;
+			}
 		}
 		&-input {
 			width: 100%;
@@ -44,6 +82,17 @@
 			border-radius: $smallest-border-radius;
 			padding: 12px;
 			outline: none;
+			&:hover {
+				background-color: $dark-orange;
+				border-color: $dark-orange;
+				cursor: pointer;
+			}
+			@include respond-to(tablets) {
+				display: block;
+			}
+			@include respond-to(handhelds) {
+				display: block;
+			}
 		}
 	}
 	&__main {
@@ -52,14 +101,37 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 50px 80px;
+		@include respond-to(medium-screens) {
+			padding: 50px 60px;
+		}
+		@include respond-to(tablets) {
+			padding: 50px 40px;
+			flex-flow: wrap;
+			justify-content: center;
+			height: 710px;
+		}
+		@include respond-to(handhelds) {
+			padding: 50px 40px;
+			flex-flow: wrap;
+			justify-content: center;
+			height: 820px;
+			align-items: center;
+		}
 		&-logo {
 			width: 150px;
+			@include respond-to(handhelds) {
+				text-align: center;
+				margin-bottom: 20px;
+			}
 		}
 		&-menu-item {
 			width: 150px;
 			display: block;
-			:first-child {
-				color: $black;
+			@include respond-to(tablets) {
+				margin-bottom: 30px;
+			}
+			@include respond-to(handhelds) {
+				margin-bottom: 30px;
 			}
 		}
 		&-menu-subitem {
@@ -69,12 +141,23 @@
 			letter-spacing: $letter-spacing;
 			line-height: 2;
 			text-decoration: none;
+			&:first-child {
+				color: $black;
+				pointer-events: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 		&-map {
 			width: 300px;
+			margin-bottom: 30px;
 		}
 		&-copyright {
 			width: 250px;
+			@include respond-to(handhelds) {
+				text-align: center;
+			}
 			&-copy {
 				display: block;
 				color: $black;
@@ -88,6 +171,8 @@
 				font-size: $medium-font;
 				letter-spacing: $letter-spacing;
 				line-height: 1.375;
+				text-decoration: none;
+				cursor: default;
 			}
 		}
 	}
@@ -127,7 +212,15 @@
 		background-color: $orange;
 		top: 50%;
 		transform: translateY(-50%);
-		left: 38%;
+		left: 30%;
+		@include respond-to(tablets) {
+			transform: translateY(-140%);
+			left: 9%;
+		}
+		@include respond-to(handhelds) {
+			transform: translateY(-140%);
+			left: 9%;
+		}
 		&::before {
 			background-color: $white;
 		}
