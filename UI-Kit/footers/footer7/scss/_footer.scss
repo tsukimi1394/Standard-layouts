@@ -1,48 +1,54 @@
 .c-footer {
-	height: 672px;
-	background: url(../images/back.jpg) no-repeat;
-	background-size: cover;
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-	padding: 80px 120px;
 	@include respond-to(medium-screens) {
 		padding: 40px;
 	}
 	@include respond-to(tablets) {
-		padding: 40px;
 		flex-flow: wrap;
-		height: 1250px;
 		justify-content: center;
+		height: 1250px;
+		padding: 40px;
 	}
 	@include respond-to(handhelds) {
-		padding: 20px;
 		flex-flow: wrap;
-		height: 1850px;
 		justify-content: center;
+		height: 1850px;
+		padding: 20px;
 	}
+
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+	height: 672px;
+	padding: 80px 120px;
+
+	background: url(../images/back.jpg) no-repeat;
+	background-size: cover;
 	&__logo {
 		width: 150px;
 	}
 	&__menu-item {
-		width: 150px;
 		@include respond-to(tablets) {
 			width: 200px;
 			margin-bottom: 20px;
 		}
+
+		width: 150px;
 	}
 	&__menu-subitem {
 		display: block;
-		text-decoration: none;
+
+		color: #9d9d9e;
 		font-size: $medium-font;
 		line-height: 2;
 		letter-spacing: $letter-spacing;
-		color: #9d9d9e;
+		text-decoration: none;
 		&:first-child {
 			color: $white;
 			line-height: 2.25;
-			text-transform: uppercase;
 			letter-spacing: 0.05rem;
+			text-transform: uppercase;
+
 			pointer-events: none;
 		}
 		&:hover {
@@ -52,16 +58,20 @@
 			position: relative;
 			&::after {
 				content: 'NEW';
-				color: $black;
-				border: 1px solid transparent;
-				background-color: $orange;
-				border-radius: $smallest-border-radius;
+
 				position: absolute;
-				margin-left: 10px;
-				font-size: $small-font;
-				letter-spacing: 0.05rem;
+
 				width: 52px;
 				height: 28px;
+				margin-left: 10px;
+				border: 1px solid transparent;
+
+				border-radius: $smallest-border-radius;
+				background-color: $orange;
+
+				color: $black;
+				font-size: $small-font;
+				letter-spacing: 0.05rem;
 				text-align: center;
 			}
 			&:hover::after {
@@ -70,106 +80,130 @@
 		}
 	}
 	&__other {
-		width: 260px;
 		@include respond-to(tablets) {
 			width: 360px;
+
 			text-align: center;
 		}
+
+		width: 260px;
 	}
 	&__social {
 		&-title {
 			display: block;
+			margin-bottom: 10px;
+
+			color: $white;
+			font-size: $medium-font;
 			line-height: 2.25;
 			letter-spacing: 0.05rem;
-			font-size: $medium-font;
-			color: $white;
 			text-transform: uppercase;
-			margin-bottom: 10px;
 		}
 		&-item {
-			width: 36px;
-			height: 36px;
-			border-radius: $smallest-border-radius;
-			border: 1px solid;
-			&:not(:last-child) {
-				margin-right: 10px;
-			}
 			@include respond-to(medium-screens) {
 				margin-bottom: 10px;
 			}
+
+			width: 36px;
+			height: 36px;
+			border: 1px solid;
+
+			border-radius: $smallest-border-radius;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
 			&.c--facebook {
-				background-color: #3162a2;
 				border-color: #3162a2;
+
+				background-color: #3162a2;
 				&:hover {
-					background-color: #235493;
 					border-color: #235493;
+
+					background-color: #235493;
+
 					cursor: pointer;
 				}
 			}
 			&.c--twitter {
-				background-color: #2eb1eb;
 				border-color: #2eb1eb;
+
+				background-color: #2eb1eb;
 				&:hover {
-					background-color: #209dd4;
 					border-color: #209dd4;
+
+					background-color: #209dd4;
+
 					cursor: pointer;
 				}
 			}
 			&.c--dribbble {
-				background-color: #f552b6;
 				border-color: #f552b6;
+
+				background-color: #f552b6;
 				&:hover {
-					background-color: #d43b99;
 					border-color: #d43b99;
+
+					background-color: #d43b99;
+
 					cursor: pointer;
 				}
 			}
 			&.c--vimeo {
-				background-color: #3498b9;
 				border-color: #3498b9;
+
+				background-color: #3498b9;
 				&:hover {
-					background-color: #2485a5;
 					border-color: #2485a5;
+
+					background-color: #2485a5;
+
 					cursor: pointer;
 				}
 			}
 			&.c--google-plus {
-				background-color: #f25c58;
 				border-color: #f25c58;
+
+				background-color: #f25c58;
 				&:hover {
-					background-color: #d24440;
 					border-color: #d24440;
+
+					background-color: #d24440;
+
 					cursor: pointer;
 				}
 			}
 			&-img {
-				height: 14px;
 				width: auto;
+				height: 14px;
+
 				vertical-align: middle;
 			}
 		}
 	}
 	&__subscribe {
-		margin-top: 50px;
-		margin-bottom: 40px;
 		@include respond-to(medium-screens) {
 			margin-top: 20px;
 		}
+
+		margin-top: 50px;
+		margin-bottom: 40px;
 		&-title {
 			display: block;
+
+			color: $white;
+			font-size: $medium-font;
 			line-height: 2.25;
 			letter-spacing: 0.05rem;
-			font-size: $medium-font;
-			color: $white;
 			text-transform: uppercase;
 		}
 		&-text {
 			display: block;
-			line-height: 1.25;
-			letter-spacing: $letter-spacing;
+			margin-bottom: 15px;
+
 			color: #9d9d9e;
 			font-size: $medium-font;
-			margin-bottom: 15px;
+			line-height: 1.25;
+			letter-spacing: $letter-spacing;
 		}
 		&-input-wrapper {
 			display: inline-block;
@@ -180,34 +214,41 @@
 		&-input {
 			width: 100%;
 			height: 100%;
-			border: 1px solid transparent;
-			border-radius: $smallest-border-radius;
-			font-size: $small-font;
-			letter-spacing: $letter-spacing;
-			line-height: 1.71;
 			padding: 10px;
-			color: $white;
+			border: 1px solid transparent;
+
+			border-radius: $smallest-border-radius;
 			background-color: rgba(255, 255, 255, .25);
 			outline: none;
+
+			color: $white;
+			font-size: $small-font;
+			line-height: 1.71;
+			letter-spacing: $letter-spacing;
 			&::placeholder {
 				color: rgba(255, 255, 255, .6);
 			}
 		}
 		&-submit-wrapper {
+			position: relative;
+
+			display: inline-block;
 			width: 36px;
 			height: 36px;
-			position: relative;
-			display: inline-block;
+
 			vertical-align: bottom;
 			&::before {
 				content: '';
+
 				position: absolute;
 				top: 50%;
 				left: calc(50% - 1px);
+
 				width: 5px;
 				height: 5px;
 				border-top: solid $border-width $white;
 				border-right: solid $border-width $white;
+
 				transform: translate(-50%, -50%) rotate(45deg);
 				transform-origin: center;
 			}
@@ -216,27 +257,31 @@
 			width: 100%;
 			height: 100%;
 			border: 1px solid transparent;
+
+			border-radius: $smallest-border-radius;
 			background-color: $green;
 			outline: none;
-			border-radius: $smallest-border-radius;
 			&:hover {
 				background-color: $dark-green;
+
 				cursor: pointer;
 			}
 		}
 	}
 	&__main-menu-item {
 		display: block;
-		text-decoration: none;
+
+		color: #9d9d9e;
 		font-size: $medium-font;
 		line-height: 2;
 		letter-spacing: $letter-spacing;
-		color: #9d9d9e;
+		text-decoration: none;
 		&:first-child {
 			color: $white;
 			line-height: 2.25;
-			text-transform: uppercase;
 			letter-spacing: 0.05rem;
+			text-transform: uppercase;
+
 			pointer-events: none;
 		}
 		&:hover {
@@ -244,27 +289,33 @@
 		}
 	}
 	&__copyright {
-		position: absolute;
-		bottom: 30px;
-		right: 120px;
-		line-height: 2.57;
-		letter-spacing: $letter-spacing;
-		font-size: $small-font;
-		color: #9d9d9e;
 		@include respond-to(tablets) {
+			right: 0;
 			bottom: 10px;
 			left: 50%;
-			right: 0;
-			transform: translateX(-50%);
+
 			text-align: center;
+
+			transform: translateX(-50%);
 		}
 		@include respond-to(handhelds) {
+			right: 0;
 			bottom: 5px;
 			left: 50%;
-			right: 0;
-			transform: translateX(-50%);
-			text-align: center;
+
 			line-height: 1.25;
+			text-align: center;
+
+			transform: translateX(-50%);
 		}
+
+		position: absolute;
+		right: 120px;
+		bottom: 30px;
+
+		color: #9d9d9e;
+		font-size: $small-font;
+		line-height: 2.57;
+		letter-spacing: $letter-spacing;
 	}
 }
