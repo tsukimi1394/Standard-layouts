@@ -1,65 +1,148 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
-  width: 1180px;
-  margin: 0 auto;
-  font-family: "Cabin", Arial, sans-serif; }
+  font-family: "Cabin", Arial, sans-serif;
+}
 
 .c-footer {
   height: 192px;
   background-color: #383737;
-  padding: 15px; }
-  .c-footer__menu {
-    display: block;
-    text-align: center; }
-    .c-footer__menu-item {
-      display: inline-block;
-      color: #fff;
-      line-height: 2.25;
-      letter-spacing: 0.02rem;
-      font-size: 16px;
-      text-decoration: none; }
-      .c-footer__menu-item:not(:last-child) {
-        margin-right: 30px; }
-  .c-footer__social {
-    margin-top: 30px;
-    text-align: center; }
-    .c-footer__social-item {
-      width: 36px;
-      height: 36px;
-      border-radius: 999rem;
-      border: 1px solid;
-      outline: none; }
-      .c-footer__social-item:not(:last-child) {
-        margin-right: 20px; }
-      .c-footer__social-item.c--facebook {
-        background-color: #3162a2;
-        border-color: #3162a2; }
-      .c-footer__social-item.c--twitter {
-        background-color: #2eb1eb;
-        border-color: #2eb1eb; }
-      .c-footer__social-item.c--dribbble {
-        background-color: #f552b6;
-        border-color: #f552b6; }
-      .c-footer__social-item.c--vimeo {
-        background-color: #3498b9;
-        border-color: #3498b9; }
-      .c-footer__social-item.c--google-plus {
-        background-color: #f25c58;
-        border-color: #f25c58; }
-      .c-footer__social-item-img {
-        height: 14px;
-        width: auto; }
-  .c-footer__copyright {
-    margin-top: 30px;
-    text-align: center; }
-    .c-footer__copyright-copy {
-      font-size: 14px;
-      line-height: 2.57;
-      letter-spacing: 0.02rem;
-      color: #838282; }
+  padding: 15px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
 
+.c-footer__menu {
+  display: block;
+  text-align: center;
+}
+
+.c-footer__menu-item {
+  display: inline-block;
+  color: #fff;
+  line-height: 2.25;
+  letter-spacing: 0.02rem;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.c-footer__menu-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.c-footer__menu-item:hover {
+  text-decoration: underline;
+}
+
+.c-footer__social {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.c-footer__social-item {
+  width: 36px;
+  height: 36px;
+  border-radius: 999rem;
+  border: 1px solid;
+  outline: none;
+}
+
+.c-footer__social-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.c-footer__social-item.c--facebook {
+  background-color: #3162a2;
+  border-color: #3162a2;
+}
+
+.c-footer__social-item.c--facebook:hover {
+  background-color: #235493;
+  border-color: #235493;
+  cursor: pointer;
+}
+
+.c-footer__social-item.c--twitter {
+  background-color: #2eb1eb;
+  border-color: #2eb1eb;
+}
+
+.c-footer__social-item.c--twitter:hover {
+  background-color: #209dd4;
+  border-color: #209dd4;
+  cursor: pointer;
+}
+
+.c-footer__social-item.c--dribbble {
+  background-color: #f552b6;
+  border-color: #f552b6;
+}
+
+.c-footer__social-item.c--dribbble:hover {
+  background-color: #d43b99;
+  border-color: #d43b99;
+  cursor: pointer;
+}
+
+.c-footer__social-item.c--vimeo {
+  background-color: #3498b9;
+  border-color: #3498b9;
+}
+
+.c-footer__social-item.c--vimeo:hover {
+  background-color: #2485a5;
+  border-color: #2485a5;
+  cursor: pointer;
+}
+
+.c-footer__social-item.c--google-plus {
+  background-color: #f25c58;
+  border-color: #f25c58;
+}
+
+.c-footer__social-item.c--google-plus:hover {
+  background-color: #d24440;
+  border-color: #d24440;
+  cursor: pointer;
+}
+
+.c-footer__social-item-img {
+  height: 16px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.c-footer__copyright {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.c-footer__copyright-copy {
+  font-size: 14px;
+  line-height: 2.57;
+  letter-spacing: 0.02rem;
+  color: #838282;
+}
+
+@media only screen and (max-width: 375px) {
+  .c-footer {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .c-footer {
+    height: 225px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
