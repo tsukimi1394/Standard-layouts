@@ -1,9 +1,4 @@
 .c-footer {
-	height: 72px;
-	background-color: $black;
-	padding: 15px 120px;
-	display: flex;
-	justify-content: space-between;
 	@include respond-to(medium-screens) {
 		padding: 15px 60px;
 	}
@@ -19,20 +14,28 @@
 		height: 200px;
 		padding: 15px;
 	}
+
+	display: flex;
+	justify-content: space-between;
+	height: 72px;
+	padding: 15px 120px;
+
+	background-color: $black;
 	&__menu {
-		display: inline-block;
 		@include respond-to(tablets) {
 			text-align: center;
 		}
 		@include respond-to(handhelds) {
 			text-align: center;
 		}
+
+		display: inline-block;
 		&-item {
-			text-decoration: none;
-			line-height: 2.25;
 			color: $white;
 			font-size: $medium-font;
+			line-height: 2.25;
 			letter-spacing: $letter-spacing;
+			text-decoration: none;
 			&:not(:last-child) {
 				margin-right: 30px;
 			}
@@ -43,13 +46,13 @@
 	}
 	&__copyright {
 		display: inline-block;
+
 		color: #838282;
 		font-size: $medium-font;
 		line-height: 2.25;
 		letter-spacing: $letter-spacing;
 	}
 	&__social {
-		display: inline-block;
 		@include respond-to(tablets) {
 			display: flex;
 			flex-flow: wrap;
@@ -60,21 +63,25 @@
 			flex-flow: wrap;
 			justify-content: center;
 		}
+
+		display: inline-block;
 		&-buttons {
 			display: inline-block;
 		}
 		&-item {
 			width: 36px;
 			height: 36px;
-			background-color: transparent;
 			border: none;
+
+			background-color: transparent;
 			outline: none;
 			&-img {
-				height: 14px;
 				width: auto;
+				height: 14px;
 			}
 			&:hover {
 				border: 1px solid #9c9b9b;
+
 				border-radius: $round-border-radius;
 			}
 		}
