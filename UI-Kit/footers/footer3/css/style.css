@@ -9,13 +9,13 @@ body {
 }
 
 .c-footer {
-  height: 288px;
-  background-color: #f2f5f8;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  height: 288px;
   padding: 30px 0;
+  background-color: #f2f5f8;
 }
 
 .c-footer__menu-item {
@@ -29,10 +29,10 @@ body {
 .c-footer__menu-subitem {
   display: block;
   color: #b4bbc2;
-  text-decoration: none;
-  line-height: 2.25;
   font-size: 16px;
+  line-height: 2.25;
   letter-spacing: 0.02rem;
+  text-decoration: none;
 }
 
 .c-footer__menu-subitem:first-child {
@@ -50,19 +50,19 @@ body {
 
 .c-footer__copyright-copy {
   display: block;
-  line-height: 2.25;
-  letter-spacing: 0.02rem;
+  margin-top: 10px;
   color: #383737;
   font-size: 16px;
-  margin-top: 10px;
+  line-height: 2.25;
+  letter-spacing: 0.02rem;
 }
 
 .c-footer__copyright-link {
   display: block;
-  line-height: 2;
-  letter-spacing: 0.02rem;
   color: #b4bbc2;
   font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.02rem;
   text-decoration: none;
 }
 
@@ -96,9 +96,9 @@ body {
   .c-footer {
     -ms-flex-flow: wrap;
     flex-flow: wrap;
-    height: 470px;
     -ms-flex-align: center;
     align-items: center;
+    height: 470px;
   }
 
   .c-footer__menu-item {
