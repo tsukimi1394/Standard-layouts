@@ -1,25 +1,26 @@
 .c-footer {
-	height: 288px;
-	background-color: #f2f5f8;
-	display: flex;
-	justify-content: space-between;
-	padding: 40px 120px;
 	@include respond-to(tablets) {
 		flex-flow: wrap;
 		justify-content: center;
-		height: 850px;
 		align-content: center;
+		height: 850px;
 		padding: 40px;
 	}
 	@include respond-to(handhelds) {
 		flex-flow: wrap;
 		justify-content: center;
-		height: 900px;
 		align-content: center;
+		height: 900px;
 		padding: 40px 20px;
 	}
+
+	display: flex;
+	justify-content: space-between;
+	height: 288px;
+	padding: 40px 120px;
+
+	background-color: #f2f5f8;
 	&__logo {
-		width: 75px;
 		@include respond-to(tablets) {
 			order: 1;
 			margin-right: 20%;
@@ -29,9 +30,10 @@
 			order: 1;
 			margin-bottom: 80px;
 		}
+
+		width: 75px;
 	}
 	&__contact {
-		width: 200px;
 		@include respond-to(tablets) {
 			order: 3;
 			margin-right: 20%;
@@ -39,28 +41,31 @@
 		}
 		@include respond-to(handhelds) {
 			order: 3;
-			margin-bottom: 80px;
 			width: 270px;
+			margin-bottom: 80px;
 		}
+
+		width: 200px;
 		&-title {
 			color: $black;
 			font-size: $medium-font;
-			letter-spacing: $letter-spacing;
 			line-height: 2.25;
+			letter-spacing: $letter-spacing;
 		}
 		&-info {
 			display: block;
+			margin-bottom: 20px;
+
 			color: $dark-grey;
 			font-size: $medium-font;
-			letter-spacing: $letter-spacing;
 			line-height: 1.375;
-			margin-bottom: 20px;
+			letter-spacing: $letter-spacing;
 			text-decoration: none;
+
 			cursor: default;
 		}
 	}
 	&__info {
-		width: 270px;
 		@include respond-to(tablets) {
 			order: 2;
 			margin-bottom: 80px;
@@ -69,45 +74,51 @@
 			order: 2;
 			margin-bottom: 80px;
 		}
+
+		width: 270px;
 		&-title {
 			color: $black;
 			font-size: $medium-font;
-			letter-spacing: $letter-spacing;
 			line-height: 2.25;
+			letter-spacing: $letter-spacing;
 		}
 		&-text {
 			display: block;
+
 			color: $dark-grey;
 			font-size: $medium-font;
-			letter-spacing: $letter-spacing;
 			line-height: 1.375;
+			letter-spacing: $letter-spacing;
 		}
 	}
 	&__app {
-		width: 150px;
 		@include respond-to(tablets) {
 			order: 4;
 		}
 		@include respond-to(handhelds) {
 			order: 4;
-			margin-bottom: 80px;
 			width: 270px;
+			margin-bottom: 80px;
+
 			text-align: center;
 		}
+
+		width: 150px;
 		&-title {
 			color: $black;
 			font-size: $medium-font;
-			letter-spacing: $letter-spacing;
 			line-height: 2.25;
+			letter-spacing: $letter-spacing;
 		}
 		&-link {
 			display: block;
+			margin-left: 20px;
+
 			color: $blue;
 			font-size: $medium-font;
-			letter-spacing: $letter-spacing;
 			line-height: 1.375;
+			letter-spacing: $letter-spacing;
 			text-decoration: none;
-			margin-left: 20px;
 			&:hover {
 				text-decoration: underline;
 			}
