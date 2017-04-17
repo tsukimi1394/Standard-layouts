@@ -1,38 +1,38 @@
 .c-footer {
 	height: 409px;
 	&__subscribe {
-		height: 120px;
-		background-color: $green;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
 		@include respond-to(handhelds) {
 			height: 200px;
 		}
 		@include respond-to(tablets) {
 			height: 200px;
 		}
+
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 120px;
+
+		background-color: $green;
 		&-wrapper {
-			position: relative;
 			@include respond-to(tablets) {
 				display: flex;
+				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				flex-direction: column;
 			}
 			@include respond-to(handhelds) {
 				display: flex;
+				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				flex-direction: column;
 			}
+
+			position: relative;
 		}
 		&-label {
-			font-size: $medium-font;
-			color: $white;
-			letter-spacing: $letter-spacing;
-			line-height: 2.25;
 			@include respond-to(tablets) {
 				display: block;
 				margin-bottom: 10px;
@@ -41,108 +41,128 @@
 				display: block;
 				margin-bottom: 10px;
 			}
+
+			color: $white;
+			font-size: $medium-font;
+			line-height: 2.25;
+			letter-spacing: $letter-spacing;
 		}
 		&-input-wrapper {
+			@include respond-to(tablets) {
+				display: block;
+				margin-bottom: 20px;
+			}
+			@include respond-to(handhelds) {
+				display: block;
+				width: 255px;
+				margin-bottom: 20px;
+			}
+
 			display: inline-block;
 			width: 321px;
 			height: 48px;
 			margin-right: 20px;
 			margin-left: 15px;
-			@include respond-to(tablets) {
-				display: block;
-				margin-bottom: 20px;
-			}
-			@include respond-to(handhelds) {
-				display: block;
-				margin-bottom: 20px;
-				width: 255px;
-			}
 		}
 		&-input {
 			width: 100%;
 			height: 100%;
-			border: 1px solid $white;
-			border-radius: $smallest-border-radius;
 			padding: 18px 50px;
-			color: $black;
+			border: 1px solid $white;
+
+			border-radius: $smallest-border-radius;
 			outline: none;
+
+			color: $black;
 			font-size: $medium-font;
 			&::placeholder {
 				color: $dark-grey;
 			}
 		}
 		&-submit {
-			min-width: 178px;
-			font-size: $medium-font;
-			line-height: 1.5;
-			letter-spacing: $letter-spacing;
-			color: $white;
-			background-color: $orange;
-			border: 1px solid $orange;
-			border-radius: $smallest-border-radius;
-			padding: 12px;
-			outline: none;
-			&:hover {
-				background-color: $dark-orange;
-				border-color: $dark-orange;
-				cursor: pointer;
-			}
 			@include respond-to(tablets) {
 				display: block;
 			}
 			@include respond-to(handhelds) {
 				display: block;
+			}
+
+			min-width: 178px;
+			padding: 12px;
+			border: 1px solid $orange;
+
+			border-radius: $smallest-border-radius;
+			background-color: $orange;
+			outline: none;
+
+			color: $white;
+			font-size: $medium-font;
+			line-height: 1.5;
+			letter-spacing: $letter-spacing;
+			&:hover {
+				border-color: $dark-orange;
+
+				background-color: $dark-orange;
+
+				cursor: pointer;
 			}
 		}
 	}
 	&__main {
-		height: 289px;
-		background-color: #f2f5f8;
-		display: flex;
-		justify-content: space-between;
-		padding: 50px 80px;
 		@include respond-to(medium-screens) {
 			padding: 50px 60px;
 		}
 		@include respond-to(tablets) {
-			padding: 50px 40px;
 			flex-flow: wrap;
 			justify-content: center;
 			height: 710px;
+			padding: 50px 40px;
 		}
 		@include respond-to(handhelds) {
-			padding: 50px 40px;
 			flex-flow: wrap;
 			justify-content: center;
-			height: 820px;
 			align-items: center;
+			height: 820px;
+			padding: 50px 40px;
 		}
+
+		display: flex;
+		justify-content: space-between;
+		height: 289px;
+		padding: 50px 80px;
+
+		background-color: #f2f5f8;
 		&-logo {
-			width: 150px;
 			@include respond-to(handhelds) {
-				text-align: center;
 				margin-bottom: 20px;
+
+				text-align: center;
 			}
+
+			width: 150px;
 		}
 		&-menu-item {
-			width: 150px;
-			display: block;
 			@include respond-to(tablets) {
 				margin-bottom: 30px;
 			}
 			@include respond-to(handhelds) {
 				margin-bottom: 30px;
 			}
+
+			display: block;
+			width: 150px;
 		}
 		&-menu-subitem {
 			display: block;
+
 			color: $dark-grey;
 			font-size: $medium-font;
-			letter-spacing: $letter-spacing;
 			line-height: 2;
+			letter-spacing: $letter-spacing;
 			text-decoration: none;
 			&:first-child {
 				color: $black;
+
 				pointer-events: none;
 			}
 			&:hover {
@@ -154,24 +174,28 @@
 			margin-bottom: 30px;
 		}
 		&-copyright {
-			width: 250px;
 			@include respond-to(handhelds) {
 				text-align: center;
 			}
+
+			width: 250px;
 			&-copy {
 				display: block;
+
 				color: $black;
 				font-size: $medium-font;
-				letter-spacing: $letter-spacing;
 				line-height: 2.25;
+				letter-spacing: $letter-spacing;
 			}
 			&-contact {
 				display: block;
+
 				color: $dark-grey;
 				font-size: $medium-font;
-				letter-spacing: $letter-spacing;
 				line-height: 1.375;
+				letter-spacing: $letter-spacing;
 				text-decoration: none;
+
 				cursor: default;
 			}
 		}
@@ -180,47 +204,63 @@
 
 .mail-icon {
 	position: absolute;
+
 	width: 20px;
 	height: 14px;
-	border-radius: 1px;
 	border: solid 1px $black;
+
+	border-radius: 1px;
 	border-radius: 2px;
 	&::before {
 		content: '';
+
 		position: absolute;
-		left: 9px;
 		top: -5px;
+		left: 9px;
+
 		width: 1px;
 		height: 12px;
+
 		background-color: $black;
-		transform-origin: bottom;
+
 		transform: rotate(-54deg);
+		transform-origin: bottom;
 	}
 	&::after {
 		content: '';
+
 		position: absolute;
-		left: 8px;
 		top: -5px;
+		left: 8px;
+
 		width: 1px;
 		height: 12px;
+
 		background-color: $black;
-		transform-origin: bottom;
+
 		transform: rotate(54deg);
+		transform-origin: bottom;
 	}
 	&.c-footer__subscribe-mail-icon {
-		border-color: $white;
-		background-color: $orange;
-		top: 50%;
-		transform: translateY(-50%);
-		left: 30%;
 		@include respond-to(tablets) {
-			transform: translateY(-140%);
 			left: 9%;
+
+			transform: translateY(-140%);
 		}
 		@include respond-to(handhelds) {
-			transform: translateY(-140%);
 			left: 9%;
+
+			transform: translateY(-140%);
 		}
+
+		top: 50%;
+		left: 30%;
+
+		border-color: $white;
+
+		background-color: $orange;
+
+		transform: translateY(-50%);
 		&::before {
 			background-color: $white;
 		}
