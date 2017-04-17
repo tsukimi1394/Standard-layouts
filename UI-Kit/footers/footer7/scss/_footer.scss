@@ -6,11 +6,30 @@
 	justify-content: space-between;
 	position: relative;
 	padding: 80px 120px;
+	@include respond-to(medium-screens) {
+		padding: 40px;
+	}
+	@include respond-to(tablets) {
+		padding: 40px;
+		flex-flow: wrap;
+		height: 1250px;
+		justify-content: center;
+	}
+	@include respond-to(handhelds) {
+		padding: 20px;
+		flex-flow: wrap;
+		height: 1850px;
+		justify-content: center;
+	}
 	&__logo {
 		width: 150px;
 	}
 	&__menu-item {
 		width: 150px;
+		@include respond-to(tablets) {
+			width: 200px;
+			margin-bottom: 20px;
+		}
 	}
 	&__menu-subitem {
 		display: block;
@@ -24,6 +43,10 @@
 			line-height: 2.25;
 			text-transform: uppercase;
 			letter-spacing: 0.05rem;
+			pointer-events: none;
+		}
+		&:hover {
+			text-decoration: underline;
 		}
 		&.new {
 			position: relative;
@@ -41,10 +64,17 @@
 				height: 28px;
 				text-align: center;
 			}
+			&:hover::after {
+				background-color: $dark-orange;
+			}
 		}
 	}
 	&__other {
 		width: 260px;
+		@include respond-to(tablets) {
+			width: 360px;
+			text-align: center;
+		}
 	}
 	&__social {
 		&-title {
@@ -64,35 +94,67 @@
 			&:not(:last-child) {
 				margin-right: 10px;
 			}
+			@include respond-to(medium-screens) {
+				margin-bottom: 10px;
+			}
 			&.c--facebook {
 				background-color: #3162a2;
 				border-color: #3162a2;
+				&:hover {
+					background-color: #235493;
+					border-color: #235493;
+					cursor: pointer;
+				}
 			}
 			&.c--twitter {
 				background-color: #2eb1eb;
 				border-color: #2eb1eb;
+				&:hover {
+					background-color: #209dd4;
+					border-color: #209dd4;
+					cursor: pointer;
+				}
 			}
 			&.c--dribbble {
 				background-color: #f552b6;
 				border-color: #f552b6;
+				&:hover {
+					background-color: #d43b99;
+					border-color: #d43b99;
+					cursor: pointer;
+				}
 			}
 			&.c--vimeo {
 				background-color: #3498b9;
 				border-color: #3498b9;
+				&:hover {
+					background-color: #2485a5;
+					border-color: #2485a5;
+					cursor: pointer;
+				}
 			}
 			&.c--google-plus {
 				background-color: #f25c58;
 				border-color: #f25c58;
+				&:hover {
+					background-color: #d24440;
+					border-color: #d24440;
+					cursor: pointer;
+				}
 			}
 			&-img {
 				height: 14px;
 				width: auto;
+				vertical-align: middle;
 			}
 		}
 	}
 	&__subscribe {
 		margin-top: 50px;
 		margin-bottom: 40px;
+		@include respond-to(medium-screens) {
+			margin-top: 20px;
+		}
 		&-title {
 			display: block;
 			line-height: 2.25;
@@ -127,6 +189,9 @@
 			color: $white;
 			background-color: rgba(255, 255, 255, .25);
 			outline: none;
+			&::placeholder {
+				color: rgba(255, 255, 255, .6);
+			}
 		}
 		&-submit-wrapper {
 			width: 36px;
@@ -154,7 +219,10 @@
 			background-color: $green;
 			outline: none;
 			border-radius: $smallest-border-radius;
-
+			&:hover {
+				background-color: $dark-green;
+				cursor: pointer;
+			}
 		}
 	}
 	&__main-menu-item {
@@ -169,6 +237,10 @@
 			line-height: 2.25;
 			text-transform: uppercase;
 			letter-spacing: 0.05rem;
+			pointer-events: none;
+		}
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 	&__copyright {
@@ -179,5 +251,20 @@
 		letter-spacing: $letter-spacing;
 		font-size: $small-font;
 		color: #9d9d9e;
+		@include respond-to(tablets) {
+			bottom: 10px;
+			left: 50%;
+			right: 0;
+			transform: translateX(-50%);
+			text-align: center;
+		}
+		@include respond-to(handhelds) {
+			bottom: 5px;
+			left: 50%;
+			right: 0;
+			transform: translateX(-50%);
+			text-align: center;
+			line-height: 1.25;
+		}
 	}
 }
