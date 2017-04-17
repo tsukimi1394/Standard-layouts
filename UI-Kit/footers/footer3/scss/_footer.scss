@@ -1,9 +1,4 @@
 .c-footer {
-	height: 288px;
-	background-color: #f2f5f8;
-	display: flex;
-	justify-content: space-around;
-	padding: 30px 0;
 	@include respond-to(handhelds) {
 		flex-direction: column;
 		align-items: center;
@@ -11,30 +6,40 @@
 	}
 	@include respond-to(tablets) {
 		flex-flow: wrap;
-		height: 470px;
 		align-items: center;
+		height: 470px;
 	}
+
+	display: flex;
+	justify-content: space-around;
+	height: 288px;
+	padding: 30px 0;
+
+	background-color: #f2f5f8;
 	&__menu-item {
-		display: block;
 		@include respond-to(handhelds) {
 			margin-bottom: 30px;
 		}
 		@include respond-to(tablets) {
 			margin-bottom: 30px;
 		}
+
+		display: block;
 		&:first-child .c-footer__menu-subitem:first-child {
 			color: $blue;
 		}
 	}
 	&__menu-subitem {
 		display: block;
+
 		color: $dark-grey;
-		text-decoration: none;
-		line-height: 2.25;
 		font-size: $medium-font;
+		line-height: 2.25;
 		letter-spacing: $letter-spacing;
+		text-decoration: none;
 		&:first-child {
 			color: $black;
+
 			pointer-events: none;
 		}
 		&:hover {
@@ -49,28 +54,31 @@
 			text-align: center;
 		}
 		&-logo-img {
-			display: block;
 			@include respond-to(handhelds) {
 				display: inline-block;
 			}
 			@include respond-to(tablets) {
 				display: inline-block;
 			}
+
+			display: block;
 		}
 		&-copy {
 			display: block;
-			line-height: 2.25;
-			letter-spacing: $letter-spacing;
+			margin-top: 10px;
+
 			color: $black;
 			font-size: $medium-font;
-			margin-top: 10px;
+			line-height: 2.25;
+			letter-spacing: $letter-spacing;
 		}
 		&-link {
 			display: block;
-			line-height: 2;
-			letter-spacing: $letter-spacing;
+
 			color: $dark-grey;
 			font-size: $medium-font;
+			line-height: 2;
+			letter-spacing: $letter-spacing;
 			text-decoration: none;
 			&:hover {
 				text-decoration: underline;
