@@ -4,8 +4,29 @@
 	padding: 15px 120px;
 	display: flex;
 	justify-content: space-between;
+	@include respond-to(medium-screens) {
+		padding: 15px 60px;
+	}
+	@include respond-to(tablets) {
+		flex-direction: column;
+		align-items: center;
+		height: 150px;
+		padding: 15px 30px;
+	}
+	@include respond-to(handhelds) {
+		flex-direction: column;
+		align-items: center;
+		height: 200px;
+		padding: 15px;
+	}
 	&__menu {
 		display: inline-block;
+		@include respond-to(tablets) {
+			text-align: center;
+		}
+		@include respond-to(handhelds) {
+			text-align: center;
+		}
 		&-item {
 			text-decoration: none;
 			line-height: 2.25;
@@ -14,6 +35,9 @@
 			letter-spacing: $letter-spacing;
 			&:not(:last-child) {
 				margin-right: 30px;
+			}
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -26,6 +50,19 @@
 	}
 	&__social {
 		display: inline-block;
+		@include respond-to(tablets) {
+			display: flex;
+			flex-flow: wrap;
+			justify-content: center;
+		}
+		@include respond-to(handhelds) {
+			display: flex;
+			flex-flow: wrap;
+			justify-content: center;
+		}
+		&-buttons {
+			display: inline-block;
+		}
 		&-item {
 			width: 36px;
 			height: 36px;
@@ -35,6 +72,10 @@
 			&-img {
 				height: 14px;
 				width: auto;
+			}
+			&:hover {
+				border: 1px solid #9c9b9b;
+				border-radius: $round-border-radius;
 			}
 		}
 	}
