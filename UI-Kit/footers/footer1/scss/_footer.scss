@@ -17,7 +17,7 @@
 	justify-content: space-between;
 	height: 168px;
 
-	background-color: $footer-background-color;
+	background-color: #f2f5f8;
 	&__logo-menu {
 		@include respond-to(handhelds) {
 			display: flex;
@@ -30,7 +30,7 @@
 		}
 
 		margin-top: $normal-margin;
-		margin-left: $large-margin;
+		margin-left: 50px;
 	}
 	&__menu {
 		@include respond-to(handhelds) {
@@ -56,7 +56,7 @@
 				margin-right: 20px;
 			}
 			@include respond-to(wide-screens) {
-				margin-right: $x-normal-margin;
+				margin-right: 40px;
 			}
 
 			color: $black;
@@ -98,7 +98,7 @@
 			}
 			&-img {
 				width: auto;
-				height: $social-icon-height;
+				height: 14px;
 			}
 		}
 	}
@@ -113,8 +113,8 @@
 			padding-bottom: 30px;
 		}
 
-		margin-top: $x-normal-margin;
-		margin-right: $large-margin;
+		margin-top: 40px;
+		margin-right: 120px;
 
 		font-size: $medium-font;
 		letter-spacing: $letter-spacing;
