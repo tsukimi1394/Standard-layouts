@@ -1,10 +1,4 @@
 .c-footer {
-	height: 288px;
-	background-color: $black;
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-	padding: 30px 100px;
 	@include respond-to(handhelds) {
 		flex-flow: wrap;
 		justify-content: space-around;
@@ -23,11 +17,21 @@
 		height: 480px;
 		padding: 30px 50px;
 	}
+
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+	height: 288px;
+	padding: 30px 100px;
+
+	background-color: $black;
 	&__logo {
-		width: 120px;
 		@include respond-to(tablets) {
 			width: 100px;
 		}
+
+		width: 120px;
 	}
 	&__menu-item {
 		@include respond-to(medium-screens) {
@@ -44,15 +48,17 @@
 	}
 	&__menu-subitem {
 		display: block;
-		text-decoration: none;
+
+		color: #9d9d9e;
 		font-size: $medium-font;
 		line-height: 2;
 		letter-spacing: $letter-spacing;
-		color: #9d9d9e;
+		text-decoration: none;
 		&:first-child {
 			color: $white;
 			line-height: 2.25;
 			letter-spacing: 0.05rem;
+
 			pointer-events: none;
 		}
 		&:hover {
@@ -72,18 +78,20 @@
 		}
 		&-title {
 			display: block;
+
+			color: $white;
+			font-size: $medium-font;
 			line-height: 2.25;
 			letter-spacing: 0.05rem;
-			font-size: $medium-font;
-			color: $white;
 		}
 		&-text {
 			display: block;
-			line-height: 1.25;
-			letter-spacing: $letter-spacing;
+			margin-bottom: 15px;
+
 			color: #9d9d9e;
 			font-size: $medium-font;
-			margin-bottom: 15px;
+			line-height: 1.25;
+			letter-spacing: $letter-spacing;
 		}
 		&-input-wrapper {
 			display: inline-block;
@@ -94,35 +102,42 @@
 		&-input {
 			width: 100%;
 			height: 100%;
-			border: 1px solid transparent;
-			border-radius: $smallest-border-radius;
-			font-size: $small-font;
-			letter-spacing: $letter-spacing;
-			line-height: 1.71;
 			padding: 10px;
-			color: $black;
+			border: 1px solid transparent;
+
+			border-radius: $smallest-border-radius;
 			background-color: $white;
 			outline: none;
+
+			color: $black;
 			font-weight: bold;
+			font-size: $small-font;
+			line-height: 1.71;
+			letter-spacing: $letter-spacing;
 			&::placeholder {
 				color: $dark-grey;
 			}
 		}
 		&-submit-wrapper {
+			position: relative;
+
+			display: inline-block;
 			width: 36px;
 			height: 36px;
-			position: relative;
-			display: inline-block;
+
 			vertical-align: bottom;
 			&::before {
 				content: '';
+
 				position: absolute;
 				top: 50%;
 				left: calc(50% - 1px);
+
 				width: 5px;
 				height: 5px;
 				border-top: solid $border-width $white;
 				border-right: solid $border-width $white;
+
 				transform: translate(-50%, -50%) rotate(45deg);
 				transform-origin: center;
 			}
@@ -131,12 +146,15 @@
 			width: 100%;
 			height: 100%;
 			border: 1px solid transparent;
+
+			border-radius: $smallest-border-radius;
 			background-color: $green;
 			outline: none;
-			border-radius: $smallest-border-radius;
 			&:hover {
-				background-color: $dark-green;
 				border-color: $dark-green;
+
+				background-color: $dark-green;
+
 				cursor: pointer;
 			}
 		}
@@ -144,16 +162,18 @@
 	&__social {
 		&-title {
 			display: block;
+			margin-bottom: 10px;
+
+			color: $white;
+			font-size: $medium-font;
 			line-height: 2.25;
 			letter-spacing: 0.05rem;
-			font-size: $medium-font;
-			color: $white;
-			margin-bottom: 10px;
 		}
 		&-item {
 			width: 36px;
 			height: 36px;
 			border: 1px solid transparent;
+
 			background-color: transparent;
 			outline: none;
 			&:not(:last-child) {
@@ -161,15 +181,17 @@
 			}
 			&:hover {
 				border-color: $dark-grey;
+
 				border-radius: $round-border-radius;
+
 				cursor: pointer;
 			}
 			&.c--facebook {
 				margin-left: -13px;
 			}
 			&-img {
-				height: 14px;
 				width: auto;
+				height: 14px;
 			}
 		}
 	}
