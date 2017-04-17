@@ -9,17 +9,17 @@ body {
 }
 
 .c-footer {
-  height: 192px;
-  background-color: #383737;
-  padding: 15px;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  height: 192px;
+  padding: 15px;
+  background-color: #383737;
 }
 
 .c-footer__menu {
@@ -30,9 +30,9 @@ body {
 .c-footer__menu-item {
   display: inline-block;
   color: #fff;
+  font-size: 16px;
   line-height: 2.25;
   letter-spacing: 0.02rem;
-  font-size: 16px;
   text-decoration: none;
 }
 
@@ -52,8 +52,8 @@ body {
 .c-footer__social-item {
   width: 36px;
   height: 36px;
-  border-radius: 999rem;
   border: 1px solid;
+  border-radius: 999rem;
   outline: none;
 }
 
@@ -62,63 +62,63 @@ body {
 }
 
 .c-footer__social-item.c--facebook {
-  background-color: #3162a2;
   border-color: #3162a2;
+  background-color: #3162a2;
 }
 
 .c-footer__social-item.c--facebook:hover {
-  background-color: #235493;
   border-color: #235493;
+  background-color: #235493;
   cursor: pointer;
 }
 
 .c-footer__social-item.c--twitter {
-  background-color: #2eb1eb;
   border-color: #2eb1eb;
+  background-color: #2eb1eb;
 }
 
 .c-footer__social-item.c--twitter:hover {
-  background-color: #209dd4;
   border-color: #209dd4;
+  background-color: #209dd4;
   cursor: pointer;
 }
 
 .c-footer__social-item.c--dribbble {
-  background-color: #f552b6;
   border-color: #f552b6;
+  background-color: #f552b6;
 }
 
 .c-footer__social-item.c--dribbble:hover {
-  background-color: #d43b99;
   border-color: #d43b99;
+  background-color: #d43b99;
   cursor: pointer;
 }
 
 .c-footer__social-item.c--vimeo {
-  background-color: #3498b9;
   border-color: #3498b9;
+  background-color: #3498b9;
 }
 
 .c-footer__social-item.c--vimeo:hover {
-  background-color: #2485a5;
   border-color: #2485a5;
+  background-color: #2485a5;
   cursor: pointer;
 }
 
 .c-footer__social-item.c--google-plus {
-  background-color: #f25c58;
   border-color: #f25c58;
+  background-color: #f25c58;
 }
 
 .c-footer__social-item.c--google-plus:hover {
-  background-color: #d24440;
   border-color: #d24440;
+  background-color: #d24440;
   cursor: pointer;
 }
 
 .c-footer__social-item-img {
-  height: 16px;
   width: auto;
+  height: 16px;
   vertical-align: middle;
 }
 
@@ -128,10 +128,10 @@ body {
 }
 
 .c-footer__copyright-copy {
+  color: #838282;
   font-size: 14px;
   line-height: 2.57;
   letter-spacing: 0.02rem;
-  color: #838282;
 }
 
 @media only screen and (max-width: 375px) {
