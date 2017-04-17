@@ -5,8 +5,42 @@
 	justify-content: space-between;
 	position: relative;
 	padding: 30px 100px;
+	@include respond-to(handhelds) {
+		flex-flow: wrap;
+		justify-content: space-around;
+		height: 750px;
+		padding: 30px 10px;
+	}
+	@include respond-to(tablets) {
+		flex-flow: wrap;
+		justify-content: space-around;
+		height: 700px;
+		padding: 30px 25px;
+	}
+	@include respond-to(medium-screens) {
+		flex-flow: wrap;
+		justify-content: space-around;
+		height: 480px;
+		padding: 30px 50px;
+	}
 	&__logo {
 		width: 120px;
+		@include respond-to(tablets) {
+			width: 100px;
+		}
+	}
+	&__menu-item {
+		@include respond-to(medium-screens) {
+			width: 200px;
+		}
+		@include respond-to(tablets) {
+			width: 150px;
+			margin-bottom: 20px;
+		}
+		@include respond-to(handhelds) {
+			width: 120px;
+			margin-bottom: 20px;
+		}
 	}
 	&__menu-subitem {
 		display: block;
@@ -18,25 +52,11 @@
 		&:first-child {
 			color: $white;
 			line-height: 2.25;
-			text-transform: uppercase;
 			letter-spacing: 0.05rem;
+			pointer-events: none;
 		}
-		&.new {
-			position: relative;
-			&::after {
-				content: 'NEW';
-				color: $black;
-				border: 1px solid transparent;
-				background-color: $orange;
-				border-radius: $smallest-border-radius;
-				position: absolute;
-				margin-left: 10px;
-				font-size: $small-font;
-				letter-spacing: 0.05rem;
-				width: 52px;
-				height: 28px;
-				text-align: center;
-			}
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 	&__other {
@@ -44,13 +64,18 @@
 	}
 	&__subscribe {
 		margin-bottom: 40px;
+		&-wrapper {
+			@include respond-to(handhelds) {
+				display: flex;
+				justify-content: center;
+			}
+		}
 		&-title {
 			display: block;
 			line-height: 2.25;
 			letter-spacing: 0.05rem;
 			font-size: $medium-font;
 			color: $white;
-			text-transform: uppercase;
 		}
 		&-text {
 			display: block;
@@ -79,6 +104,9 @@
 			background-color: $white;
 			outline: none;
 			font-weight: bold;
+			&::placeholder {
+				color: $dark-grey;
+			}
 		}
 		&-submit-wrapper {
 			width: 36px;
@@ -106,6 +134,11 @@
 			background-color: $green;
 			outline: none;
 			border-radius: $smallest-border-radius;
+			&:hover {
+				background-color: $dark-green;
+				border-color: $dark-green;
+				cursor: pointer;
+			}
 		}
 	}
 	&__social {
@@ -115,7 +148,6 @@
 			letter-spacing: 0.05rem;
 			font-size: $medium-font;
 			color: $white;
-			text-transform: uppercase;
 			margin-bottom: 10px;
 		}
 		&-item {
@@ -126,6 +158,11 @@
 			outline: none;
 			&:not(:last-child) {
 				margin-right: 10px;
+			}
+			&:hover {
+				border-color: $dark-grey;
+				border-radius: $round-border-radius;
+				cursor: pointer;
 			}
 			&.c--facebook {
 				margin-left: -13px;
