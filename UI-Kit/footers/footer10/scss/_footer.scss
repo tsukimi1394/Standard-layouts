@@ -1,42 +1,37 @@
 .c-footer {
-	height: 461px;
-	background-color: $green;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: column wrap;
 	@include respond-to(tablets) {
 		height: 520px;
 	}
 	@include respond-to(handhelds) {
 		height: 650px;
 	}
+
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	height: 461px;
+
+	background-color: $green;
 	&__title {
-		color: $white;
-		line-height: 1.16;
-		font-size: 50px;
-		letter-spacing: $letter-spacing;
 		margin-bottom: 40px;
+
+		color: $white;
+		font-size: 50px;
+		line-height: 1.16;
+		letter-spacing: $letter-spacing;
 		text-align: center;
 	}
 	&__text {
-		color: $white;
-		line-height: 2.25;
-		font-size: $medium-font;
-		letter-spacing: $letter-spacing;
-		font-weight: normal;
 		margin-bottom: 25px;
+
+		color: $white;
+		font-weight: normal;
+		font-size: $medium-font;
+		line-height: 2.25;
+		letter-spacing: $letter-spacing;
 	}
 	&__form-wrapper {
-		width: 56%;
-		height: 96px;
-		border-radius: $smallest-border-radius;
-		background-color: #f2f5f8;
-		border: 1px solid transparent;
-		padding: 24px;
-		margin-bottom: 75px;
-		display: flex;
-		justify-content: center;
 		@include respond-to(tablets) {
 			flex-flow: wrap;
 			flex-direction: column;
@@ -46,21 +41,23 @@
 		@include respond-to(handhelds) {
 			flex-flow: wrap;
 			flex-direction: column;
+			align-items: center;
 			height: 210px;
 			padding: 12px;
-			align-items: center;
 		}
+
+		display: flex;
+		justify-content: center;
+		width: 56%;
+		height: 96px;
+		margin-bottom: 75px;
+		padding: 24px;
+		border: 1px solid transparent;
+
+		border-radius: $smallest-border-radius;
+		background-color: #f2f5f8;
 	}
 	&__form-input-wrapper {
-		display: inline-block;
-		width: 100%;
-		height: 48px;
-		&:first-child {
-			margin-right: 10px;
-			@include respond-to(tablets) {
-				margin-bottom: 20px;
-			}
-		}
 		@include respond-to(handhelds) {
 			margin-bottom: 20px;
 		}
@@ -73,20 +70,33 @@
 		@include respond-to(wide-screens) {
 			width: 220px;
 		}
+
+		display: inline-block;
+		width: 100%;
+		height: 48px;
+		&:first-child {
+			@include respond-to(tablets) {
+				margin-bottom: 20px;
+			}
+
+			margin-right: 10px;
+		}
 	}
 	&__form-input {
 		width: 100%;
 		height: 100%;
-		border: 2px solid $grey;
-		border-radius: $smallest-border-radius;
-		font-size: $medium-font;
-		letter-spacing: $letter-spacing;
-		line-height: 1.5;
 		padding: 10px;
-		color: $black;
+		border: 2px solid $grey;
+
+		border-radius: $smallest-border-radius;
 		background-color: $white;
 		outline: none;
+
+		color: $black;
 		font-weight: bold;
+		font-size: $medium-font;
+		line-height: 1.5;
+		letter-spacing: $letter-spacing;
 		&::placeholder {
 			color: $grey;
 		}
@@ -100,36 +110,42 @@
 	&__form-submit {
 		width: 100%;
 		height: 100%;
-		border: 1px solid transparent;
-		border-radius: $smallest-border-radius;
-		font-size: $medium-font;
-		letter-spacing: $letter-spacing;
-		line-height: 1.5;
 		padding: 10px;
-		color: $white;
+		border: 1px solid transparent;
+
+		border-radius: $smallest-border-radius;
 		background-color: $orange;
 		outline: none;
+
+		color: $white;
+		font-size: $medium-font;
+		line-height: 1.5;
+		letter-spacing: $letter-spacing;
 		&:hover {
-			background-color: $dark-orange;
 			border-color: $dark-orange;
+
+			background-color: $dark-orange;
+
 			cursor: pointer;
 		}
 	}
 	&__menu {
 		margin-bottom: 25px;
+
 		text-align: center;
 		&-item {
-			text-decoration: none;
 			color: $white;
-			line-height: 1.71;
 			font-size: $small-font;
+			line-height: 1.71;
 			letter-spacing: 0.05rem;
 			text-transform: uppercase;
+			text-decoration: none;
 			&:not(:last-child) {
-				margin-right: 55px;
 				@include respond-to(handhelds) {
 					margin-right: 30px;
 				}
+
+				margin-right: 55px;
 			}
 			&:hover {
 				text-decoration: underline;
@@ -137,9 +153,9 @@
 		}
 	}
 	&__copyright {
-		line-height: 2.57;
-		font-size: $small-font;
-		letter-spacing: $letter-spacing;
 		color: rgba(255, 255, 255, .3);
+		font-size: $small-font;
+		line-height: 2.57;
+		letter-spacing: $letter-spacing;
 	}
 }
