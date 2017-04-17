@@ -9,13 +9,13 @@ body {
 }
 
 .c-footer {
-  height: 72px;
-  background-color: #383737;
-  padding: 15px 120px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  height: 72px;
+  padding: 15px 120px;
+  background-color: #383737;
 }
 
 .c-footer__menu {
@@ -23,11 +23,11 @@ body {
 }
 
 .c-footer__menu-item {
-  text-decoration: none;
-  line-height: 2.25;
   color: #fff;
   font-size: 16px;
+  line-height: 2.25;
   letter-spacing: 0.02rem;
+  text-decoration: none;
 }
 
 .c-footer__menu-item:not(:last-child) {
@@ -57,14 +57,14 @@ body {
 .c-footer__social-item {
   width: 36px;
   height: 36px;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
   outline: none;
 }
 
 .c-footer__social-item-img {
-  height: 14px;
   width: auto;
+  height: 14px;
 }
 
 .c-footer__social-item:hover {
