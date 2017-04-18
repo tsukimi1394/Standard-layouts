@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Cabin', Arial, sans-serif;
+}
+
+.c-footers {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: wrap;
+	padding: 50px;
+	align-items: center;
+	&__img {
+		width: 295px;
+		height: auto;
+	}
+	figure {
+		margin: 20px;
+		box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+	}
+	figcaption {
+		text-align: center;
+		margin-top: 15px;
+	}
+}
