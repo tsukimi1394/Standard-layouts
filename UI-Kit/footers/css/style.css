@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Cabin', Arial, sans-serif;
+}
+
+.c-footers {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  padding: 50px;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c-footers__img {
+  width: 295px;
+  height: auto;
+}
+
+.c-footers figure {
+  margin: 20px;
+  box-shadow: 0 0 10px 5px #dddddd;
+}
+
+.c-footers figcaption {
+  text-align: center;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=style.css.map */
