@@ -1,46 +1,119 @@
 .c-header {
-	height: 100vh;
+	@include respond-to(medium-screens) {
+		padding-top: 60px;
+	}
+	@include respond-to(tablets) {
+		padding-top: 40px;
+	}
+
 	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	padding-top: 80px;
+	padding-bottom: 80px;
+
 	background-image: url(../images/back.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
 	background-position: center center;
+	background-size: cover;
+	&__header {
+		&-logo-img {
+			@include respond-to(medium-screens) {
+				top: 40px;
+				left: 80px;
+			}
+			@include respond-to(tablets) {
+				top: 20px;
+				left: 40px;
+			}
+			@include respond-to(handhelds) {
+				top: 10px;
+				left: 20px;
+			}
+
+			position: absolute;
+			top: 60px;
+			left: 120px;
+		}
+		&-menu {
+			text-align: center;
+			&-item {
+				@include respond-to(tablets) {
+					margin: 10px;
+				}
+				@include respond-to(handhelds) {
+					margin: 5px;
+
+					font-size: $small-font;
+				}
+
+				margin: 20px;
+
+				color: $black;
+				font-size: $medium-font;
+				line-height: 2.25;
+				letter-spacing: 0.05rem;
+				text-transform: uppercase;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__title {
+		@include respond-to(medium-screens) {
+			padding: 0 220px;
+		}
+		@include respond-to(tablets) {
+			padding: 0 180px;
+		}
+		@include respond-to(handhelds) {
+			padding: 0 20px;
+
+			font-size: $large-font;
+		}
+
+		padding: 0 280px;
+
+		color: $black;
+		font-size: 36px;
+		line-height: 1.4;
+		letter-spacing: $letter-spacing;
+		text-align: center;
+	}
 }
 
-.c-header__logo-img {
-	position: absolute;
-	top: 6rem;
-	left: 12rem;
-}
+.c-button {
+	&.c-header__header-menu-item {
+		@include respond-to(medium-screens) {
+			top: 30px;
+			right: 80px;
+		}
+		@include respond-to(tablets) {
+			top: 23px;
+			right: 40px;
+		}
+		@include respond-to(handhelds) {
+			top: 10px;
+			right: 20px;
+		}
 
-.c-header__menu {
-	text-align: center;
-	padding-top: 8rem;
-	margin-bottom: 12rem;
-}
-
-.c-header__menu-item {
-	margin: 2rem;
-	text-decoration: none;
-	letter-spacing: 0.05rem;
-	color: $black;
-	font-size: $medium-font;
-	line-height: 2.25;
-	text-transform: uppercase;
-}
-
-.c-button{
-	&.c-header__menu-item {
 		position: absolute;
-		background-color: transparent;
+		top: 50px;
+		right: 120px;
+
 		margin: 0;
-		top: 4.9rem;
-		right: 12rem;
+
+		background-color: transparent;
 	}
 }
 
 .c-button-square-icon {
-	&.c-header__menu-item {
+	&.c-header__header-menu-item {
 		background-color: $black;
 		&::before {
 			background-color: $black;
@@ -51,23 +124,24 @@
 	}
 }
 
-.c-header__title {
-	text-align: center;
-	color: $black;
-	font-size: 3.6rem;
-	letter-spacing: $letter-spacing;
-	margin-bottom: 11rem;
-	padding: 0 28rem;
-	line-height: 1.4;
-}
 
 .sign-wrapper {
-	width: 66rem;
+	@include respond-to(handhelds) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 240px;
+		height: 220px;
+		padding: 0;
+	}
+
+	width: 660px;
+	height: 96px;
 	margin: 0 auto;
-	height: 9.6rem;
-	background-color: #f2f5f8;
-	border-radius: 6px;
 	padding: 16px;
+
+	border-radius: 6px;
+	background-color: #f2f5f8;
 }
 
 .c-sign-up {
@@ -80,14 +154,18 @@
 }
 
 .email-wrapper {
-	width: 22rem;
+	width: 220px;
 }
 
 .password-wrapper {
-	width: 22rem;
+	width: 220px;
 }
 
 .submit-wrapper {
+	@include respond-to(handhelds) {
+		margin-left: 50px;
+	}
+
 	width: 140px;
 	margin-left: 10px;
 }
