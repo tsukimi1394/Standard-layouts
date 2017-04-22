@@ -1,49 +1,125 @@
 .c-header {
-	height: 100vh;
+	@include respond-to(handhelds) {
+		padding: 30px 0;
+	}
+	@include respond-to(tablets) {
+		padding: 40px 0;
+	}
+
 	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	padding: 80px 0 110px;
+
 	background-image: url(../images/back.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
 	background-position: center center;
-	padding: 8rem 0 10.7rem;
-}
+	background-size: cover;
+	&__header {
+		&-logo {
+			@include respond-to(tablets) {
+				top: 40px;
+				left: 60px;
+			}
+			@include respond-to(handhelds) {
+				top: 30%;
+				left: 50%;
 
-.c-header__logo {
-	position: absolute;
-	top: 8rem;
-	left: 12rem;
-}
+				transform: translateX(-50%);
+			}
 
-.c-header__menu {
-	text-align: right;
-	margin-right: 12rem;
-}
+			position: absolute;
+			top: 80px;
+			left: 120px;
+		}
+		&-menu {
+			@include respond-to(tablets) {
+				margin-right: 60px;
+				margin-left: 100px;
+			}
+			@include respond-to(handhelds) {
+				margin-right: 30px;
+			}
 
-.c-header__menu-item {
-	margin: 2rem;
-	text-decoration: none;
-	letter-spacing: $letter-spacing;
-	color: $white;
-	font-size: $medium-font;
-}
+			margin-right: 120px;
 
-.c-button{
-	&.c-header__menu-item {
-		background-color: transparent;
-		margin: 0;
+			text-align: right;
+			&-item {
+				@include respond-to(tablets) {
+					margin: 10px;
+				}
+				@include respond-to(handhelds) {
+					margin: 10px;
+
+					font-size: $small-font;
+				}
+
+				margin: 20px;
+
+				color: $white;
+				font-size: $medium-font;
+				letter-spacing: $letter-spacing;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__main {
+		&-title {
+			@include respond-to(handhelds) {
+				margin-right: 50px;
+				margin-left: 30px;
+
+				font-size: 24px;
+			}
+			@include respond-to(tablets) {
+				margin-right: 100px;
+				margin-left: 60px;
+			}
+
+			margin-right: 210px;
+			margin-left: 120px;
+
+			color: $white;
+			font-size: 36px;
+			letter-spacing: $letter-spacing;
+		}
+		&-subtitle {
+			@include respond-to(tablets) {
+				margin-right: 100px;
+				margin-left: 60px;
+			}
+			@include respond-to(handhelds) {
+				margin-top: 20px;
+				margin-right: 50px;
+				margin-left: 30px;
+
+				font-size: $medium-font;
+			}
+
+			margin-top: 30px;
+			margin-right: 210px;
+			margin-left: 120px;
+
+			color: $white;
+			font-size: 18px;
+			letter-spacing: $letter-spacing;
+		}
 	}
 }
 
-.c-header__title {
-	margin: 29rem 21rem 1.5rem 12rem;
-	color: $white;
-	font-size: 3.6rem;
-	letter-spacing: $letter-spacing;
-}
+.c-button {
+	&.c-header__header-menu-item {
+		margin: 0;
 
-.c-header__subtitle {
-	margin: 1.5rem 21rem 0 12rem;
-	color: $white;
-	font-size: 1.8rem;
-	letter-spacing: $letter-spacing;
+		background-color: transparent;
+		&:hover {
+			background-color: rgba(0, 0, 0, .5);
+		}
+	}
 }
