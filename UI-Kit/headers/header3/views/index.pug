@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+	head
+		title= "Header 3"
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(href="https://fonts.googleapis.com/css?family=Cabin:600", rel="stylesheet")
+		link(rel="stylesheet", type= "text/css", href="css/style.css")
+	body
+		section(class="c-header")
+			div(class="c-header__header")
+				img(src="images/logo.png", alt="logo", class="c-header__header-logo-img")
+				nav(class="c-header__header-menu")
+					a(href="#", class="c-header__header-menu-item") Products
+					a(href="#", class="c-header__header-menu-item") Prices
+					a(href="#", class="c-header__header-menu-item") About Us
+					a(href="#", class="c-header__header-menu-item") Contacts			
+				button(class="c-button c--button-square c--button-rounded c-header__header-menu-item")
+					div(class="c-button-square-icon c-header__header-menu-item")
+			h1(class="c-header__title") It was some time before he obtained any answer, and the reply, when made, was unpropitious.
+			div(class="sign-wrapper")
+				form(class="c-sign-up")
+					div(class="email-wrapper")
+						input(type="text", placeholder="E-mail", class="c-email")
+					div(class="password-wrapper")
+						input(type="password", placeholder="Password", class="c-email")
+					div(class="submit-wrapper")
+						input(type="submit", value="Sign up", class="c-button c--button-rounded")
