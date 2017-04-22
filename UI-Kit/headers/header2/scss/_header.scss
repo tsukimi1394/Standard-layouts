@@ -1,57 +1,117 @@
 .c-header {
-	height: 100vh;
-	position: relative;
-	background-color: $orange;
-}
+	@include respond-to(medium-screens) {
+		padding-top: 60px;
+		padding-bottom: 80px;
+	}
+	@include respond-to(tablets) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	@include respond-to(handhelds) {
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
 
-.c-button{
-	&.c-header__menu-item {
-		position: absolute;
-		background-color: transparent;
-		margin: 0;
-		margin-top: 6.9rem;
-		margin-left: 12rem;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	padding-top: 80px;
+	padding-bottom: 100px;
+
+	background-color: $orange;
+	&__header {
+		&-menu {
+			@include respond-to(tablets) {
+				margin-right: 40px;
+			}
+			@include respond-to(handhelds) {
+				margin-right: 20px;
+			}
+
+			margin-right: 120px;
+
+			text-align: right;
+			&-item {
+				@include respond-to(handhelds) {
+					margin: 10px;
+				}
+
+				margin: 20px;
+
+				color: $white;
+				font-size: $medium-font;
+				letter-spacing: $letter-spacing;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__logo {
+		text-align: center;
+	}
+	&__main {
+		&-title {
+			@include respond-to(tablets) {
+				font-size: 28px;
+			}
+			@include respond-to(handhelds) {
+				padding: 0 50px;
+
+				font-size: 18px;
+			}
+
+			margin-bottom: 40px;
+			padding: 0 180px;
+
+			color: $white;
+			font-size: 36px;
+			line-height: 1.4;
+			letter-spacing: $letter-spacing;
+			text-align: center;
+		}
 	}
 }
 
-.c-header__menu {
-	text-align: right;
-	padding-top: 8rem;
-	margin-right: 12rem;
-}
+.c-button {
+	&.c-header__header-menu-item {
+		@include respond-to(medium-screens) {
+			top: 50px;
+		}
+		@include respond-to(tablets) {
+			top: 30px;
+			left: 40px;
+		}
+		@include respond-to(handhelds) {
+			top: 15px;
+			left: 15px;
+		}
 
-.c-header__menu-item {
-	margin: 2rem;
-	text-decoration: none;
-	letter-spacing: $letter-spacing;
-	color: $white;
-	font-size: $medium-font;
-}
+		position: absolute;
+		top: 70px;
+		left: 120px;
 
-.c-header__logo {
-	margin-top: 9rem;
-	margin-bottom: 7rem;
-	text-align: center;
-}
+		margin: 0;
 
-.c-header__title {
-	text-align: center;
-	color: $white;
-	font-size: 3.6rem;
-	letter-spacing: $letter-spacing;
-	margin-bottom: 7rem;
-	padding: 0 18rem;
-	line-height: 1.4;
+		background-color: transparent;
+		&:hover {
+			background-color: rgba(0, 0, 0, .5);
+		}
+	}
+	&.c-header__button {
+		background-color: $green;
+		&:hover {
+			background-color: $dark-green;
+		}
+	}
 }
 
 .button-wrapper {
 	display: block;
-	margin: 0 auto;
 	width: 140px;
-}
-
-.c-button {
-	&.c-header__button {
-		background-color: $green;
-	}
+	margin: 0 auto;
 }
